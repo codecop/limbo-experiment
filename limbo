@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git pull --rebase && git push || ./git_conflict
+
+exit 0

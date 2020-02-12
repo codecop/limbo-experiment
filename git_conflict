@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo -e "\e[31m CONFLICT"
+git rebase --abort
+git reset --hard HEAD^
+git checkout master
+echo -e "\e[0m"
+
+./limbo
+
+exit 0
