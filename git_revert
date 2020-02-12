@@ -6,7 +6,7 @@ git stage -A
 if test -f "test_results.txt"; then
     git add test_results.txt -f
 fi
-git commit -m "broken tests"
+git commit -m "[tcr] broken tests"
 git checkout master
 echo -e "\e[0m"
 
