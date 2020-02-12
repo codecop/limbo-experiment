@@ -14,3 +14,10 @@ buildNumber.properties
 .classpath
 .project
 .settings/
+
+# IDEA
+*.iml
+.idea/
+
+# TCR
+test_results.txt
