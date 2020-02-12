@@ -1,19 +1,16 @@
 package limbo;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
 public class SampleTest {
 
-    @Test
-    public void test() {
-        // fail("Not yet implemented");
-    }
+    Sample sample = new Sample();
 
     @Test
-    public void test2() {
-        // fail("Not yet implemented");
+    public void test() {
+        assertNotNull(sample);
     }
 
 }
