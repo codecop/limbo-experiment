@@ -3,6 +3,9 @@
 echo -e "\e[31m FAILURE"
 git checkout -b broken_`date +%s`
 git stage -A
+if test -f "test_results.txt"; then
+    git add test_results.txt -f
+fi
 git commit -m "broken tests"
 git checkout master
 echo -e "\e[0m"
