@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git pull --rebase && git push
+# we do not care if this does not work
+
+exit 0
