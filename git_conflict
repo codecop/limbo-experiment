@@ -2,8 +2,9 @@
 
 echo -e "\e[31m CONFLICT"
 git rebase --abort
-git reset --hard HEAD^
+git checkout -b conflict_`date +%s`
 git checkout master
+git reset --hard HEAD^
 echo -e "\e[0m"
 
 ./limbo
