@@ -1,6 +1,8 @@
 #!/bin/sh
 
-rm test_results.txt
+if test -f "test_results.txt"; then
+    rm test_results.txt
+fi
 git stage -A
 git commit -m "working"
 
