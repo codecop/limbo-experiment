@@ -1,3 +1,5 @@
 #!/bin/sh
 
 ./run_tests && ./git_commit || ./git_revert
+
+exit 0
