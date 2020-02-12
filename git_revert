@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo -e "\e[31m FAILURE"
+git checkout -b broken_`date +%s`
+git stage -A
+git commit -m "broken tests"
+git checkout master
+echo -e "\e[0m"

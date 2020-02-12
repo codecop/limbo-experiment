@@ -1,0 +1,7 @@
+#!/bin/sh
+
+mvn test 2> test_results.txt
+error=$?
+cat test_results.txt
+
+exit $error

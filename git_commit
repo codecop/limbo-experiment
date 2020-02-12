@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm test_results.txt
+git stage -A
+git commit -m "working"
+
+exit 0
