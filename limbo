@@ -1,6 +1,11 @@
 #!/bin/sh
 
-./tcr
-./git_merge
+# https://stackoverflow.com/a/5143914/104143
+if git diff-index --quiet HEAD --; then
+   ./git_fetch
+else
+  ./tcr
+  ./git_merge
+fi
 
 exit 0
