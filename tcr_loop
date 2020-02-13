@@ -6,8 +6,6 @@ do
   if ! git diff-index --quiet HEAD --; then
     ./tcr
   fi
-    
-  sleep 1
 
 done;
 

@@ -3,7 +3,6 @@
 while(true);
 do
   ./limbo
-  sleep 1
 done;
 
 exit 0
