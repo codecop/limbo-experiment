@@ -1,5 +1,6 @@
 #!/bin/sh
 
-git pull --rebase && ./run_tests && git push || ./git_conflict
+git pull --rebase && ./run_tests || ./git_conflict
+git push
 
 exit 0

@@ -1,12 +1,14 @@
 #!/bin/sh
 
-echo -e "\e[31m CONFLICT"
+echo -e "\e[31m MERGE CONFLICT"
 git rebase --abort
+
+# create diagnostics branch
 git checkout -b conflict_`date +%s`
-git checkout master
+
+# last commit is a conflict, remove it
+git checkout master -f
 git reset --hard HEAD^
 echo -e "\e[0m"
-
-./limbo
 
 exit 0
