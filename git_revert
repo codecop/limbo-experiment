@@ -1,13 +1,18 @@
 #!/bin/sh
 
-echo -e "\e[31m FAILURE"
+echo -e "\e[31m TEST FAILURE"
+
+# create diagnostics branch
 git checkout -b broken_`date +%s`
 git stage -A
 if test -f "test_results.txt"; then
     git add test_results.txt -f
 fi
 git commit -m "[tcr] broken tests"
-git checkout master
+
+# last changes are a failure, remove them
+git checkout master -f
+git reset --hard
 echo -e "\e[0m"
 
 exit 0
