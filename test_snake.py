@@ -32,7 +32,7 @@ Domain
 """
 
 
-class Snake(object):
+class Snake:
     pass
 
 
