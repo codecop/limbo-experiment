@@ -30,6 +30,7 @@ Domain
 - User Input
   - Turn
 """
+from collections import namedtuple
 from enum import Enum
 
 import pytest
@@ -54,8 +55,6 @@ class Snake:
     def turn_right(self):
         self.direction = Directions.turn_right(self.direction)
 
-
-from collections import namedtuple
 
 Direction = namedtuple("Direction", ["name", "offset"])
 
