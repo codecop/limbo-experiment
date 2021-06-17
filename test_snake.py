@@ -70,6 +70,9 @@ class Directions(Enum):
     SOUTH = Direction("S", (0, -1))
     EAST = Direction("E", (1, 0))
     WEST = Direction("W", (-1, 0))
+    RIGHT = {
+        NORTH: EAST,
+    }
 
 
 @pytest.fixture
