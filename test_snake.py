@@ -96,7 +96,7 @@ def test_there_is_a_snake(snake):
 
 def test_snake_advances_without_growing(snake):
     snake.advance()
-    assert snake.direction == "N"
+    assert snake.d2 == Directions.NORTH
     assert snake.position == (0, 1)
     assert snake.body == [(0, 1), (0, 0), (0, -1)]
 
