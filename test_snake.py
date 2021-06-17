@@ -19,11 +19,11 @@ Nice to have
 
 Domain
 - Snake
-  - Direction
-  - Length?
-  - Head, Tail
-  - Ã¢ÂÂAdvanceÃ¢ÂÂ
-  - Ã¢ÂÂGrowthÃ¢ÂÂ
+  - X Direction
+  - ? Length?
+  - X Head, Tail
+  - X Advance
+  - / Growth
 - Arena
   - Obstacle
 - Tick
