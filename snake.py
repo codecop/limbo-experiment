@@ -1,1 +1,3 @@
-print('hi')
+print("hi")
+
+# new implementation
