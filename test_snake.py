@@ -36,5 +36,5 @@ class Snake(object):
     pass
 
 
-def test_there_there_is():
+def test_there_is_a_snake():
     assert Snake()
