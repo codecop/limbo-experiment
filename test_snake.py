@@ -35,9 +35,11 @@ Domain
 class Snake:
     def __init__(self):
         self.direction = "N"
+        self.position = (0, 0)
 
 
 def test_there_is_a_snake():
     # this is a change
     snake = Snake()
     assert snake.direction == "N"
+    assert snake.position == (0, 0)
