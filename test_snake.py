@@ -43,7 +43,6 @@ class Snake:
 
 
 def test_there_is_a_snake():
-    # this is a change
     snake = Snake()
     assert snake.direction == "N"
     assert snake.position == (0, 0)
