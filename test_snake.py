@@ -53,8 +53,12 @@ class Snake:
 
 
 class Direction:
-    def __init__(self, direction="N"):
-        self.direction = direction
+    def __init__(self, name="N", offset=(0, 1)):
+        self.name = name
+        self.offset = offset
+
+    def offset(self):
+        return self.offset
 
 
 @pytest.fixture
