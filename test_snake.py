@@ -2,10 +2,10 @@
 https://docs.google.com/document/d/1ac_DFYlnCyb23le62Tn4I9MRbUnKFIAk9y2lc9wMtR8/edit#heading=h.98eb2udzjo75
 
 Grundanforderungen:
-- X es startet unten Mitte und fÃÂÃÂ¤hrt nach oben
+- X es startet unten Mitte und fÃÂÃÂÃÂÃÂ¤hrt nach oben
 - X beim Start hat die Schlanke 3 Glieder
 - alle n Ticks kommt ein Glied dazu
-- jeden Tick fÃÂÃÂ¤hrt es 1 Feld (und gibt frei)
+- jeden Tick fÃÂÃÂÃÂÃÂ¤hrt es 1 Feld (und gibt frei)
 - auf User Input kann es rechts/links drehen
 - trifft Snake sich selbst ist Spiel aus
 - trifft Snake eine Wand ist Spiel aus
@@ -15,7 +15,7 @@ Nice to have
 - Es kann ein Labyrint von Datei als Level geladen werden
 - Geschwindigkeit
 - Schwierigkeitsgrad
-- Essen verlÃÂÃÂ¤ngert Schlange sofort
+- Essen verlÃÂÃÂÃÂÃÂ¤ngert Schlange sofort
 
 Domain
 - Snake
