@@ -103,10 +103,10 @@ def test_snake_advances_without_growing(snake):
 
 def test_snake_rotates(snake):
     snake.turn_right()
-    assert snake.direction == "E"
+    assert snake.d2 == Directions.EAST
     snake.turn_right()
-    assert snake.direction == "S"
+    assert snake.d2 == Directions.SOUTH
     snake.turn_right()
-    assert snake.direction == "W"
+    assert snake.d2 == Directions.WEST
     snake.turn_right()
-    assert snake.direction == "N"
+    assert snake.d2 == Directions.NORTH
