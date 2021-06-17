@@ -74,10 +74,10 @@ class Directions(Enum):
     @classmethod
     def turn_right(cls, direction):
         _RIGHT = {
-            NORTH: EAST,
-            EAST: SOUTH,
-            SOUTH: WEST,
-            WEST: NORTH,
+            cls.NORTH: cls.EAST,
+            cls.EAST: cls.SOUTH,
+            cls.SOUTH: cls.WEST,
+            cls.WEST: cls.NORTH,
         }
 
         return _RIGHT[direction]
