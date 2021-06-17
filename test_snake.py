@@ -36,7 +36,7 @@ class Snake:
     def __init__(self):
         self.direction = "N"
         self.position = (0, 0)
-        self.body = [1, 1, 1]
+        self.body = [(0, 0), 1, 1]
 
 
 def test_there_is_a_snake():
