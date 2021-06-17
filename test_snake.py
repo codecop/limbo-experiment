@@ -47,4 +47,4 @@ def test_there_is_a_snake():
     snake = Snake()
     assert snake.direction == "N"
     assert snake.position == (0, 0)
-    assert len(snake.body) == 3
+    assert snake.body == [(0, 0), (0, -1), (0, -2)]
