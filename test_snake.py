@@ -78,8 +78,8 @@ class Directions(Enum):
     }
 
     @classmethod
-    def turn_right(self, direction):
-        return self._RIGHT[direction]
+    def turn_right(cls, direction):
+        return cls._RIGHT[direction]
 
 
 @pytest.fixture
