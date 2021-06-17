@@ -72,6 +72,9 @@ class Directions(Enum):
     WEST = Direction("W", (-1, 0))
     _RIGHT = {
         NORTH: EAST,
+        EAST: SOUTH,
+        SOUTH: WEST,
+        WEST: NORTH,
     }
 
     @classmethod
