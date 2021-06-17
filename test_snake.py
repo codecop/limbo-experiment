@@ -21,7 +21,7 @@ Domain
 - Snake
   - X Direction
   - ? Length?
-  - X Head, Tail
+  - X Head, Tail (maybe more explicit)
   - X Advance
   - / Growth
 - Arena
