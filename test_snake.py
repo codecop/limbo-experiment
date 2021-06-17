@@ -48,7 +48,7 @@ class Snake:
         self.body = [new_head] + self.body[:-1]
 
     def turn_right(self):
-        foo = {"N": "E", "E": "S"}
+        foo = {"N": "E", "E": "S", "S": "W", "W": "N"}
         self.direction = foo[self.direction]
 
 
@@ -75,3 +75,7 @@ def test_snake_rotates(snake):
     assert snake.direction == "E"
     snake.turn_right()
     assert snake.direction == "S"
+    snake.turn_right()
+    assert snake.direction == "W"
+    snake.turn_right()
+    assert snake.direction == "N"
