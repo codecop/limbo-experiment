@@ -52,6 +52,15 @@ class Snake:
         self.direction = right_turns[self.direction]
 
 
+from enum import Enum
+
+
+class Color(Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+
+
 class Direction:
     def __init__(self, name="N", offset=(0, 1)):
         self.name = name
