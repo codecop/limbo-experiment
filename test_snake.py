@@ -53,13 +53,9 @@ class Snake:
         self.direction = Directions.turn_right(self.direction)
 
 
-class Direction:
-    def __init__(self, name="N", offset=(0, 1)):
-        self.name = name
-        self.offset = offset
+from collections import namedtuple
 
-    def offset(self):
-        return self.offset
+Direction = namedtuple("Direction", ["name", "offset"])
 
 
 class Directions(Enum):
