@@ -36,6 +36,7 @@ class Snake:
     def __init__(self):
         self.direction = "N"
         self.position = (0, 0)
+        self.body = []
 
 
 def test_there_is_a_snake():
@@ -43,3 +44,4 @@ def test_there_is_a_snake():
     snake = Snake()
     assert snake.direction == "N"
     assert snake.position == (0, 0)
+    assert isinstance(snake.body, list)
