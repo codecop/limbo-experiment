@@ -43,7 +43,8 @@ class Snake:
         return self.body[0]
 
     def advance(self):
-        self.body = [(0, 1)] + self.body[:-1]
+        new_head = (0, 1)
+        self.body = [new_head] + self.body[:-1]
 
 
 @pytest.fixture
