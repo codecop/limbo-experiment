@@ -108,3 +108,8 @@ def test_snake_rotates_right(snake):
 @pytest.mark.skip
 def test_snake_rotates_left():
     pass
+
+
+@pytest.mark.skip
+def test_snake_moves_in_any_direction():
+    pass
