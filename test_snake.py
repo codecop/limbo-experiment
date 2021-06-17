@@ -44,12 +44,11 @@ class Snake:
 
 
 @pytest.fixture
-def create_snake():
+def snake():
     return Snake()
 
 
-def test_there_is_a_snake(create_snake):
-    snake = create_snake
+def test_there_is_a_snake(snake):
     assert snake.direction == "N"
     assert snake.position == (0, 0)
     assert snake.body == [(0, 0), (0, -1), (0, -2)]
