@@ -35,7 +35,7 @@ Domain
 class Snake:
     def __init__(self):
         self.direction = "N"
-        self.body = [(0, 0), 1, 1]
+        self.body = [(0, 0), (0, -1), (0, -2)]
 
     @property
     def position(self):
