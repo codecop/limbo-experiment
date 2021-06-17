@@ -58,7 +58,7 @@ from collections import namedtuple
 Direction = namedtuple("Direction", ["name", "offset"])
 
 
-class Directions(Enum):
+class Directions:
     NORTH = Direction("N", (0, 1))
     SOUTH = Direction("S", (0, -1))
     EAST = Direction("E", (1, 0))
