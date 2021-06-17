@@ -1,0 +1,6 @@
+# Python PIP (package manager) required dependencies
+black
+pytest
+pytest-cov
+pylint
+rope

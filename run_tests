@@ -3,7 +3,7 @@
 if test -f "test_results.txt"; then
     rm test_results.txt
 fi
-./mvnw test > test_results.txt
+pytest > test_results.txt
 error=$?
 cat test_results.txt
 

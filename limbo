@@ -1,9 +1,0 @@
-#!/bin/sh
-
-# https://stackoverflow.com/a/5143914/104143
-if ! git diff-index --quiet HEAD --; then
-  ./tcr
-fi
-./git_merge
-
-exit 0
