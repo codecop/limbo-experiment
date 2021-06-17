@@ -15,7 +15,7 @@ Nice to have
 - Es kann ein Labyrint von Datei als Level geladen werden
 - Geschwindigkeit
 - Schwierigkeitsgrad
-- Essen verlÃÂ¤ngert Schlange sofort
+- Essen verlängert Schlange sofort
 
 Domain
 - Snake
