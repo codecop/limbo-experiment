@@ -52,6 +52,11 @@ class Snake:
         self.direction = right_turns[self.direction]
 
 
+class Direction:
+    def __init__(self, direction="N"):
+        self.direction = direction
+
+
 @pytest.fixture
 def snake():
     return Snake()
