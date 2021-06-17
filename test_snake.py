@@ -30,6 +30,8 @@ Domain
 - User Input
   - Turn
 """
+from enum import Enum
+
 import pytest
 
 
@@ -50,9 +52,6 @@ class Snake:
     def turn_right(self):
         right_turns = {"N": "E", "E": "S", "S": "W", "W": "N"}
         self.direction = right_turns[self.direction]
-
-
-from enum import Enum
 
 
 class Direction:
