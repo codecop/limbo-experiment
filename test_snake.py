@@ -37,7 +37,7 @@ import pytest
 
 class Snake:
     def __init__(self):
-        self.d2 = Directions.NORTH
+        self.direction = Directions.NORTH
         self.body = [(0, 0), (0, -1), (0, -2)]
 
     @property
@@ -45,12 +45,12 @@ class Snake:
         return self.body[0]
 
     def advance(self):
-        if self.d2 == Directions.NORTH:
+        if self.direction == Directions.NORTH:
             new_head = (self.position[0] + 0, self.position[1] + 1)
         self.body = [new_head] + self.body[:-1]
 
     def turn_right(self):
-        self.d2 = Directions.turn_right(self.d2)
+        self.direction = Directions.turn_right(self.direction)
 
 
 class Direction:
@@ -86,24 +86,24 @@ def snake():
 
 
 def test_there_is_a_snake(snake):
-    assert snake.d2 == Directions.NORTH
+    assert snake.direction == Directions.NORTH
     assert snake.position == (0, 0)
     assert snake.body == [(0, 0), (0, -1), (0, -2)]
 
 
 def test_snake_advances_without_growing(snake):
     snake.advance()
-    assert snake.d2 == Directions.NORTH
+    assert snake.direction == Directions.NORTH
     assert snake.position == (0, 1)
     assert snake.body == [(0, 1), (0, 0), (0, -1)]
 
 
 def test_snake_rotates(snake):
     snake.turn_right()
-    assert snake.d2 == Directions.EAST
+    assert snake.direction == Directions.EAST
     snake.turn_right()
-    assert snake.d2 == Directions.SOUTH
+    assert snake.direction == Directions.SOUTH
     snake.turn_right()
-    assert snake.d2 == Directions.WEST
+    assert snake.direction == Directions.WEST
     snake.turn_right()
-    assert snake.d2 == Directions.NORTH
+    assert snake.direction == Directions.NORTH
