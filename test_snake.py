@@ -53,6 +53,7 @@ class Snake:
     def turn_right(self):
         right_turns = {"N": "E", "E": "S", "S": "W", "W": "N"}
         self.direction = right_turns[self.direction]
+        # self.d2 = self.d2.right()
 
 
 class Direction:
