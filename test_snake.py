@@ -94,7 +94,7 @@ def test_snake_advances_without_growing(snake):
     assert snake.body == [(0, 1), (0, 0), (0, -1)]
 
 
-def test_snake_rotates(snake):
+def test_snake_rotates_right(snake):
     snake.turn_right()
     assert snake.direction == Directions.EAST
     snake.turn_right()
