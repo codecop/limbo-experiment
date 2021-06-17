@@ -48,8 +48,8 @@ class Snake:
         self.body = [new_head] + self.body[:-1]
 
     def turn_right(self):
-        foo = {"N": "E", "E": "S", "S": "W", "W": "N"}
-        self.direction = foo[self.direction]
+        right_turns = {"N": "E", "E": "S", "S": "W", "W": "N"}
+        self.direction = right_turns[self.direction]
 
 
 @pytest.fixture
