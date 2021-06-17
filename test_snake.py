@@ -30,6 +30,7 @@ Domain
 - User Input
   - Turn
 """
+import pytest
 
 
 class Snake:
@@ -42,12 +43,13 @@ class Snake:
         return self.body[0]
 
 
+@pytest.fixture
 def create_snake():
     return Snake()
 
 
-def test_there_is_a_snake():
-    snake = create_snake()
+def test_there_is_a_snake(create_snake):
+    snake = create_snake
     assert snake.direction == "N"
     assert snake.position == (0, 0)
     assert snake.body == [(0, 0), (0, -1), (0, -2)]
