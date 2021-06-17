@@ -61,6 +61,10 @@ class Color(Enum):
     BLUE = 3
 
 
+class Directions(Enum):
+    NORTH = 1
+
+
 class Direction:
     def __init__(self, name="N", offset=(0, 1)):
         self.name = name
