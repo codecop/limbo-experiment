@@ -55,12 +55,6 @@ class Snake:
 from enum import Enum
 
 
-class Color(Enum):
-    RED = 1
-    GREEN = 2
-    BLUE = 3
-
-
 class Direction:
     def __init__(self, name="N", offset=(0, 1)):
         self.name = name
@@ -71,7 +65,10 @@ class Direction:
 
 
 class Directions(Enum):
-    NORTH = Direction()
+    NORTH = Direction("N", (0, 1))
+    SOUTH = Direction("S", (0, -1))
+    EAST = Direction("E", (1, 0))
+    WEST = Direction("W", (-1, 0))
 
 
 @pytest.fixture
