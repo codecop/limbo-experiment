@@ -38,4 +38,5 @@ class Snake:
 
 def test_there_is_a_snake():
     # this is a change
-    assert Snake()
+    snake = Snake()
+    assert snake
