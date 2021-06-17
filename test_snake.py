@@ -42,6 +42,9 @@ class Snake:
     def position(self):
         return self.body[0]
 
+    def advance(self):
+        pass
+
 
 @pytest.fixture
 def snake():
@@ -55,4 +58,4 @@ def test_there_is_a_snake(snake):
 
 
 def test_snake_moves_without_growing(snake):
-    pass
+    snake.advance()
