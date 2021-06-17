@@ -31,7 +31,6 @@ Domain
   - Turn
 """
 from collections import namedtuple
-from enum import Enum
 
 import pytest
 
