@@ -32,5 +32,9 @@ Domain
 """
 
 
-def test_failing():
-    assert True
+class Snake(object):
+    pass
+
+
+def test_there_there_is():
+    assert Snake()
