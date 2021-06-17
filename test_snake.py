@@ -72,3 +72,5 @@ def test_snake_advances_without_growing(snake):
 def test_snake_rotates(snake):
     snake.turn_right()
     assert snake.direction == "E"
+    snake.turn_right()
+    assert snake.direction == "E"
