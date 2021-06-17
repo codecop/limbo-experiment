@@ -59,3 +59,4 @@ def test_there_is_a_snake(snake):
 
 def test_snake_moves_without_growing(snake):
     snake.advance()
+    assert snake.direction == "N"
