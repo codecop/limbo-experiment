@@ -45,11 +45,10 @@ class Snake:
         return self.body[0]
 
     def advance(self):
-        if self.direction == Directions.NORTH:
-            new_head = (
-                self.position[0] + self.direction.offset[0],
-                self.position[1] + self.direction.offset[1],
-            )
+        new_head = (
+            self.position[0] + self.direction.offset[0],
+            self.position[1] + self.direction.offset[1],
+        )
         self.body = [new_head] + self.body[:-1]
 
     def turn_right(self):
