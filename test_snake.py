@@ -48,7 +48,7 @@ class Snake:
         self.body = [new_head] + self.body[:-1]
 
     def turn_right(self):
-        pass
+        self.direction = "E"
 
 
 @pytest.fixture
@@ -71,3 +71,4 @@ def test_snake_advances_without_growing(snake):
 
 def test_snake_rotates(snake):
     snake.turn_right()
+    assert snake.direction == "E"
