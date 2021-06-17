@@ -61,3 +61,4 @@ def test_snake_moves_without_growing(snake):
     snake.advance()
     assert snake.direction == "N"
     assert snake.position == (0, 1)
+    assert snake.body == [(0, 1), (0, 0), (0, -1)]
