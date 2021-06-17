@@ -44,7 +44,7 @@ class Snake:
 
     def advance(self):
         if self.direction == "N":
-            new_head = (0, 1)
+            new_head = (self.position[0], self.position[1] + 1)
         self.body = [new_head] + self.body[:-1]
 
 
