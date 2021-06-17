@@ -33,7 +33,8 @@ Domain
 
 
 class Snake:
-    direction = "N"
+    def __init__(self):
+        self.direction = "N"
 
 
 def test_there_is_a_snake():
