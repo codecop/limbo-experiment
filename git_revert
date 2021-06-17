@@ -11,7 +11,7 @@ fi
 git commit -m "[tcr] broken tests"
 
 # last changes are a failure, remove them
-git checkout master -f
+git checkout tcr-in-practice -f
 git reset --hard
 echo -e "\e[0m"
 
