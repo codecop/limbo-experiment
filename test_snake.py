@@ -64,3 +64,7 @@ def test_snake_advances_without_growing(snake):
     assert snake.direction == "N"
     assert snake.position == (0, 1)
     assert snake.body == [(0, 1), (0, 0), (0, -1)]
+
+
+def test_snake_rotates(snake):
+    pass
