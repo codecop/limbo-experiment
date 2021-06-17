@@ -70,16 +70,17 @@ class Directions(Enum):
     SOUTH = Direction("S", (0, -1))
     EAST = Direction("E", (1, 0))
     WEST = Direction("W", (-1, 0))
-    _RIGHT = {
-        NORTH: EAST,
-        EAST: SOUTH,
-        SOUTH: WEST,
-        WEST: NORTH,
-    }
 
     @classmethod
     def turn_right(cls, direction):
-        return cls._RIGHT[direction]
+        _RIGHT = {
+            NORTH: EAST,
+            EAST: SOUTH,
+            SOUTH: WEST,
+            WEST: NORTH,
+        }
+
+        return _RIGHT[direction]
 
 
 @pytest.fixture
