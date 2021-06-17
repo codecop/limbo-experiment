@@ -38,6 +38,7 @@ import pytest
 class Snake:
     def __init__(self):
         self.direction = "N"
+        self.d2 = Directions.NORTH
         self.body = [(0, 0), (0, -1), (0, -2)]
 
     @property
@@ -45,7 +46,7 @@ class Snake:
         return self.body[0]
 
     def advance(self):
-        if self.direction == "N":
+        if self.direction == "N" or self.d2 == Directions.NORTH:
             new_head = (self.position[0] + 0, self.position[1] + 1)
         self.body = [new_head] + self.body[:-1]
 
