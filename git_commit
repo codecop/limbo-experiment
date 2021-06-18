@@ -1,10 +1,5 @@
 #!/bin/sh
 
-# remove result from successful test run
-if test -f "test_results.txt"; then
-    rm test_results.txt
-fi
-
 # commit
 git stage -A
 git commit -m "[tcr] working"

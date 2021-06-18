@@ -1,10 +1,6 @@
 #!/bin/sh
 
-if test -f "test_results.txt"; then
-    rm test_results.txt
-fi
-pytest > test_results.txt
+pytest
 error=$?
-cat test_results.txt
 
 exit $error
