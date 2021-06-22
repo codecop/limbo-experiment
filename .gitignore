@@ -157,7 +157,8 @@ Thumbs.db
 .settings
 
 # VS Code
-.vscode/
+.vscode/*
+!.vscode/settings.json
 
 # VirtualEnv Peter
 .virtual3/
