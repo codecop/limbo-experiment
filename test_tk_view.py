@@ -1,9 +1,9 @@
 # -*- coding: latin-1 -*-
 """
 TKinter implementation of domain view of game.
-* draw snake
-* draw arena
-  * draw wall
+* X draw snake
+* X draw arena
+  * X draw wall
 * update/redraw
 * ? key commands - könnte auch was anderes sein
 * extras
@@ -23,9 +23,7 @@ import pytest
 # registerGameTick, time
 # register cursorr keys callback
 
-# print_snake(points)
-# print_arena(points)
-
+# Skipped
 # registerViewModel(model)
 # update
 RADIUS = 5
