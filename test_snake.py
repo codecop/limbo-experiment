@@ -123,6 +123,12 @@ def test_snake_rotates_right(snake):
 def test_snake_rotates_left(snake):
     snake.turn_left()
     assert snake.direction == Directions.WEST
+    snake.turn_left()
+    assert snake.direction == Directions.SOUTH
+    snake.turn_left()
+    assert snake.direction == Directions.EAST
+    snake.turn_left()
+    assert snake.direction == Directions.NORTH
 
 
 @pytest.mark.skip
