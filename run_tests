@@ -1,6 +1,6 @@
 #!/bin/sh
 
-pytest
+pytest test*.py
 error=$?
 
 exit $error
