@@ -24,8 +24,8 @@ class Arena:
 
 @pytest.fixture
 def arena():
-    return Arena(3, 3)
+    return Arena(3, 4)
 
 
 def test_there_is_an_arena_with_walls(arena):
-    assert arena.walls()[0] == (-3, -3)
+    assert arena.walls()[0] == (-3, -4)
