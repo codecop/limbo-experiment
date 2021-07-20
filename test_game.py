@@ -42,10 +42,10 @@ class MockView:
         pass
 
     def register_left_command(self, callback):
-        pass
+        self.register_left_command_has_been_called = True
 
     def register_right_command(self, callback):
-        pass
+        self.register_right_command_has_been_called = True
 
     def schedule_tick(self, callback, millis):
         pass
