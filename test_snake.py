@@ -67,7 +67,10 @@ class Snake:
         self._grow += 1
 
     def has_crossed_itself(self):
-        return self.position in self.body[1:]
+        return self.position in self.newmethod425()
+
+    def newmethod425(self):
+        return self.body[1:]
 
 
 Direction = namedtuple("Direction", ["name", "offset"])
