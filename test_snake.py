@@ -160,15 +160,12 @@ def test_snake_moves_in_each_direction(snake):
     assert snake.position == (0, 1)
 
 
-def test_snake_grows(snake):
+def test_snake_grows_and_only_once(snake):
     snake.grow()
+
     snake.advance()
     assert snake.position == (0, 1)
     assert snake.body == [(0, 1), (0, 0), (0, -1), (0, -2)]
 
-
-def test_snake_grows_once(snake):
-    snake.grow()
-    snake.advance()
     snake.advance()
     assert len(snake.body) == 4
