@@ -1,7 +1,5 @@
 # -*- coding: latin-1 -*-
 """
-https://docs.google.com/document/d/1ac_DFYlnCyb23le62Tn4I9MRbUnKFIAk9y2lc9wMtR8/edit#heading=h.98eb2udzjo75
-
 Grundanforderungen:
 - X es startet unten Mitte und fährt nach oben
 - X beim Start hat die Schlange 3 Glieder
