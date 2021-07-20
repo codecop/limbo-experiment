@@ -20,12 +20,16 @@ import pytest
 
 
 class Game:
+    def __init__(self, view):
+        pass
+
     def _start(self):
         pass
 
 
 def test_foo():
-    pass
+    view = 1
+    game = Game(view)
 
 
 if __name__ == "__main__":
