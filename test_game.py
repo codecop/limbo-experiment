@@ -20,7 +20,7 @@ import pytest
 
 
 class Game:
-    def start(self):
+    def _start(self):
         pass
 
 
@@ -32,5 +32,4 @@ if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
     game = Game(view)
-    game.start()
     root.mainloop()
