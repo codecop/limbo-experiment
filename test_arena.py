@@ -57,6 +57,8 @@ def test_there_is_an_arena_with_walls_around(arena3x4):
     assert Point(3, 4) in arena3x4.walls()
     assert Point(3, -4) in arena3x4.walls()
 
+    # TODO assert length
+
 
 def test_if_areana_position_occupied(arena3x4):
     assert arena3x4.is_position_occupied(Point(3, -3)) is False
