@@ -45,7 +45,7 @@ class Snake:
     def __init__(self):
         self.direction = Directions.NORTH
         self.body = [Point(0, 0), Point(0, -1), Point(0, -2)]
-        self._grow = 0
+        self._times_to_grow = 0
 
     @property
     def position(self):
@@ -53,8 +53,8 @@ class Snake:
 
     def advance(self):
         advanced_position = self.position + self.direction.offset
-        if self._grow > 0:
-            self._grow -= 1
+        if self._times_to_grow > 0:
+            self._times_to_grow -= 1
             whole_body = slice(len(self.body))
             keep_tail = whole_body
         else:
@@ -70,7 +70,7 @@ class Snake:
         self.direction = Directions.turn_left(self.direction)
 
     def grow(self):
-        self._grow += 1
+        self._times_to_grow += 1
 
     def has_crossed_itself(self):
         return self._head() in self._tail()
