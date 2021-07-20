@@ -21,7 +21,6 @@ from tkinter_snippets.test_util import TkinterTestCase
 import pytest
 
 # registerGameTick, time
-# register cursorr keys callback
 
 # Skipped
 # registerViewModel(model)
@@ -65,6 +64,9 @@ class TkView:
     def register_right_command(self, callback):
         self.left_command = callback
         self.window.bind("<Right>", lambda event: callback())
+
+    def register_right_command(self, callback):
+        pass
 
 
 class TestTkView(TkinterTestCase):
