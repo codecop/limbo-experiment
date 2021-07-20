@@ -66,7 +66,7 @@ class Snake:
     def grow(self):
         self._grow += 1
 
-    def foo(self):
+    def has_crossed_itself(self):
         return False
 
 
@@ -179,19 +179,19 @@ def test_snake_has_hit_itself(snake):
     snake.grow()
     snake.grow()
 
-    assert snake.foo() is False
+    assert snake.has_crossed_itself() is False
 
     snake.turn_right()
     snake.advance()
 
-    assert snake.foo() is False
+    assert snake.has_crossed_itself() is False
 
     snake.turn_right()
     snake.advance()
 
-    assert snake.foo() is False
+    assert snake.has_crossed_itself() is False
 
     snake.turn_right()
     snake.advance()
 
-    assert snake.foo() is False
+    assert snake.has_crossed_itself() is False
