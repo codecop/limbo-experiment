@@ -56,7 +56,7 @@ class Snake:
         self.direction = Directions.turn_right(self.direction)
 
     def turn_left(self):
-        self.direction = Directions.turn_right(self.direction)
+        self.direction = Directions.turn_left(self.direction)
 
 
 Direction = namedtuple("Direction", ["name", "offset"])
