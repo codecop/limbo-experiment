@@ -8,7 +8,10 @@ Use
 * canvas.delete() to remove (and eventually redraw) it,
 * canvas.after() to schedule an action by adding a callback.
 
-See also http://tcl.tk/man/tcl8.7/TkCmd/canvas.html or https://web.archive.org/web/20200712234613/http://effbot.org/tkinterbook/canvas.htm.
+See also
+* http://tcl.tk/man/tcl8.7/TkCmd/canvas.html
+* or https://web.archive.org/web/20200712234613/http://effbot.org/tkinterbook/canvas.htm.
+* https://stackoverflow.com/questions/42418190/exit-a-tkinter-window-after-a-certain-time-period
 """
 from tkinter import Tk, Canvas
 
@@ -57,20 +60,30 @@ class Ball:
 
 
 if __name__ == "__main__":
+    radius = 10
+    n_balls = 10
+    height = 2 * radius * 2 * n_balls
+    color_move = "red"
+    color_redraw = "blue"
+
     root = Tk()
-    root.title("Moving Balls")
+    root.title("Animation (move={!r}, redraw={!r})".format(color_move, color_redraw))
     root.resizable(False, False)
-    canvas = Canvas(root, width=200, height=80)
+    root.after(5000, root.destroy)
+
+    canvas = Canvas(root, width=600, height=height)
     canvas.pack()
 
-    moving_ball_1 = Ball(canvas, 10, fill="red")
-    redrawing_ball_1 = Ball(canvas, 30, fill="yellow")
-    moving_ball_2 = Ball(canvas, 50, fill="blue")
-    redrawing_ball_2 = Ball(canvas, 70, fill="cyan")
+    y0 = radius
+    for i in range(n_balls):
+        yi = y0 + i * 2 * radius
+        ball = Ball(canvas, y=yi, fill=color_move)
+        ball.move_on_canvas()
 
-    moving_ball_1.move_on_canvas()
-    redrawing_ball_1.redraw_on_canvas()
-    moving_ball_2.move_on_canvas()
-    redrawing_ball_2.redraw_on_canvas()
+    y0 = yi + 2 * radius
+    for i in range(n_balls):
+        yi = y0 + i * 2 * radius
+        ball = Ball(canvas, y=yi, fill=color_redraw)
+        ball.redraw_on_canvas()
 
     root.mainloop()
