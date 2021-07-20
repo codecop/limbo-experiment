@@ -8,7 +8,6 @@ Domain
 - Arena
   - Obstacle
 """
-from _pytest.config import filter_traceback_for_conftest_import_failure
 from test_snake import Point
 
 import pytest
