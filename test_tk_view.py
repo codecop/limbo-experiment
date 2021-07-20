@@ -59,7 +59,8 @@ class TkView:
         self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, tags=tags)
 
     def register_left_command(self, callback):
-        pass
+        self.left_command = callback
+        self.window.bind("<Left>", lambda event: callback())
 
 
 class TestTkView(TkinterTestCase):
