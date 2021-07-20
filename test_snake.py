@@ -179,19 +179,19 @@ def test_snake_has_hit_itself(snake):
     snake.grow()
     snake.grow()
 
-    # assert snake.foo() it True
+    assert snake.foo() is False
 
     snake.turn_right()
     snake.advance()
 
-    # assert snake.foo() it True
+    # assert snake.foo() is False
 
     snake.turn_right()
     snake.advance()
 
-    # assert snake.foo() it True
+    # assert snake.foo() is False
 
     snake.turn_right()
     snake.advance()
 
-    # assert snake.foo() it True
+    # assert snake.foo() is True
