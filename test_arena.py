@@ -17,10 +17,11 @@ class Arena:
     def __init__(self, width, height):
         self._width = width
         self._height = height
+        self._walls = []
+
         self._build_wall()
 
     def _build_wall(self):
-        self._walls = []
         for x in range(-self._width, self._width + 1):
             for y in range(-self._height, self._height + 1):
                 self._walls.append((x, y))
