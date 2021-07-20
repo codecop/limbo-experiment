@@ -53,6 +53,9 @@ class TestTkView(TkinterTestCase):
         items = view.canvas.find_withtag("snake")
         assert 1 == len(items)
 
+        item = items[0]
+        assert [0, 0, 1, 1] == view.canvas.coords(item)
+
 
 if __name__ == "__main__":
     root = Tk()
