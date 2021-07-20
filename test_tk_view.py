@@ -39,6 +39,7 @@ class TkView:
         self.canvas = canvas
 
     def draw_snake(self, points):
+        point = points[0]
         self.canvas.create_rectangle(0, 0, 1, 1, fill="green", tags=("snake"))
 
 
@@ -49,7 +50,7 @@ class TestTkView(TkinterTestCase):
 
     def test_view_draws_snake(self):
         view = TkView(self.root)
-        view.draw_snake([(0, 0)])
+        view.draw_snake([Point(0, 0)])
         items = view.canvas.find_withtag("snake")
         assert 1 == len(items)
 
