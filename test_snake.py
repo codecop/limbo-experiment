@@ -8,7 +8,7 @@ Grundanforderungen:
 - X alle n Ticks kommt ein Glied dazu - von aussen gesteuert
 - X jeden Tick fährt es 1 Feld (und gibt frei)
 - X auf User Input kann es rechts/links drehen - von aussen gesteuert
-- trifft Snake sich selbst ist Spiel aus
+- X trifft Snake sich selbst ist Spiel aus - von aussen gesteuert
 - trifft Snake eine Wand ist Spiel aus
 - Rund um die Arena ist eine Wand
 
