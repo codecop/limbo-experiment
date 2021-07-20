@@ -94,10 +94,10 @@ Direction = namedtuple("Direction", ["name", "offset"])
 
 
 class Directions:
-    NORTH = Direction("N", (0, 1))
-    EAST = Direction("E", (1, 0))
-    SOUTH = Direction("S", (0, -1))
-    WEST = Direction("W", (-1, 0))
+    NORTH = Direction("N", Point(0, 1))
+    EAST = Direction("E", Point(1, 0))
+    SOUTH = Direction("S", Point(0, -1))
+    WEST = Direction("W", Point(-1, 0))
 
     @classmethod
     def turn_right(cls, direction):
@@ -129,15 +129,15 @@ def snake():
 
 def test_there_is_a_snake(snake):
     assert snake.direction == Directions.NORTH
-    assert snake.position == (0, 0)
-    assert snake.body == [(0, 0), (0, -1), (0, -2)]
+    assert snake.position == Point(0, 0)
+    assert snake.body == [Point(0, 0), Point(0, -1), Point(0, -2)]
 
 
 def test_snake_advances_without_growing(snake):
     snake.advance()
     assert snake.direction == Directions.NORTH
-    assert snake.position == (0, 1)
-    assert snake.body == [(0, 1), (0, 0), (0, -1)]
+    assert snake.position == Point(0, 1)
+    assert snake.body == [Point(0, 1), Point(0, 0), Point(0, -1)]
 
 
 def test_snake_rotates_right(snake):
