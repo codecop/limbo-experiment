@@ -15,7 +15,8 @@ import pytest
 
 class Arena:
     def __init__(self, width, height):
-        pass
+        self._width = width
+        self._height = height
 
     def walls(self):
         return [(-3, -3)]
