@@ -64,9 +64,9 @@ class TestTkView(TkinterTestCase):
 
     def test_view_draws_snake(self):
         view = TkView(self.root)
-        view.draw_snake([Point(0, 0)])
+        view.draw_snake([Point(0, 0), Point(1, 2)])
         items = view.canvas.find_withtag("snake")
-        assert 1 == len(items)
+        assert 2 == len(items)
 
         item = items[0]
         assert [45, 45, 55, 55] == view.canvas.coords(item)
