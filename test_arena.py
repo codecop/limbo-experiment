@@ -23,6 +23,9 @@ class Arena:
             for y in range(-self._height, self._height + 1):
                 self._walls.append((x, y))
 
+    def _createWalls(self):
+        pass
+
     def walls(self):
         return self._walls
 
