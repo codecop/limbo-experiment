@@ -45,10 +45,12 @@ class TkView:
 
     def draw_snake(self, points):
         point = points[0]
-        x0 = self._width / 2 - RADIUS
-        x1 = self._width / 2 + RADIUS
-        y0 = self._height / 2 - RADIUS
-        y1 = self._height / 2 + RADIUS
+        xcenter = self._width / 2
+        ycenter = self._height / 2
+        x0 = xcenter - RADIUS
+        x1 = xcenter + RADIUS
+        y0 = ycenter - RADIUS
+        y1 = ycenter + RADIUS
         self.canvas.create_rectangle(x0, y0, x1, y1, fill="green", tags=("snake"))
 
 
