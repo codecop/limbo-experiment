@@ -49,7 +49,7 @@ class TkView:
         x1 = self._width / 2 + RADIUS
         y0 = self._height / 2 - RADIUS
         y1 = self._height / 2 + RADIUS
-        self.canvas.create_rectangle(0, 0, 1, 1, fill="green", tags=("snake"))
+        self.canvas.create_rectangle(45, 45, 55, 55, fill="green", tags=("snake"))
 
 
 class TestTkView(TkinterTestCase):
@@ -64,7 +64,7 @@ class TestTkView(TkinterTestCase):
         assert 1 == len(items)
 
         item = items[0]
-        assert [0, 0, 1, 1] == view.canvas.coords(item)
+        assert [45, 45, 55, 55] == view.canvas.coords(item)
 
 
 if __name__ == "__main__":
