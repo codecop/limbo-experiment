@@ -52,7 +52,7 @@ def add_elementwise(x, y):
 class Snake:
     def __init__(self):
         self.direction = Directions.NORTH
-        self.body = [(0, 0), (0, -1), (0, -2)]
+        self.body = [Point(0, 0), (0, -1), (0, -2)]
         self._grow = 0
 
     @property
