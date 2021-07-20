@@ -55,7 +55,8 @@ class Snake:
             self._grow -= 1
             self.body = [advanced_position] + self.body
         else:
-            self.body = [advanced_position] + self.body[:-1]
+            all_but_last = slice(0, -1)
+            self.body = [advanced_position] + self.body[all_but_last]
 
     def turn_right(self):
         self.direction = Directions.turn_right(self.direction)
