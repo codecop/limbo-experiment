@@ -22,7 +22,6 @@ class Arena:
         for x in range(-self._width, self._width + 1):
             for y in range(-self._height, self._height + 1):
                 self._walls.append((x, y))
-        self._walls.append((-self._width, -self._height))
 
     def walls(self):
         return self._walls
