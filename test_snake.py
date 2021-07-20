@@ -157,3 +157,6 @@ def test_snake_moves_in_each_direction(snake):
 
 def test_snake_grows(snake):
     snake.grow()
+    snake.advance()
+    assert snake.position == (0, 1)
+    # assert snake.body == [(0, 1), (0, 0), (0, -1), (0, -2)]
