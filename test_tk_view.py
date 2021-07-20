@@ -66,6 +66,8 @@ class TkView:
         self.window.bind("<Right>", lambda event: callback())
 
     def schedule_tick(self, callback, millis):
+        # not TDD/TCR because cannot test TKinter scheduling
+
         pass
 
 
