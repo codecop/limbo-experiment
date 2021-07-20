@@ -30,12 +30,7 @@ import pytest
 # update
 
 
-@pytest.fixture
-def view():
-    return 1
-
-
-def test_view_draws_snake(view):
+def test_view_draws_snake():
     # view.draw_snake([(1,1), (2,1), (3,1)])
     # assertThatUiHasBluePixelAt(100,100)
     pass
