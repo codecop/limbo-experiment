@@ -19,7 +19,7 @@ class Arena:
         self._height = height
 
     def walls(self):
-        return [(-3, -3)]
+        return [(-self._width, -self._height)]
 
 
 @pytest.fixture
