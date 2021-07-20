@@ -96,6 +96,7 @@ class TestTkView(TkinterTestCase):
         view.register_left_command(callback_was_called)
 
         view.window.event_generate("<Left>")
+        self.update_gui()
         assert was_called is False
 
 
