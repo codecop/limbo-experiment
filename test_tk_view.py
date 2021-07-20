@@ -44,14 +44,14 @@ class TkView:
         self.canvas = canvas
 
     def draw_snake(self, points):
-        point = points[0]
-        xcenter = self._width / 2 + point.x * 2 * RADIUS
-        ycenter = self._height / 2 - point.y * 2 * RADIUS
-        x0 = xcenter - RADIUS
-        x1 = xcenter + RADIUS
-        y0 = ycenter - RADIUS
-        y1 = ycenter + RADIUS
-        self.canvas.create_rectangle(x0, y0, x1, y1, fill="green", tags=("snake"))
+        for point in points:
+            xcenter = self._width / 2 + point.x * 2 * RADIUS
+            ycenter = self._height / 2 - point.y * 2 * RADIUS
+            x0 = xcenter - RADIUS
+            x1 = xcenter + RADIUS
+            y0 = ycenter - RADIUS
+            y1 = ycenter + RADIUS
+            self.canvas.create_rectangle(x0, y0, x1, y1, fill="green", tags=("snake"))
 
 
 class TestTkView(TkinterTestCase):
