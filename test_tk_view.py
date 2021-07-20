@@ -45,9 +45,9 @@ class TkView:
 
     def draw_snake(self, points):
         for point in points:
-            self.draw_point(point)
+            self.draw_point(point, fill="green", tags=("snake"))
 
-    def draw_point(self, point, fill="green", tags=("snake")):
+    def draw_point(self, point, fill, tags):
         xcenter = self._width / 2 + point.x * 2 * RADIUS
         ycenter = self._height / 2 - point.y * 2 * RADIUS
         x0 = xcenter - RADIUS
