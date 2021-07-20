@@ -26,6 +26,9 @@ class Game:
     def left(self):
         pass
 
+    def right(self):
+        pass
+
     def start(self):
         pass
 
