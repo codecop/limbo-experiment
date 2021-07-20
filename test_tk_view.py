@@ -34,6 +34,9 @@ class TkView:
     def __init__(self, root):
         self.window = root
         self.window.title("Snake")
+        canvas = Canvas(root, width=100, height=100, background="white")
+        canvas.pack()
+        self.canvas = canvas
 
     def draw_snake(self, points):
         pass
