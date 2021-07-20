@@ -167,5 +167,6 @@ def test_snake_grows_and_only_once(snake):
     assert snake.position == (0, 1)
     assert snake.body == [(0, 1), (0, 0), (0, -1), (0, -2)]
 
+    # and it only grows once -> Code Smell second block in test
     snake.advance()
     assert len(snake.body) == 4
