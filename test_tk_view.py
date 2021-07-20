@@ -39,7 +39,7 @@ class TkView:
         self.canvas = canvas
 
     def draw_snake(self, points):
-        pass
+        self.canvas.create_rectangle(0, 0, 1, 1, fill="green", tags=("snake"))
 
 
 class TestTkView(TkinterTestCase):
@@ -51,8 +51,7 @@ class TestTkView(TkinterTestCase):
         view = TkView(self.root)
         view.draw_snake([(0, 0)])
         items = view.canvas.find_withtag("snake")
-        assert 0 == len(items)
-        # assertThatUiHasBluePixelAt(100,100)
+        assert 1 == len(items)
 
 
 if __name__ == "__main__":
