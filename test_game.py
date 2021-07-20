@@ -13,6 +13,16 @@ from test_tk_view import TkView
 
 import pytest
 
+# create game: create Arena, create Snake, View
+# right/left pressed
+# tick
+#
+# grow
+
+
+class Game:
+    pass
+
 
 def test_foo():
     pass
@@ -20,5 +30,6 @@ def test_foo():
 
 if __name__ == "__main__":
     root = Tk()
-    # view = TkView(root)
-    # root.mainloop()
+    view = TkView(root)
+    game = Game(view)
+    root.mainloop()
