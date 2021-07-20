@@ -62,6 +62,10 @@ class TkView:
         self.left_command = callback
         self.window.bind("<Left>", lambda event: callback())
 
+    def register_right_command(self, callback):
+        self.left_command = callback
+        self.window.bind("<Right>", lambda event: callback())
+
 
 class TestTkView(TkinterTestCase):
     def test_window_title_is_snake(self):
