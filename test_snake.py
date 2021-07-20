@@ -67,9 +67,12 @@ class Snake:
         self._grow += 1
 
     def has_crossed_itself(self):
-        return self.position in self.tail()
+        return self._head() in self._tail()
 
-    def tail(self):
+    def _head(self):
+        return self.position
+
+    def _tail(self):
         return self.body[1:]
 
 
