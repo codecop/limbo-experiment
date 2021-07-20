@@ -34,9 +34,7 @@ class Arena:
         return self._walls
 
     def is_position_occupied(self, position):
-        # return position in self._walls
-        # BUG FOUND!
-        return False
+        return position in self._walls
 
 
 @pytest.fixture
