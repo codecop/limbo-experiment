@@ -23,6 +23,9 @@ class Game:
     def __init__(self, view):
         self._view = view
 
+    def left(self):
+        pass
+
     def start(self):
         pass
 
