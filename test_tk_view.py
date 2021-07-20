@@ -51,4 +51,4 @@ class TestTkView(TkinterTestCase):
 if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
-    view.mainloop()
+    root.mainloop()
