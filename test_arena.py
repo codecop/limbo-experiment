@@ -13,5 +13,14 @@ from collections import namedtuple
 import pytest
 
 
-def test_foo():
+class Arena:
+    pass
+
+
+@pytest.fixture
+def arena():
+    return Arena()
+
+
+def test_foo(arena):
     pass
