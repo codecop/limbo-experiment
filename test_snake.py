@@ -67,6 +67,7 @@ class Snake:
         self._grow += 1
 
     def has_crossed_itself(self):
+        self.position in self.body[1:]
         return False
 
 
