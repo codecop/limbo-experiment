@@ -22,5 +22,6 @@ def arena():
     return Arena()
 
 
-def test_foo(arena):
+def test_there_is_an_arena_with_walls(arena):
+    # arena.walls()[0] == (-3,-3)
     pass
