@@ -55,6 +55,9 @@ class Snake:
     def turn_right(self):
         self.direction = Directions.turn_right(self.direction)
 
+    def turn_left(self):
+        self.direction = Directions.turn_right(self.direction)
+
 
 Direction = namedtuple("Direction", ["name", "offset"])
 
@@ -118,7 +121,7 @@ def test_snake_rotates_right(snake):
 
 
 def test_snake_rotates_left(snake):
-    snake.turn_right()
+    snake.turn_left()
     assert snake.direction == Directions.EAST
 
 
