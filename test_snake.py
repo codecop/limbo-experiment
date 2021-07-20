@@ -83,9 +83,9 @@ class Directions:
     def turn_left(cls, direction):
         _RIGHT = {
             cls.NORTH: cls.WEST,
-            cls.EAST: cls.SOUTH,
-            cls.SOUTH: cls.WEST,
-            cls.WEST: cls.NORTH,
+            cls.WEST: cls.SOUTH,
+            cls.SOUTH: cls.EAST,
+            cls.EAST: cls.NORTH,
         }
 
         return _RIGHT[direction]
