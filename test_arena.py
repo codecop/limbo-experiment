@@ -34,6 +34,7 @@ def arena3x4():
 
 def test_there_is_an_arena_with_walls_around(arena3x4):
     assert (-3, -4) in arena3x4.walls()
+    # whole left wall
     assert (-3, -3) in arena3x4.walls()
     assert (-3, -2) in arena3x4.walls()
     assert (-3, -1) in arena3x4.walls()
@@ -41,7 +42,8 @@ def test_there_is_an_arena_with_walls_around(arena3x4):
     assert (-3, 1) in arena3x4.walls()
     assert (-3, 2) in arena3x4.walls()
     assert (-3, 3) in arena3x4.walls()
-    assert (-3, 4) in arena3x4.walls()
 
+    # other corners
+    assert (-3, 4) in arena3x4.walls()
     assert (3, 4) in arena3x4.walls()
     assert (3, -4) in arena3x4.walls()
