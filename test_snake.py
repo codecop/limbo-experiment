@@ -66,6 +66,9 @@ class Snake:
     def grow(self):
         self._grow += 1
 
+    def foo(self):
+        return False
+
 
 Direction = namedtuple("Direction", ["name", "offset"])
 
