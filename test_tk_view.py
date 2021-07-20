@@ -3,14 +3,14 @@
 TKinter implementation of domain view of game.
 * draw snake
 * draw arena
-    * draw wall
+  * draw wall
 * update/redraw
 * ? key commands - könnte auch was anderes sein
 * extras
-    * game over state
-    * display score
-    * start new game
-    * Tick speed
+  * game over state
+  * display score
+  * start new game
+  * Tick speed
 * "Game Loop" = tick wird scheduled
 """
 from test_snake import Point
