@@ -1,8 +1,8 @@
 # -*- coding: latin-1 -*-
 """
 Grundanforderungen:
-- trifft Snake eine Wand ist Spiel aus
-- Rund um die Arena ist eine Wand
+- X trifft Snake eine Wand ist Spiel aus
+- x Rund um die Arena ist eine Wand
 
 Domain
 - Arena
