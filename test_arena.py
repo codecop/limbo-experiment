@@ -8,7 +8,7 @@ Domain
 - Arena
   - Obstacle
 """
-from collections import namedtuple
+from test_snake import Point
 
 import pytest
 
