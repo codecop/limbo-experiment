@@ -7,7 +7,7 @@ Grundanforderungen:
 - X beim Start hat die Schlange 3 Glieder
 - alle n Ticks kommt ein Glied dazu
 - jeden Tick fährt es 1 Feld (und gibt frei)
-- auf User Input kann es rechts/links drehen
+- X auf User Input kann es rechts/links drehen
 - trifft Snake sich selbst ist Spiel aus
 - trifft Snake eine Wand ist Spiel aus
 - Rund um die Arena ist eine Wand
@@ -150,3 +150,7 @@ def test_snake_moves_in_each_direction(snake):
     snake.turn_right()
     snake.advance()
     assert snake.position == (0, 1)
+
+
+def test_snake_grows(snake):
+    pass
