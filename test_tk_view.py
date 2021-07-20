@@ -37,8 +37,8 @@ def test_view_draws_snake():
 
 
 class TkView:
-    def __init__(self) -> None:
-        pass
+    def __init__(self, root):
+        self.window = root
 
 
 class TestTkView(TkinterTestCase):
