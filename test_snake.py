@@ -41,14 +41,6 @@ class Point(namedtuple("Point", ["x", "y"])):
         return Point(self.x + other.x, self.y + other.y)
 
 
-def add_elementwise(x, y):
-    z = []
-    for xi, yi in zip(x, y):
-        zi = xi + yi
-        z.append(zi)
-    return tuple(z)
-
-
 class Snake:
     def __init__(self):
         self.direction = Directions.NORTH
