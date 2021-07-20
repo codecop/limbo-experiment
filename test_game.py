@@ -17,6 +17,7 @@ import pytest
 # right/left pressed
 # tick = draw on view
 # grow
+# game ended!
 
 
 class Game:
@@ -58,7 +59,7 @@ class MockView:
 
 def test_game_is_created_registers_keys():
     view = MockView()
-    game = Game(view)
+    Game(view)
     assert view.register_left_command_has_been_called is True
     assert view.register_right_command_has_been_called is True
 
