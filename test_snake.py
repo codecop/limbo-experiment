@@ -173,4 +173,22 @@ def test_snake_grows_and_only_once(snake):
 
 
 def test_snake_has_hit_itself(snake):
-    pass
+    snake.grow()
+    snake.grow()
+
+    # assert snake.foo() it True
+
+    snake.turn_right()
+    snake.advance()
+
+    # assert snake.foo() it True
+
+    snake.turn_right()
+    snake.advance()
+
+    # assert snake.foo() it True
+
+    snake.turn_right()
+    snake.advance()
+
+    # assert snake.foo() it True
