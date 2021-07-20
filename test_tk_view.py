@@ -58,6 +58,9 @@ class TkView:
         y1 = ycenter + RADIUS
         self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, tags=tags)
 
+    def register_left_command(self, callback):
+        pass
+
 
 class TestTkView(TkinterTestCase):
     def test_window_title_is_snake(self):
@@ -88,6 +91,8 @@ class TestTkView(TkinterTestCase):
 
         def callback_was_called():
             was_called = True
+
+        view.register_left_command(callback_was_called)
 
         view.window.event_generate("<Left>")
         assert was_called is False
