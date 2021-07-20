@@ -94,7 +94,6 @@ class TestTkView(TkinterTestCase):
             self.was_called = True
 
         view.register_left_command(callback_was_called)
-
         view.window.event_generate("<Left>")
 
         assert self.was_called is True
