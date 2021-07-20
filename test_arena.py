@@ -19,13 +19,12 @@ class Arena:
         self._height = height
 
         self._buildWall()
+
+    def _buildWall(self):
         self._walls = []
         for x in range(-self._width, self._width + 1):
             for y in range(-self._height, self._height + 1):
                 self._walls.append((x, y))
-
-    def _buildWall(self):
-        pass
 
     def walls(self):
         return self._walls
