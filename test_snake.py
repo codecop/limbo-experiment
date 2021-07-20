@@ -189,7 +189,7 @@ def test_snake_has_hit_itself(snake):
     snake.turn_right()
     snake.advance()
 
-    # assert snake.foo() is False
+    assert snake.foo() is False
 
     snake.turn_right()
     snake.advance()
