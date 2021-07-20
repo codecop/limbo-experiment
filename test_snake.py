@@ -82,7 +82,7 @@ class Directions:
     @classmethod
     def turn_left(cls, direction):
         _RIGHT = {
-            cls.NORTH: cls.EAST,
+            cls.NORTH: cls.WEST,
             cls.EAST: cls.SOUTH,
             cls.SOUTH: cls.WEST,
             cls.WEST: cls.NORTH,
@@ -122,7 +122,7 @@ def test_snake_rotates_right(snake):
 
 def test_snake_rotates_left(snake):
     snake.turn_left()
-    assert snake.direction == Directions.EAST
+    assert snake.direction == Directions.WEST
 
 
 @pytest.mark.skip
