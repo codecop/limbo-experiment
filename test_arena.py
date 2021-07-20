@@ -8,6 +8,7 @@ Domain
 - Arena
   - Obstacle
 """
+from _pytest.config import filter_traceback_for_conftest_import_failure
 from test_snake import Point
 
 import pytest
@@ -30,6 +31,8 @@ class Arena:
         return self._walls
 
     def is_position_occupied(self, position):
+        # return position in self._walls
+        # BUG FOUND!
         return False
 
 
