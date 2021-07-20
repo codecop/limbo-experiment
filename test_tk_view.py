@@ -51,7 +51,7 @@ class TestTkView(TkinterTestCase):
         view = TkView(self.root)
         view.draw_snake([(0, 0)])
         items = view.canvas.find_withtag("snake")
-        # assert 1 == len(items)
+        assert 0 == len(items)
         # assertThatUiHasBluePixelAt(100,100)
 
 
