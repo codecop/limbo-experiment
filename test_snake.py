@@ -53,11 +53,11 @@ class Snake:
         )
         if self._grow > 0:
             self._grow -= 1
-            all_ = slice(len(self.body))
-            keep_tail = all_
+            whole_body = slice(len(self.body))
+            keep_tail = whole_body
         else:
-            all_but_last = slice(0, -1)
-            keep_tail = all_but_last
+            whole_body_but_last_element = slice(0, -1)
+            keep_tail = whole_body_but_last_element
 
         self.body = [advanced_position] + self.body[keep_tail]
 
