@@ -75,7 +75,12 @@ class TestTkView(TkinterTestCase):
         assert 1 == len(items)
 
         item = items[0]
-        # assert [45 + 2*RADIUS, 45 - 4*RADIUS, 55 + 2*RADIUS, 55 - 4*RADIUS] == view.canvas.coords(item)
+        assert [
+            45 + 2 * RADIUS,
+            45 - 4 * RADIUS,
+            55 + 2 * RADIUS,
+            55 - 4 * RADIUS,
+        ] == view.canvas.coords(item)
 
 
 if __name__ == "__main__":
