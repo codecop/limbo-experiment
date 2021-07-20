@@ -49,7 +49,7 @@ class TkView:
         x1 = self._width / 2 + RADIUS
         y0 = self._height / 2 - RADIUS
         y1 = self._height / 2 + RADIUS
-        self.canvas.create_rectangle(45, 45, 55, 55, fill="green", tags=("snake"))
+        self.canvas.create_rectangle(x0, y0, x1, y1, fill="green", tags=("snake"))
 
 
 class TestTkView(TkinterTestCase):
