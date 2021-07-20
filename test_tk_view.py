@@ -46,3 +46,9 @@ class TestTkView(TkinterTestCase):
     def test_window_title_is_snake(self):
         view = TkView(self.root)
         assert view.window.title() == "Snake"
+
+
+if __name__ == "__main__":
+    root = Tk()
+    view = TkView(root)
+    view.mainloop()
