@@ -131,7 +131,7 @@ def test_snake_rotates_left(snake):
     assert snake.direction == Directions.NORTH
 
 
-def test_snake_moves_in_any_direction(snake):
+def test_snake_moves_in_each_direction(snake):
     snake.advance()
     assert snake.position == (0, 1)
 
