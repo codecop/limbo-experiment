@@ -7,8 +7,8 @@ Grundanforderungen:
 - X jeden Tick fährt es 1 Feld (und gibt frei)
 - X auf User Input kann es rechts/links drehen - von aussen gesteuert
 - X trifft Snake sich selbst ist Spiel aus - von aussen gesteuert
-- trifft Snake eine Wand ist Spiel aus
-- Rund um die Arena ist eine Wand
+- X trifft Snake eine Wand ist Spiel aus - von aussen gesteuert
+- X Rund um die Arena ist eine Wand
 
 Nice to have
 - Es kann ein Labyrint von Datei als Level geladen werden
@@ -22,10 +22,12 @@ Domain
   - ? Length?
   - X Head, Tail (maybe more explicit)
   - X Advance
-  - / Growth
+  - X Growth
 - Arena
   - Obstacle
-- Tick
+- Game?
+  - Game Loop
+  - Tick
 - User Input
   - Turn
 """
