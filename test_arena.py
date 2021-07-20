@@ -24,5 +24,4 @@ def arena():
 
 
 def test_there_is_an_arena_with_walls(arena):
-    pass
-    # assert arena.walls()[0] == (-3,-3)
+    assert arena.walls()[0] == (-3, -3)
