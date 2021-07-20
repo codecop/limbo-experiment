@@ -76,6 +76,17 @@ class Directions:
 
         return _RIGHT[direction]
 
+    @classmethod
+    def turn_left(cls, direction):
+        _RIGHT = {
+            cls.NORTH: cls.EAST,
+            cls.EAST: cls.SOUTH,
+            cls.SOUTH: cls.WEST,
+            cls.WEST: cls.NORTH,
+        }
+
+        return _RIGHT[direction]
+
 
 @pytest.fixture
 def snake():
