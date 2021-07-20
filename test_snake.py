@@ -149,3 +149,4 @@ def test_snake_moves_in_any_direction(snake):
 
     snake.turn_right()
     snake.advance()
+    assert snake.position == (0, 1)
