@@ -53,8 +53,7 @@ class Snake:
 
     def advance(self):
         advanced_position = self.position + self.direction.offset
-        newvariable164 = self._times_to_grow > 0
-        if newvariable164:
+        if self._times_to_grow > 0:
             self._times_to_grow -= 1
             whole_body = slice(len(self.body))
             keep_tail = whole_body
