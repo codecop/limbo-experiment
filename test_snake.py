@@ -47,6 +47,7 @@ class Snake:
         return self.body[0]
 
     def advance(self):
+        # TODO: extend position to support +/-
         advanced_position = (
             self.position[0] + self.direction.offset[0],
             self.position[1] + self.direction.offset[1],
