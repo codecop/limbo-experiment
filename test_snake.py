@@ -67,8 +67,7 @@ class Snake:
         self._grow += 1
 
     def has_crossed_itself(self):
-        self.position in self.body[1:]
-        return False
+        return self.position in self.body[1:]
 
 
 Direction = namedtuple("Direction", ["name", "offset"])
@@ -195,4 +194,4 @@ def test_snake_has_hit_itself(snake):
     snake.turn_right()
     snake.advance()
 
-    assert snake.has_crossed_itself() is False
+    assert snake.has_crossed_itself() is True
