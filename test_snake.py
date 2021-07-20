@@ -53,7 +53,8 @@ class Snake:
         )
         if self._grow > 0:
             self._grow -= 1
-            self.body = [advanced_position] + self.body
+            all = slice(len(self.body))
+            self.body = [advanced_position] + self.body[all]
         else:
             all_but_last = slice(0, -1)
             self.body = [advanced_position] + self.body[all_but_last]
