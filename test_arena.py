@@ -29,6 +29,9 @@ class Arena:
     def walls(self):
         return self._walls
 
+    def is_position_occupied(self):
+        return False
+
 
 @pytest.fixture
 def arena3x4():
