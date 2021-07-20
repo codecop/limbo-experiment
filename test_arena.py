@@ -14,7 +14,8 @@ import pytest
 
 
 class Arena:
-    pass
+    def walls(self):
+        return [(-3, -3)]
 
 
 @pytest.fixture
@@ -23,5 +24,5 @@ def arena():
 
 
 def test_there_is_an_arena_with_walls(arena):
-    # arena.walls()[0] == (-3,-3)
     pass
+    # assert arena.walls()[0] == (-3,-3)
