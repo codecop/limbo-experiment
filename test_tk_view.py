@@ -65,7 +65,7 @@ class TkView:
         self.left_command = callback
         self.window.bind("<Right>", lambda event: callback())
 
-    def register_right_command(self, callback):
+    def schedule_tick(self, callback, millis):
         pass
 
 
