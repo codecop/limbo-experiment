@@ -22,6 +22,7 @@ import pytest
 class Game:
     def __init__(self, view):
         self._view = view
+        view.register_left_command(self.left)
 
     def left(self):
         pass
