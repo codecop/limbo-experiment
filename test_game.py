@@ -46,9 +46,6 @@ class MockView:
     def draw_arena(self, points):
         pass
 
-    def draw_point(self, point, fill, tags):
-        pass
-
     def register_left_command(self, callback):
         self.register_left_command_has_been_called = True
 
