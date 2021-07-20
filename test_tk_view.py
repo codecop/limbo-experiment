@@ -81,7 +81,9 @@ class TestTkView(TkinterTestCase):
             55 - 4 * RADIUS,
         ] == view.canvas.coords(item)
 
-    def test_(self):
+    def test_command_keys(self):
+        view = TkView(self.root)
+        view.window.event_generate("<Left>")
         pass
 
 
