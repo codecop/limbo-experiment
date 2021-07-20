@@ -35,6 +35,9 @@ class TkView:
         self.window = root
         self.window.title("Snake")
 
+    def draw_snake(self, points):
+        pass
+
 
 class TestTkView(TkinterTestCase):
     def test_window_title_is_snake(self):
