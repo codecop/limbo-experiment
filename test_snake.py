@@ -47,15 +47,15 @@ class Snake:
         return self.body[0]
 
     def advance(self):
-        new_head = (
+        advanced_position = (
             self.position[0] + self.direction.offset[0],
             self.position[1] + self.direction.offset[1],
         )
         if self._grow > 0:
             self._grow -= 1
-            self.body = [new_head] + self.body
+            self.body = [advanced_position] + self.body
         else:
-            self.body = [new_head] + self.body[:-1]
+            self.body = [advanced_position] + self.body[:-1]
 
     def turn_right(self):
         self.direction = Directions.turn_right(self.direction)
