@@ -52,6 +52,7 @@ class Snake:
             self.position[1] + self.direction.offset[1],
         )
         if self._grow > 0:
+            # self._grow -= 1
             self.body = [new_head] + self.body
         else:
             self.body = [new_head] + self.body[:-1]
