@@ -97,7 +97,6 @@ class TestTkView(TkinterTestCase):
 
         view.window.event_generate("<Left>")
 
-        # self.update_gui()
         assert self.was_called is True
 
 
