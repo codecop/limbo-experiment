@@ -36,6 +36,11 @@ from collections import namedtuple
 import pytest
 
 
+class Point(namedtuple("Point", ["x", "y"])):
+    def __add__(self, other):
+        return type(self)(self.x + other.x, self.y + other.y)
+
+
 def add_elementwise(x, y):
     z = []
     for xi, yi in zip(x, y):
