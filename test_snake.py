@@ -64,8 +64,8 @@ Direction = namedtuple("Direction", ["name", "offset"])
 
 class Directions:
     NORTH = Direction("N", (0, 1))
-    SOUTH = Direction("S", (0, -1))
     EAST = Direction("E", (1, 0))
+    SOUTH = Direction("S", (0, -1))
     WEST = Direction("W", (-1, 0))
 
     @classmethod
@@ -131,6 +131,6 @@ def test_snake_rotates_left(snake):
     assert snake.direction == Directions.NORTH
 
 
-@pytest.mark.skip
-def test_snake_moves_in_any_direction():
-    pass
+def test_snake_moves_in_any_direction(snake):
+    snake.advance()
+    assert snake.position == (0, 1)
