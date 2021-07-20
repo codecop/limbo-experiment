@@ -164,23 +164,23 @@ def test_snake_rotates_left(snake):
 
 def test_snake_moves_in_each_direction(snake):
     snake.advance()
-    assert snake.position == (0, 1)
+    assert snake.position == Point(0, 1)
 
     snake.turn_right()
     snake.advance()
-    assert snake.position == (1, 1)
+    assert snake.position == Point(1, 1)
 
     snake.turn_right()
     snake.advance()
-    assert snake.position == (1, 0)
+    assert snake.position == Point(1, 0)
 
     snake.turn_right()
     snake.advance()
-    assert snake.position == (0, 0)
+    assert snake.position == Point(0, 0)
 
     snake.turn_right()
     snake.advance()
-    assert snake.position == (0, 1)
+    assert snake.position == Point(0, 1)
 
 
 def test_snake_grows_and_only_once(snake):
