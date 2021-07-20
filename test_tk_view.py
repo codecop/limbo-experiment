@@ -30,12 +30,6 @@ import pytest
 # update
 
 
-def test_view_draws_snake():
-    # view.draw_snake([(1,1), (2,1), (3,1)])
-    # assertThatUiHasBluePixelAt(100,100)
-    pass
-
-
 class TkView:
     def __init__(self, root):
         self.window = root
@@ -46,6 +40,12 @@ class TestTkView(TkinterTestCase):
     def test_window_title_is_snake(self):
         view = TkView(self.root)
         assert view.window.title() == "Snake"
+
+    def test_view_draws_snake(self):
+        view = TkView(self.root)
+        # view.draw_snake([(1,1), (2,1), (3,1)])
+        # assertThatUiHasBluePixelAt(100,100)
+        pass
 
 
 if __name__ == "__main__":
