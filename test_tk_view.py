@@ -36,8 +36,13 @@ def test_view_draws_snake():
     pass
 
 
+class TkView:
+    def __init__(self) -> None:
+        pass
+
+
 class TestTkView(TkinterTestCase):
     def test_window_title_is_snake(self):
-        # view = View(self.root)
+        # view = TkView(self.root)
         # assert view.window.title == "Snake"
         pass
