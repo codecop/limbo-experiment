@@ -171,7 +171,7 @@ def test_snake_grows_once(snake):
     snake.grow()
     snake.advance()
     snake.advance()
-    # assert len(snake.body) == 4
+    assert len(snake.body) == 4
 
 
 # was passier bei 2x grow?
