@@ -23,6 +23,7 @@ class Game:
     def __init__(self, view):
         self._view = view
         view.register_left_command(self.left)
+        view.register_right_command(self.right)
 
     def left(self):
         pass
