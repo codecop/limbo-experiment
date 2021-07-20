@@ -23,7 +23,7 @@ class Game:
     def __init__(self, view):
         self._view = view
 
-    def _start(self):
+    def start(self):
         pass
 
 
@@ -36,4 +36,5 @@ if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
     game = Game(view)
+    game.start()
     root.mainloop()
