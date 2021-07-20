@@ -88,16 +88,17 @@ class TestTkView(TkinterTestCase):
     def test_command_keys(self):
         view = TkView(self.root)
 
-        was_called = False
+        self.was_called = False
 
         def callback_was_called():
-            was_called = True
+            self.was_called = True
 
         view.register_left_command(callback_was_called)
 
         view.window.event_generate("<Left>")
+
         self.update_gui()
-        assert was_called is False
+        assert self.was_called is True
 
 
 if __name__ == "__main__":
