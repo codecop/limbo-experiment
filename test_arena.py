@@ -18,6 +18,7 @@ class Arena:
         self._width = width
         self._height = height
 
+        self._buildWall()
         self._walls = []
         for x in range(-self._width, self._width + 1):
             for y in range(-self._height, self._height + 1):
