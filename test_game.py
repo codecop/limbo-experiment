@@ -21,7 +21,7 @@ import pytest
 
 class Game:
     def __init__(self, view):
-        pass
+        self._view = view
 
     def _start(self):
         pass
