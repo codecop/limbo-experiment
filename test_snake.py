@@ -60,7 +60,7 @@ class Snake:
         return self.body[0]
 
     def advance(self):
-        advanced_position = add_elementwise(self.position, self.direction.offset)
+        advanced_position = self.position + self.direction.offset
         if self._grow > 0:
             self._grow -= 1
             whole_body = slice(len(self.body))
