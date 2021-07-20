@@ -5,9 +5,9 @@ https://docs.google.com/document/d/1ac_DFYlnCyb23le62Tn4I9MRbUnKFIAk9y2lc9wMtR8/
 Grundanforderungen:
 - X es startet unten Mitte und fährt nach oben
 - X beim Start hat die Schlange 3 Glieder
-- alle n Ticks kommt ein Glied dazu
-- jeden Tick fährt es 1 Feld (und gibt frei)
-- X auf User Input kann es rechts/links drehen
+- X alle n Ticks kommt ein Glied dazu - von aussen gesteuert
+- X jeden Tick fährt es 1 Feld (und gibt frei)
+- X auf User Input kann es rechts/links drehen - von aussen gesteuert
 - trifft Snake sich selbst ist Spiel aus
 - trifft Snake eine Wand ist Spiel aus
 - Rund um die Arena ist eine Wand
