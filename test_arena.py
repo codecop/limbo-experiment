@@ -17,7 +17,9 @@ class Arena:
     def __init__(self, width, height):
         self._width = width
         self._height = height
-        self._walls = [(-self._width, -self._height)]
+
+        self._walls = []
+        self._walls.append((-self._width, -self._height))
 
     def walls(self):
         return self._walls
