@@ -40,6 +40,7 @@ class Snake:
     def __init__(self):
         self.direction = Directions.NORTH
         self.body = [(0, 0), (0, -1), (0, -2)]
+        self._grow = 0
 
     @property
     def position(self):
@@ -59,6 +60,7 @@ class Snake:
         self.direction = Directions.turn_left(self.direction)
 
     def grow(self):
+        self._grow += 1
         pass
 
 
