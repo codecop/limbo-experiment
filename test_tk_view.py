@@ -46,7 +46,7 @@ class TestTkView(TkinterTestCase):
 
     def test_view_draws_snake(self):
         view = TkView(self.root)
-        # view.draw_snake([(0, 0)])
+        view.draw_snake([(0, 0)])
         # assertThatUiHasBluePixelAt(100,100)
         pass
 
