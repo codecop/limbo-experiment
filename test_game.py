@@ -47,8 +47,8 @@ class MockView:
         pass
 
 
-def test_foo():
-    view = 1
+def test_game_is_created_registers_keys():
+    view = MockView()
     game = Game(view)
 
 
