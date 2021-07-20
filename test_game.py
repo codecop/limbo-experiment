@@ -27,6 +27,10 @@ class Game:
         pass
 
 
+class MockView:
+    pass
+
+
 def test_foo():
     view = 1
     game = Game(view)
