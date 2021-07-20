@@ -28,6 +28,10 @@ class Game:
 
 
 class MockView:
+    def __init__(self):
+        self.register_left_command_has_been_called = False
+        self.register_right_command_has_been_called = False
+
     def draw_snake(self, points):
         pass
 
