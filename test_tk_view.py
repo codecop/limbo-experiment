@@ -67,7 +67,7 @@ class TkView:
 
     def schedule_tick(self, callback, millis):
         # not TDD/TCR because cannot test TKinter scheduling
-
+        # self.window.after(, millis)
         pass
 
 
