@@ -58,6 +58,9 @@ class Snake:
     def turn_left(self):
         self.direction = Directions.turn_left(self.direction)
 
+    def grow(self):
+        pass
+
 
 Direction = namedtuple("Direction", ["name", "offset"])
 
@@ -153,4 +156,4 @@ def test_snake_moves_in_each_direction(snake):
 
 
 def test_snake_grows(snake):
-    pass
+    snake.grow()
