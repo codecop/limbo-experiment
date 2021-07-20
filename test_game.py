@@ -28,7 +28,23 @@ class Game:
 
 
 class MockView:
-    pass
+    def draw_snake(self, points):
+        pass
+
+    def draw_arena(self, points):
+        pass
+
+    def draw_point(self, point, fill, tags):
+        pass
+
+    def register_left_command(self, callback):
+        pass
+
+    def register_right_command(self, callback):
+        pass
+
+    def schedule_tick(self, callback, millis):
+        pass
 
 
 def test_foo():
