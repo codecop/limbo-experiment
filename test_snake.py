@@ -51,6 +51,9 @@ class Snake:
             self.position[0] + self.direction.offset[0],
             self.position[1] + self.direction.offset[1],
         )
+        if self._grow > 0:
+            pass
+
         self.body = [new_head] + self.body[:-1]
 
     def turn_right(self):
