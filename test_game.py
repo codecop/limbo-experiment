@@ -13,10 +13,9 @@ from test_tk_view import TkView
 
 import pytest
 
-# create game: create Arena, create Snake, View
+# create game: create Arena, create Snake, get View
 # right/left pressed
-# tick
-#
+# tick = draw on view
 # grow
 
 
