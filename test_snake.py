@@ -170,3 +170,7 @@ def test_snake_grows_and_only_once(snake):
     # and it only grows once -> Code Smell second block in test
     snake.advance()
     assert len(snake.body) == 4
+
+
+def test_snake_has_hit_itself(snake):
+    pass
