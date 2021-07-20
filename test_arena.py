@@ -36,6 +36,9 @@ class Arena:
     def is_position_occupied(self, position):
         return position in self._walls
 
+    # TODO place_obstacle
+    # TODO apple to eat
+
 
 @pytest.fixture
 def arena3x4():
