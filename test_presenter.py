@@ -6,6 +6,7 @@ Grundanforderungen:
 - X trifft Snake sich selbst ist Spiel aus - von aussen gesteuert
 - X trifft Snake eine Wand ist Spiel aus - von aussen gesteuert
 """
+from test_snake import Point
 from test_game import Game, TurnCommand
 from tkinter import Tk
 from test_tk_view import TkView
@@ -71,9 +72,9 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 
 def test_presenter_draws_snake(viewGamePresenter):
     view, game, presenter = viewGamePresenter
-    # game.snake =
+    game.snake = lambda: [Point(2, 3)]
     presenter._loop()
-    # view.draw_snake.assert_called_with([Point(2,3)]])
+    # view.draw_snake.assert_called_with([Point(2,3)])
 
 
 if __name__ == "__main__":
