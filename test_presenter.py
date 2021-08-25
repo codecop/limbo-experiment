@@ -7,8 +7,6 @@ Grundanforderungen:
 - X trifft Snake eine Wand ist Spiel aus - von aussen gesteuert
 """
 from tkinter import Tk
-from test_snake import Point, Snake
-from test_arena import Arena
 from test_tk_view import TkView
 
 import pytest
