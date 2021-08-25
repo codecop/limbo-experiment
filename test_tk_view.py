@@ -110,6 +110,8 @@ class TestTkView(TkinterTestCase):
         assert self._was_callback_called is True
 
 
+# right and start works ;-)
+
 if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
