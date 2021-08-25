@@ -118,5 +118,7 @@ def test_game_grows_snake_every_3_ticks(game):
 
 
 def test_if_snake_hits_itself_game_is_over(game):
-    # how does snake grow
-    pass
+    game.tick(TurnCommand.RIGHT)
+    game.tick(TurnCommand.RIGHT)
+    game.tick(TurnCommand.RIGHT)  # grow
+    assert game.is_running() is True
