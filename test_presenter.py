@@ -46,6 +46,8 @@ class Presenter:
 
         if self._game.is_running():
             self.start()
+        else:
+            self._view.game_over()
 
     def _draw(self):
         self._view.draw_snake(self._game.snake())
@@ -119,4 +121,4 @@ def test_presenter_notifies_view_on_game_over(viewGamePresenter):
     view, game, presenter = viewGamePresenter
     game.is_running = lambda: False
     presenter._loop()
-    # view.gameover.assert_called()
+    view.game_over.assert_called()
