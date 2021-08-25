@@ -84,10 +84,12 @@ def test_presenter_draws_stuff(viewGamePresenter):
     view.draw_arena.assert_called_with([Point(8, 9)])
 
 
-def test_presenter_start_schedules_loop(viewGamePresenter):
+def test_presenter_start_schedules_loop_and_draws_stuff(viewGamePresenter):
     view, _, presenter = viewGamePresenter
     presenter.start()
     # view.draw_snake.assert_called_with([Point(2, 3)])
+    # view.draw_snake.assert_called()
+    # view.draw_arena.assert_called()
 
 
 if __name__ == "__main__":
