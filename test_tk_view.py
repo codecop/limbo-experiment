@@ -145,7 +145,7 @@ class TestTkView(TkinterTestCase):
     def test_game_over_draws_message(self):
         view = TkView(self.root)
         view.game_over()
-        # items = view.canvas.find_withtag("gameover")
+        items = view.canvas.find_withtag("gameover")
         # assert 1 == len(items)
 
 
