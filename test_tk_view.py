@@ -43,6 +43,16 @@ class TkView:
         self._snake_objects = {}
 
     def draw_snake(self, points):
+
+        old_points = self._snake_objects.keys()
+        new_points = points
+
+        points_to_add = set(new_points) - set(old_points)
+        points_to_remove = set(old_points) - set(new_points)
+
+        for point in points_to_add:
+            pass
+
         for point in points:
             if point in self._snake_objects:
                 continue
