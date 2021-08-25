@@ -21,10 +21,11 @@ from unittest.mock import MagicMock
 
 
 class Presenter:
-    def __init__(self, view, game):
+    def __init__(self, view, game, update_interval=100):
         self._view = view
         self._game = game
         self._next_command = None
+        self._update_interval = update_interval
 
         self._register_command_callbacks(view)
 
@@ -51,7 +52,7 @@ class Presenter:
 
     def start(self):
         self._draw()
-        self._view.schedule_tick(self._loop, 500)
+        self._view.schedule_tick(self._loop, self._update_interval)
 
 
 @pytest.fixture
