@@ -42,11 +42,6 @@ class Arena:
     # TODO later: place apple to eat
 
 
-@pytest.fixture
-def arena3x4():
-    return Arena(3, 4)
-
-
 def test_there_is_an_arena_with_walls_around(arena3x4):
     assert Point(-3, -4) in arena3x4.walls()
     # whole left wall
