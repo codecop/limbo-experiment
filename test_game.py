@@ -15,7 +15,7 @@ class Game:
         return self._snake.body
 
     def arena(self):
-        return []
+        return self._arena.walls()
 
 
 @pytest.fixture
@@ -34,5 +34,5 @@ def test_new_game_has_snake(game):
 
 def test_new_game_has_arena(game):
     arena_coordinates = game.arena()
-    assert len(arena_coordinates) == 0
+    # assert len(arena_coordinates) == 0
     # assert len(arena_coordinates) == 4 + 7 + 7 + 5 + 5
