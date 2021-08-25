@@ -58,6 +58,7 @@ def test_presenter_is_created_registers_keys(fixture):
 
 def test_presenter_sets_command_left(fixture):
     view, game, presenter = fixture
+    presenter.right()
 
 
 if __name__ == "__main__":
