@@ -7,7 +7,7 @@ import pytest
 
 class Game:
     def __init__(self, snake=None):
-        pass
+        self.snake = snake
 
 
 @pytest.fixture
