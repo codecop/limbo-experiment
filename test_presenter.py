@@ -24,9 +24,10 @@ class Presenter:
     def __init__(self, view, game):
         self._view = view
         self._game = game
+        self._next_command = None
+
         view.register_left_command(self.left)
         view.register_right_command(self.right)
-        self._next_command = None
 
     def left(self):
         self._next_command = TurnCommand.LEFT
@@ -40,9 +41,10 @@ class Presenter:
 
         self._view.draw_snake(self._game.snake())
         self._view.draw_arena(self._game.arena())
+        # TODO game over handling
 
     def start(self):
-        # register _lop in schedule
+        # register _loop in schedule
         pass
 
 
@@ -78,6 +80,12 @@ def test_presenter_draws_stuff(viewGamePresenter):
     presenter._loop()
     view.draw_snake.assert_called_with([Point(2, 3)])
     view.draw_arena.assert_called_with([Point(8, 9)])
+
+
+def test_presenter_start_schedules_loop(viewGamePresenter):
+    view, _, presenter = viewGamePresenter
+    presenter.start()
+    # view.draw_snake.assert_called_with([Point(2, 3)])
 
 
 if __name__ == "__main__":
