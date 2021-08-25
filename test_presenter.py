@@ -45,7 +45,8 @@ class Presenter:
 @pytest.fixture
 def presenter():
     view = MagicMock()
-    return Presenter(view)
+    game = MagicMock()
+    return view, Presenter(view)
 
 
 def test_presenter_is_created_registers_keys():
