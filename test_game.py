@@ -27,7 +27,7 @@ class Game:
 
     def is_running(self):
         # TODO: different cases
-        return not self._arena.are_positions_occupied(self._snake.body)
+        return not self._is_game_over
 
     def snake(self):
         return self._snake.body
