@@ -6,6 +6,7 @@ Grundanforderungen:
 - X trifft Snake sich selbst ist Spiel aus - von aussen gesteuert
 - X trifft Snake eine Wand ist Spiel aus - von aussen gesteuert
 """
+from test_game import Game
 from tkinter import Tk
 from test_tk_view import TkView
 
@@ -54,7 +55,8 @@ def game():
 
 def fixture():
     view = MagicMock()
-    return Presenter(view)
+    # game = Game()
+    return view, Presenter(view)
 
 
 def test_presenter_is_created_registers_keys():
