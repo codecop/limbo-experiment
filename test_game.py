@@ -24,9 +24,9 @@ class Game:
         self._snake.advance()
 
     def is_running(self):
+        return not self._arena.are_positions_occupied(self._snake.body)
         # TODO: pass snake positions into arena
         # TODO: different cases
-        return True
 
     def snake(self):
         return self._snake.body
