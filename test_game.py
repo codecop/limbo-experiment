@@ -37,6 +37,12 @@ class Game:
 
         self._check_running()
 
+    def _handle_command(self, command):
+        if command is TurnCommand.LEFT:
+            self._snake.turn_left()
+        if command is TurnCommand.RIGHT:
+            self._snake.turn_right()
+
     def _check_running(self):
         self._is_running &= not self._arena.are_positions_occupied(self._snake.body)
         self._is_running &= not self._snake.has_crossed_itself()
