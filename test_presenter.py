@@ -89,7 +89,7 @@ def test_presenter_start_schedules_loop_and_draws_stuff(viewGamePresenter):
     view, _, presenter = viewGamePresenter
     presenter.start()
     view.schedule_tick.assert_called()
-    # view.draw_snake.assert_called()
+    view.draw_snake.assert_called()
     # view.draw_arena.assert_called()
 
 
