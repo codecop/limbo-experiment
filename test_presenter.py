@@ -57,7 +57,7 @@ class MockView:
         pass
 
 
-def test_game_is_created_registers_keys():
+def test_presenter_is_created_registers_keys():
     view = MockView()
     Presenter(view)
     assert view.register_left_command_has_been_called is True
