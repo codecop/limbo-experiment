@@ -16,13 +16,17 @@ class Game:
         self._arena = arena
         self._is_running = True
         self._grow_count = grow_count
-        self._tick_count = 0
+        self._ticks_to_grow = 0
 
     def tick(self, command=None):
         if not self._is_running:
             return
 
-        self._tick_count += 1
+        self._ticks_to_grow += 1
+
+        if self._ticks_to_grow == self._grow_count:
+            self._ticks_to_grow = 0
+            # self._snake.
 
         # TBD: keep separated?
         if command is TurnCommand.LEFT:
