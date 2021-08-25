@@ -44,7 +44,7 @@ class Presenter:
         self._game.tick(self._next_command)
         self._next_command = None
 
-        if self._game.is_running:
+        if self._game.is_running():
             self.start()
 
     def _draw(self):
