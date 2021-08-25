@@ -1,6 +1,10 @@
 #!/bin/sh
 
-git reset --hard
-git commit -m "[tcr] failing" --allow-empty
+git stage -A
+git commit -m "[tcr] failing"
+
+git revert -n HEAD
+git stage -A
+git commit -m "[tcr] revert"
 
 exit 0
