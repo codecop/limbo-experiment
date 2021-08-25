@@ -27,12 +27,18 @@ class Presenter:
         view.register_right_command(self.right)
 
     def left(self):
+        # set command LEFT
         pass
 
     def right(self):
+        # set command RIGHT
         pass
 
     def start(self):
+        pass
+
+    def _loop(self):
+        # self._game_tick(command)
         pass
 
 
