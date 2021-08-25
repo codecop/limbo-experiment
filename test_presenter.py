@@ -56,11 +56,13 @@ def test_presenter_is_created_registers_keys(viewGamePresenter):
     view.register_right_command.assert_called()
 
 
-def test_presenter_sets_command_left(viewGamePresenter):
+def test_presenter_sets_command_left_only_once(viewGamePresenter):
     _, game, presenter = viewGamePresenter
     presenter.right()
     presenter._loop()
     game.tick.assert_called_with(TurnCommand.RIGHT)
+    presenter._loop()
+    # game.tick.assert_not_called()
 
 
 if __name__ == "__main__":
