@@ -190,7 +190,7 @@ def test_snake_grows_and_only_once(snake):
     assert len(snake.body) == 4
 
 
-def test_snake_has_hit_itself(snake):
+def test_snake_detects_it_has_hit_itself(snake):
     snake.grow()
     snake.grow()
 
