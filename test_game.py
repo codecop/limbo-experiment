@@ -66,5 +66,4 @@ def test_game_tick_turn_right_rotates_and_moves_snake(game):
 
 
 def test_new_game_is_running(game):
-    # assert game.is_running() is True
-    pass
+    assert game.is_running() is True
