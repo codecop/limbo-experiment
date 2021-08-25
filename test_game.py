@@ -14,10 +14,10 @@ class Game:
     def __init__(self, snake, arena):
         self._snake = snake
         self._arena = arena
-        self._is_game_over = False
+        self._is_running = True
 
     def tick(self, command=None):
-        if self._is_game_over:
+        if not self._is_running:
             return
 
         # TBD: keep separated?
@@ -29,12 +29,12 @@ class Game:
         self._check_running()
 
     def _check_running(self):
-        self._is_game_over |= self._arena.are_positions_occupied(self._snake.body)
-        self._is_game_over |= False
+        self._is_running &= not self._arena.are_positions_occupied(self._snake.body)
+        self._is_running &= True
         # TODO: different cases
 
     def is_running(self):
-        return not self._is_game_over
+        return self._is_running
 
     def snake(self):
         return self._snake.body
