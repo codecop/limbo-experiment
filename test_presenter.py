@@ -43,6 +43,16 @@ class Presenter:
 
 
 @pytest.fixture
+def view():
+    return MagicMock()
+
+
+@pytest.fixture
+def game():
+    return MagicMock()
+
+
+@pytest.fixture
 def foo():
     view = MagicMock()
     game = MagicMock()
