@@ -117,11 +117,6 @@ class Directions:
         return _RIGHT[direction]
 
 
-@pytest.fixture
-def snake():
-    return Snake()
-
-
 def test_there_is_a_snake(snake):
     assert snake.direction == Directions.NORTH
     assert snake.position == Point(0, 0)
