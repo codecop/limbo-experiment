@@ -110,6 +110,9 @@ class TestTkView(TkinterTestCase):
 
         assert self._was_callback_called is True
 
+    def test_draw_snake_clears_snake(self):
+        pass
+
 
 # right and start works ;-)
 
