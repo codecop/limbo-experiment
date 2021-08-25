@@ -73,9 +73,10 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 # turn left is just working ;-)
 
 
-def test_presenter_draws_snake(viewGamePresenter):
+def test_presenter_draws_stuff(viewGamePresenter):
     view, game, presenter = viewGamePresenter
     game.snake = lambda: [Point(2, 3)]
+    game.arena = lambda: [Point(8, 9)]
     presenter._loop()
     view.draw_snake.assert_called_with([Point(2, 3)])
 
