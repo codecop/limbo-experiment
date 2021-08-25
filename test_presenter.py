@@ -50,7 +50,7 @@ class Presenter:
         # TODO game over handling
 
     def start(self):
-        self._view.schedule_tick(self._loop)
+        self._view.schedule_tick(self._loop, 500)
         self._draw()
 
 
