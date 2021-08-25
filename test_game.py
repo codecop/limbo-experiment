@@ -1,5 +1,6 @@
 # -*- coding: latin-1 -*-
 
+from enum import Enum
 from test_snake import Point, Snake
 from test_arena import Arena
 
