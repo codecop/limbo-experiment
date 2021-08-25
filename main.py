@@ -14,6 +14,6 @@ if __name__ == "__main__":
     snake = Snake()
     arena = Arena(20, 20)
     game = Game(snake, arena)
-
+    # TODO: window focus
     Presenter(view, game, update_interval=100)
     root.mainloop()
