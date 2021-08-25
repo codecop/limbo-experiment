@@ -7,6 +7,9 @@ from test_arena import Arena
 import pytest
 
 
+# Enum('TurnCommand', 'left')
+
+
 class Game:
     def __init__(self, snake, arena):
         self._snake = snake
