@@ -37,7 +37,6 @@ class Presenter:
         self._game.tick(self._next_command)
         self._next_command = None
         # draw snake and draw arena
-        # reset command
 
     def start(self):
         # register _lop in schedule
@@ -63,7 +62,7 @@ def test_presenter_sets_command_left_only_once(viewGamePresenter):
     presenter._loop()
     game.tick.assert_called_with(TurnCommand.RIGHT)
     presenter._loop()
-    # game.tick.assert_called_once_with(TurnCommand.RIGHT)
+    game.tick.assert_called_once_with(TurnCommand.RIGHT)
 
 
 if __name__ == "__main__":
