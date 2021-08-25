@@ -22,6 +22,8 @@ class Game:
         if not self._is_running:
             return
 
+        self._tick_count += 1
+
         # TBD: keep separated?
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
