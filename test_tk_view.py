@@ -59,26 +59,9 @@ class TkView:
 
     def draw_snake(self, new_points):
         self.draw_generic(new_points, self._snake_objects, "green", ("snake"))
-        """
-        old_points = self._snake_objects.keys()
 
-        points_to_add = set(new_points) - set(old_points)
-        points_to_remove = set(old_points) - set(new_points)
-
-        # draw new points
-        for point in points_to_add:
-            self._snake_objects[point] = self.draw_point(
-                point, fill="green", tags=("snake")
-            )
-
-        # remove extra points
-        for point in points_to_remove:
-            self.canvas.delete(self._snake_objects.pop(point))
-        """
-
-    def draw_arena(self, points):
-        for point in points:
-            self.draw_point(point, fill="grey", tags=("arena"))
+    def draw_arena(self, new_points):
+        self.draw_generic(new_points, self._snake_objects, "grey", ("arena"))
 
     def draw_point(self, point, fill, tags):
         xcenter = self._width / 2 + point.x * 2 * RADIUS
