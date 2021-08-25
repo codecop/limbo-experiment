@@ -20,5 +20,5 @@ def test_there_is_a_game(game):
 
 
 def test_new_arena_has_snake(game):
-    # snake = game.snake()
-    pass
+    snake = game.snake
+    assert snake is not None
