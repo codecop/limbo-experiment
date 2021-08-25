@@ -23,7 +23,6 @@ class Game:
             return
 
         self._handle_growth()
-
         self._handle_command(command)
         self._snake.advance()
         self._check_running()
