@@ -38,3 +38,4 @@ def test_new_game_has_arena(game):
 
 def test_game_tick_moves_snake(game):
     game.tick()
+    snake_coordinates = game.snake()
