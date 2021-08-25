@@ -23,10 +23,6 @@ def game():
     return Game(Snake(), Arena(3, 4))
 
 
-def test_there_is_a_game(game):
-    assert game is not None
-
-
 def test_new_game_has_snake(game):
     snake_coordinates = game.snake()
     assert snake_coordinates == [Point(0, 0), Point(0, -1), Point(0, -2)]
