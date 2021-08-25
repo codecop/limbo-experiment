@@ -57,7 +57,7 @@ def presenter(view, game):
     return Presenter(view)
 
 
-def test_presenter_is_created_registers_keys():
+def test_presenter_is_created_registers_keys(view, presenter):
     view = MagicMock()
     Presenter(view)
     view.register_left_command.assert_called()
