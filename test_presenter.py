@@ -26,6 +26,7 @@ class Presenter:
         self._game = game
         self._next_command = None
 
+        view.register_start_command(self.start)
         view.register_left_command(self.left)
         view.register_right_command(self.right)
 
