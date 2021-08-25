@@ -76,6 +76,7 @@ def test_game_is_over_if_snake_hits_the_wall(game):
     game.tick()
     assert game.is_running() is True
     game.tick()
+    assert game.is_running() is False
     # assert game.
 
 
