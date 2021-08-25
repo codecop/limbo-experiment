@@ -46,8 +46,8 @@ class Presenter:
 
     def start(self):
         self._view.schedule_tick(self._loop)
-        # register _loop in schedule
-        pass
+        self._view.draw_snake(self._game.snake())
+        self._view.draw_arena(self._game.arena())
 
 
 @pytest.fixture
