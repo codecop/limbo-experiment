@@ -44,6 +44,8 @@ class TkView:
 
     def draw_snake(self, points):
         for point in points:
+            if point in self._snake_objects:
+                continue
             self._snake_objects[point] = self.draw_point(
                 point, fill="green", tags=("snake")
             )
