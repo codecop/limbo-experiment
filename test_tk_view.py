@@ -32,8 +32,8 @@ class TkView:
     def __init__(self, root):
         self.window = root
         self.window.title("Snake")
-        self._width = 100
-        self._height = 100
+        self._width = 500
+        self._height = 500
         canvas = Canvas(
             root, width=self._width, height=self._height, background="white"
         )
