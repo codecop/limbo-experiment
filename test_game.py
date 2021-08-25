@@ -17,7 +17,8 @@ class Game:
 
     def tick(self, command=None):
         if command:
-            pass
+            if command is TurnCommand.LEFT:
+                self._snake.turn_left()
         self._snake.advance()
 
     def snake(self):
