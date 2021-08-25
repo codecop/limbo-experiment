@@ -13,7 +13,6 @@ class Game:
 
     def tick(self):
         self._snake.advance()
-        pass
 
     def snake(self):
         return self._snake.body
