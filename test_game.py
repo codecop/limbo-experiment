@@ -12,6 +12,7 @@ class Game:
         self._arena = arena
 
     def tick(self):
+        self._snake.advance()
         pass
 
     def snake(self):
