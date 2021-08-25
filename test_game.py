@@ -14,6 +14,7 @@ class Game:
     def __init__(self, snake, arena):
         self._snake = snake
         self._arena = arena
+        self._is_game_over = False
 
     def tick(self, command=None):
         # TBD: keep separated?
@@ -22,6 +23,7 @@ class Game:
         if command is TurnCommand.RIGHT:
             self._snake.turn_right()
         self._snake.advance()
+        self._is_game_over |= not self.is_running()
 
     def is_running(self):
         # TODO: different cases
