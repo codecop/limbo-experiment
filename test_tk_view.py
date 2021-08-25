@@ -141,6 +141,7 @@ class TestTkView(TkinterTestCase):
 
 
 # right and start works ;-)
+# arena works ;-)
 
 if __name__ == "__main__":
     root = Tk()
