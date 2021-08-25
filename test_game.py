@@ -78,13 +78,15 @@ def test_game_is_over_if_snake_hits_the_wall(game):
     assert game.is_running() is True
     game.tick()
     assert game.is_running() is False
-    # assert game.
+
+
+def test_if_game_is_over_stop_advancing_snake(game):
+    game.tick()
+    game.tick()
+    game.tick()
+    game.tick()
 
 
 def test_if_snake_hits_itself_game_is_over(game):
     # how does snake grow
-    pass
-
-
-def test_if_game_is_over_stop_advancing_snake(game):
     pass
