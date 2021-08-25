@@ -60,8 +60,6 @@ class TkView:
         for point in points_to_remove:
             self.canvas.delete(self._snake_objects.pop(point))
 
-        # update
-
     def draw_arena(self, points):
         for point in points:
             self.draw_point(point, fill="grey", tags=("arena"))
@@ -140,7 +138,7 @@ class TestTkView(TkinterTestCase):
         view.draw_snake([Point(0, 0)])
         view.draw_snake([Point(1, 0)])
         items = view.canvas.find_withtag("snake")
-        # assert 1 == len(items)
+        assert 1 == len(items)
 
 
 # right and start works ;-)
