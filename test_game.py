@@ -17,6 +17,9 @@ class Game:
         self._is_game_over = False
 
     def tick(self, command=None):
+        if self._is_game_over:
+            return
+
         # TBD: keep separated?
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
@@ -94,7 +97,7 @@ def test_if_game_is_over_stop_advancing_snake(game):
     old_snake_coordinates = game.snake()
     game.tick()
     new_snake_coordinates = game.snake()
-    assert old_snake_coordinates != new_snake_coordinates
+    assert old_snake_coordinates == new_snake_coordinates
 
 
 def test_if_snake_hits_itself_game_is_over(game):
