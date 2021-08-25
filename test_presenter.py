@@ -68,6 +68,7 @@ class MockView:
 
 def test_presenter_is_created_registers_keys():
     view = MockView()
+    view2 = MagicMock()
     Presenter(view)
     assert view.register_left_command_has_been_called is True
     assert view.register_right_command_has_been_called is True
