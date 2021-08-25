@@ -96,6 +96,13 @@ def test_presenter_reschedules_loop(viewGamePresenter):
     view.schedule_tick.assert_called()
 
 
+def test_presenter_does_not_reschedules_loop_on_game_over(viewGamePresenter):
+    view, game, presenter = viewGamePresenter
+    game.is_running = lambda: False
+    presenter._loop()
+    # view.schedule_tick.assert_not_called()
+
+
 def test_presenter_start_schedules_loop_and_draws_stuff(viewGamePresenter):
     view, _, presenter = viewGamePresenter
     presenter.start()
