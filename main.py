@@ -7,7 +7,7 @@ from test_snake import Snake
 from test_tk_view import TkView
 
 if __name__ == "__main__":
-    # TODO: pull out config (RADIUS, width, size, ..., growth rate, schedule interval)
+    # TODO: pull out config (RADIUS, ..., growth rate)
     root = Tk()
     view = TkView(root, 500, 500)
 
