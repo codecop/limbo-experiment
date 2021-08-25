@@ -53,4 +53,4 @@ def test_game_tick_rotates_and_moves_snake(game):
     turn_left = TurnCommand.LEFT
     game.tick(turn_left)
     snake_coordinates = game.snake()
-    # assert snake_coordinates == [Point(-1, 1), Point(0, 1), Point(0, 0)]
+    assert snake_coordinates == [Point(-1, 1), Point(0, 1), Point(0, 0)]
