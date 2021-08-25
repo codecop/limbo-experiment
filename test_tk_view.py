@@ -64,7 +64,6 @@ class TkView:
         for point in points:
             self.draw_point(point, fill="grey", tags=("arena"))
 
-    # TODO: remove old drawings
     def draw_point(self, point, fill, tags):
         xcenter = self._width / 2 + point.x * 2 * RADIUS
         ycenter = self._height / 2 - point.y * 2 * RADIUS
