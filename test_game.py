@@ -9,6 +9,9 @@ class Game:
     def __init__(self, snake):
         self.snake = snake
 
+    def snake():
+        pass
+
 
 @pytest.fixture
 def game():
