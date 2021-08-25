@@ -51,7 +51,7 @@ def fixture():
 
 
 def test_presenter_is_created_registers_keys(fixture):
-    view, game, presenter = fixture
+    view, _, _ = fixture
     view.register_left_command.assert_called()
     view.register_right_command.assert_called()
 
