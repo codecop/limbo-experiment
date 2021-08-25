@@ -126,4 +126,4 @@ def test_if_snake_hits_itself_game_is_over(game):
     assert game.is_running() is True
     game.tick(TurnCommand.RIGHT)  # grow
     # assert game.is_running() is True
-    # assert game.is_running() is False
+    assert game.is_running() is False
