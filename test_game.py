@@ -16,6 +16,7 @@ class Game:
         self._arena = arena
 
     def tick(self, command=None):
+        # TBD: keep separated?
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
         if command is TurnCommand.RIGHT:
