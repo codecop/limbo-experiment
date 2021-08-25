@@ -56,8 +56,8 @@ def test_presenter_is_created_registers_keys(fixture):
     view.register_right_command.assert_called()
 
 
-def test_presenter_sets_command_left():
-    pass
+def test_presenter_sets_command_left(fixture):
+    view, game, presenter = fixture
 
 
 if __name__ == "__main__":
