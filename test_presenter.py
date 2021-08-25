@@ -42,7 +42,7 @@ class Presenter:
     def _loop(self):
         self._game.tick(self._next_command)
         self._next_command = None
-        self._draw()
+        self.start()
 
     def _draw(self):
         self._view.draw_snake(self._game.snake())
@@ -50,8 +50,8 @@ class Presenter:
         # TODO game over handling
 
     def start(self):
-        self._view.schedule_tick(self._loop, 500)
         self._draw()
+        self._view.schedule_tick(self._loop, 500)
 
 
 @pytest.fixture
@@ -92,7 +92,7 @@ def test_presenter_draws_stuff_in_loop(viewGamePresenter):
 def test_presenter_reschedules_loop(viewGamePresenter):
     view, _, presenter = viewGamePresenter
     presenter._loop()
-    # view.schedule_tick.assert_called()
+    view.schedule_tick.assert_called()
 
 
 def test_presenter_start_schedules_loop_and_draws_stuff(viewGamePresenter):
