@@ -89,7 +89,7 @@ class TkView:
         # not TDD/TCR because cannot test TKinter scheduling
         self.window.after(millis, callback)
 
-    def gameover(self):
+    def game_over(self):
         self.canvas.create_text(0, 0, text="Game Over!", tags=("gameover"))
 
 
@@ -144,7 +144,7 @@ class TestTkView(TkinterTestCase):
 
     def test_game_over_draws_message(self):
         view = TkView(self.root)
-        # view.game_over()
+        view.game_over()
         # items = view.canvas.find_withtag("gameover")
         # assert 1 == len(items)
 
