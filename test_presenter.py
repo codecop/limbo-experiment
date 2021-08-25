@@ -22,6 +22,7 @@ from unittest.mock import MagicMock
 class Presenter:
     def __init__(self, view, game):
         self._view = view
+        self._game = game
         view.register_left_command(self.left)
         view.register_right_command(self.right)
         self._next_command = None
