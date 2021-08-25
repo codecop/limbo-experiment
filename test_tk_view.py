@@ -42,6 +42,21 @@ class TkView:
 
         self._snake_objects = {}
 
+    def draw_generic(self, new_points, point_object_mapping, fill, tags):
+
+        old_points = point_object_mapping.keys()
+
+        points_to_add = set(new_points) - set(old_points)
+        points_to_remove = set(old_points) - set(new_points)
+
+        # draw new points
+        for point in points_to_add:
+            point_object_mapping[point] = self.draw_point(point, fill=fill, tags=tags)
+
+        # remove extra points
+        for point in points_to_remove:
+            self.canvas.delete(point_object_mapping.pop(point))
+
     def draw_snake(self, new_points):
 
         old_points = self._snake_objects.keys()
