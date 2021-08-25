@@ -19,6 +19,8 @@ class Game:
         if command:
             if command is TurnCommand.LEFT:
                 self._snake.turn_left()
+            if command is TurnCommand.RIGHT:
+                self._snake.turn_right()
         self._snake.advance()
 
     def snake(self):
