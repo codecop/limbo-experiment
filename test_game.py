@@ -74,8 +74,10 @@ def test_new_game_is_running(game):
 def test_game_is_over_if_snake_hits_the_wall(game):
     game.tick()
     game.tick()
+    game.tick()
     assert game.is_running() is True
     game.tick()
+    assert game.is_running() is False
     # assert game.
 
 
