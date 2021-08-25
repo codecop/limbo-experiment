@@ -25,7 +25,7 @@ import pytest
 # Skipped
 # registerViewModel(model)
 # update
-RADIUS = 10
+RADIUS = 5
 
 
 class TkView:
