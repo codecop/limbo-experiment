@@ -1,6 +1,7 @@
 # -*- coding: latin-1 -*-
 
 from test_snake import Point, Snake
+from test_arena import Arena
 
 import pytest
 
