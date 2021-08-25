@@ -102,16 +102,14 @@ class TestTkView(TkinterTestCase):
         items = view.canvas.find_withtag("snake")
         assert 2 == len(items)
 
-        item = items[0]
-        assert [45, 45, 55, 55] == view.canvas.coords(item)
-
-        item = items[1]
+        item_coords = [view.canvas.coords(item) for item in items]
+        assert [45, 45, 55, 55] in item_coords
         assert [
             45 + 2 * RADIUS,
             45 - 4 * RADIUS,
             55 + 2 * RADIUS,
             55 - 4 * RADIUS,
-        ] == view.canvas.coords(item)
+        ] in item_coords
 
     def test_command_key_left(self):
         view = TkView(self.root)
