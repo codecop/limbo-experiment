@@ -71,6 +71,8 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 
 def test_presenter_draws_snake(viewGamePresenter):
     view, _, presenter = viewGamePresenter
+    presenter._loop()
+    # view.
 
 
 if __name__ == "__main__":
