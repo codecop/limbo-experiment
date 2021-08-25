@@ -12,6 +12,7 @@ from test_arena import Arena
 from test_tk_view import TkView
 
 import pytest
+from unittest.mock import MagicMock
 
 # create game: create Arena, create Snake, get View
 # right/left pressed
