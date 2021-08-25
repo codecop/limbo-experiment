@@ -15,7 +15,6 @@ from unittest.mock import MagicMock
 # create game: create Arena, create Snake, get View
 # right/left pressed
 # tick = draw on view
-# grow
 # game ended!
 
 
