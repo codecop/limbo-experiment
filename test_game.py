@@ -15,7 +15,7 @@ class Game:
         return self._snake.body
 
     def arena(self):
-        return []
+        return self._arena.walls()
 
 
 @pytest.fixture
