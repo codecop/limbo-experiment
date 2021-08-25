@@ -101,5 +101,4 @@ if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
     game = Presenter(view)
-    game.start()
     root.mainloop()
