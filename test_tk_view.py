@@ -51,14 +51,16 @@ class TkView:
         points_to_remove = set(old_points) - set(new_points)
 
         for point in points_to_add:
-            pass
-
-        for point in points:
-            if point in self._snake_objects:
-                continue
             self._snake_objects[point] = self.draw_point(
                 point, fill="green", tags=("snake")
             )
+
+        # for point in points:
+        #    if point in self._snake_objects:
+        #        continue
+        #    self._snake_objects[point] = self.draw_point(
+        #        point, fill="green", tags=("snake")
+        #    )
 
     def draw_arena(self, points):
         for point in points:
