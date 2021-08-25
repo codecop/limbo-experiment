@@ -49,7 +49,7 @@ def test_game_tick_moves_snake(game):
     assert snake_coordinates == [Point(0, 1), Point(0, 0), Point(0, -1)]
 
 
-def test_game_tick_rotates_and_moves_snake(game):
+def test_game_tick_turn_left_rotates_and_moves_snake(game):
     turn_left = TurnCommand.LEFT
     game.tick(turn_left)
     snake_coordinates = game.snake()
