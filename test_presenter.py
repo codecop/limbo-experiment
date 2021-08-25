@@ -39,6 +39,7 @@ class Presenter:
         self._next_command = None
 
         self._view.draw_snake(self._game.snake())
+        self._view.draw_arena(self._game.arena())
 
         # draw snake and draw arena
         # reset command
