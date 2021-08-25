@@ -45,6 +45,7 @@ class Presenter:
         # TODO game over handling
 
     def start(self):
+        self._view.schedule_tick(self._loop)
         # register _loop in schedule
         pass
 
