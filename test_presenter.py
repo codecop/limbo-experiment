@@ -45,35 +45,11 @@ class Presenter:
         pass
 
 
-class MockView:
-    def __init__(self):
-        self.register_left_command_has_been_called = False
-        self.register_right_command_has_been_called = False
-
-    def draw_snake(self, points):
-        pass
-
-    def draw_arena(self, points):
-        pass
-
-    def register_left_command(self, callback):
-        self.register_left_command_has_been_called = True
-
-    def register_right_command(self, callback):
-        self.register_right_command_has_been_called = True
-
-    def schedule_tick(self, callback, millis):
-        pass
-
-
 def test_presenter_is_created_registers_keys():
-    # view = MockView()
     view = MagicMock()
     Presenter(view)
-    # assert view.register_left_command_has_been_called is True
     view.register_left_command.assert_called()
     view.register_right_command.assert_called()
-    # assert view.register_right_command_has_been_called is True
 
 
 if __name__ == "__main__":
