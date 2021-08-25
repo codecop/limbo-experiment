@@ -31,6 +31,12 @@ class Game:
         self._snake.advance()
         self._check_running()
 
+    def _handle_growth(self):
+        self._ticks_to_grow += 1
+        if self._ticks_to_grow == self._grow_count:
+            self._ticks_to_grow = 0
+            self._snake.grow()
+
     def _handle_command(self, command):
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
