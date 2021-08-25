@@ -26,9 +26,9 @@ Domain
 - Arena
   - Obstacle
 - Game?
+  - X Tick
+- User Input/UI
   - Game Loop
-  - Tick
-- User Input
   - Turn
 """
 from collections import namedtuple
