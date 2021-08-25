@@ -13,4 +13,4 @@ def game():
 
 
 def test_there_is_a_game(game):
-    pass
+    assert game is not None
