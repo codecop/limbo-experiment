@@ -19,6 +19,6 @@ def test_there_is_a_game(game):
     assert game is not None
 
 
-def test_new_arena_has_snake(game):
+def test_new_game_has_snake(game):
     snake = game.snake
     assert snake is not None
