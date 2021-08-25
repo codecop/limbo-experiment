@@ -28,8 +28,6 @@ class Presenter:
 
     def left(self):
         self._next_command = TurnCommand.LEFT
-        # set command LEFT
-        pass
 
     def right(self):
         self._next_command = TurnCommand.RIGHT
