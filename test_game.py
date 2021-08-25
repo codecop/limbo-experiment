@@ -26,7 +26,7 @@ class Game:
 
         if self._ticks_to_grow == self._grow_count:
             self._ticks_to_grow = 0
-            # self._snake.
+            self._snake.grow()
 
         # TBD: keep separated?
         if command is TurnCommand.LEFT:
@@ -114,8 +114,7 @@ def test_game_grows_snake_every_3_ticks(game):
     old_snake_length = len(game.snake())
     game.tick()
     new_snake_length = len(game.snake())
-    assert new_snake_length == old_snake_length
-    # assert new_snake_length == old_snake_length + 1
+    assert new_snake_length == old_snake_length + 1
 
 
 def test_if_snake_hits_itself_game_is_over(game):
