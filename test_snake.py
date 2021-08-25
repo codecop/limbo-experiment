@@ -210,3 +210,6 @@ def test_snake_detects_it_has_hit_itself(snake):
     snake.advance()
 
     assert snake.has_crossed_itself() is True
+
+
+# Snake is complete
