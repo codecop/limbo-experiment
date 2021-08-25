@@ -52,12 +52,12 @@ def game():
     return MagicMock()
 
 
-@pytest.fixture
-def presenter(view, game):
+def fixture():
+    view = MagicMock()
     return Presenter(view)
 
 
-def test_presenter_is_created_registers_keys(view, presenter):
+def test_presenter_is_created_registers_keys():
     view = MagicMock()
     Presenter(view)
     view.register_left_command.assert_called()
