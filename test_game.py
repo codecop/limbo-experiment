@@ -48,4 +48,4 @@ def test_game_tick_moves_snake(game):
 
 def test_game_tick_rotates_and_moves_snake(game):
     turn_left = TurnCommand.LEFT
-    game.tick()
+    game.tick(turn_left)
