@@ -12,7 +12,7 @@ if __name__ == "__main__":
     view = TkView(root, 500, 500)
 
     snake = Snake()
-    arena = Arena(30, 40)
+    arena = Arena(20, 20)
     game = Game(snake, arena)
 
     Presenter(view, game)
