@@ -49,6 +49,10 @@ def test_presenter_is_created_registers_keys():
     view.register_right_command.assert_called()
 
 
+def test_presenter_sets_command_left():
+    pass
+
+
 if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
