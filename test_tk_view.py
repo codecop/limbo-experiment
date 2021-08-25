@@ -110,8 +110,12 @@ class TestTkView(TkinterTestCase):
 
         assert self._was_callback_called is True
 
-    def test_draw_snake_clears_snake(self):
-        pass
+    def test_draw_same_snake_twice_draws_only_once(self):
+        view = TkView(self.root)
+        view.draw_snake([Point(0, 0), Point(1, 2)])
+        view.draw_snake([Point(0, 0), Point(1, 2)])
+        items = view.canvas.find_withtag("snake")
+        assert 4 == len(items)
 
 
 # right and start works ;-)
