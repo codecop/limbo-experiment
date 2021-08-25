@@ -32,4 +32,4 @@ def test_new_game_has_snake(game):
 
 
 def test_new_game_has_arena(game):
-    pass
+    arena_coordinates = game.arena()
