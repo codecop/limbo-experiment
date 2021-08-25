@@ -1,6 +1,6 @@
 # -*- coding: latin-1 -*-
 
-from test_snake import Snake
+from test_snake import Point, Snake
 
 import pytest
 
