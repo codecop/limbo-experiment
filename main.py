@@ -7,11 +7,12 @@ from test_snake import Snake
 from test_tk_view import TkView
 
 if __name__ == "__main__":
+    # TODO: pull out config (RADIUS, width, size, ..., growth rate, schedule interval)
     root = Tk()
     view = TkView(root)
 
     snake = Snake()
-    arena = Arena(3, 4)
+    arena = Arena(30, 40)
     game = Game(snake, arena)
 
     Presenter(view, game)

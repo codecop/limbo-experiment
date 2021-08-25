@@ -51,7 +51,7 @@ class Presenter:
 
     def start(self):
         self._draw()
-        self._view.schedule_tick(self._loop, 500)
+        self._view.schedule_tick(self._loop, 100)
 
 
 @pytest.fixture
