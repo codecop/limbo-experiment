@@ -28,9 +28,7 @@ class Game:
             self._snake.grow()
 
         self._handle_command(command)
-
         self._snake.advance()
-
         self._check_running()
 
     def _handle_command(self, command):
