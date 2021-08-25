@@ -15,5 +15,5 @@ if __name__ == "__main__":
     arena = Arena(20, 20)
     game = Game(snake, arena)
 
-    Presenter(view, game, update_interval=50)
+    Presenter(view, game, update_interval=100)
     root.mainloop()
