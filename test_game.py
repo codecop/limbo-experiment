@@ -27,7 +27,7 @@ class Game:
             self._ticks_to_grow = 0
             self._snake.grow()
 
-        # TBD: keep separated?
+        # self._handle_command(command)
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
         if command is TurnCommand.RIGHT:
