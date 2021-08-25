@@ -36,6 +36,7 @@ class Presenter:
     def _loop(self):
         self._game.tick(self._next_command)
         # draw snake and draw arena
+        # reset command
 
     def start(self):
         # register _lop in schedule
