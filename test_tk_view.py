@@ -65,6 +65,10 @@ class TkView:
         self.left_command = callback
         self.window.bind("<Right>", lambda event: callback())
 
+    def register_start_command(self, callback):
+        self.start_command = callback
+        self.window.bind("<Enter>", lambda event: callback())
+
     def schedule_tick(self, callback, millis):
         # not TDD/TCR because cannot test TKinter scheduling
         self.window.after(millis, callback)
