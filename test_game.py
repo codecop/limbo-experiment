@@ -27,9 +27,10 @@ class Game:
 
     def _check_running(self):
         self._is_game_over |= self._arena.are_positions_occupied(self._snake.body)
+        self._is_game_over |= False
+        # TODO: different cases
 
     def is_running(self):
-        # TODO: different cases
         return not self._is_game_over
 
     def snake(self):
