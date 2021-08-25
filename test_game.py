@@ -1,7 +1,11 @@
 # -*- coding: latin-1 -*-
 
-
 import pytest
+
+
+class Game:
+    pass
+
 
 # @pytest.fixture
 # def game():
