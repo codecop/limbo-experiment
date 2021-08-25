@@ -74,7 +74,7 @@ def test_presenter_draws_snake(viewGamePresenter):
     view, game, presenter = viewGamePresenter
     game.snake = lambda: [Point(2, 3)]
     presenter._loop()
-    # view.draw_snake.assert_called_with([Point(2,3)])
+    view.draw_snake.assert_called_with([Point(2, 3)])
 
 
 if __name__ == "__main__":
