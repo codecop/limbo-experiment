@@ -9,7 +9,7 @@ from test_tk_view import TkView
 if __name__ == "__main__":
     # TODO: pull out config (RADIUS, width, size, ..., growth rate, schedule interval)
     root = Tk()
-    view = TkView(root)
+    view = TkView(root, 500, 500)
 
     snake = Snake()
     arena = Arena(30, 40)
