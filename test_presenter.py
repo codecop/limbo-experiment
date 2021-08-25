@@ -26,6 +26,9 @@ class Presenter:
         self._game = game
         self._next_command = None
 
+        self._register_command_callbacks(view)
+
+    def _register_command_callbacks(self, view):
         view.register_start_command(self.start)
         view.register_left_command(self.left)
         view.register_right_command(self.right)
@@ -39,15 +42,16 @@ class Presenter:
     def _loop(self):
         self._game.tick(self._next_command)
         self._next_command = None
+        self._draw()
 
+    def _draw(self):
         self._view.draw_snake(self._game.snake())
         self._view.draw_arena(self._game.arena())
         # TODO game over handling
 
     def start(self):
         self._view.schedule_tick(self._loop)
-        self._view.draw_snake(self._game.snake())
-        self._view.draw_arena(self._game.arena())
+        self._draw()
 
 
 @pytest.fixture
