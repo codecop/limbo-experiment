@@ -40,9 +40,13 @@ class TkView:
         canvas.pack()
         self.canvas = canvas
 
+        self._snake_objects = {}
+
     def draw_snake(self, points):
         for point in points:
-            self.draw_point(point, fill="green", tags=("snake"))
+            self._snake_objects[point] = self.draw_point(
+                point, fill="green", tags=("snake")
+            )
 
     def draw_arena(self, points):
         for point in points:
@@ -56,7 +60,7 @@ class TkView:
         x1 = xcenter + RADIUS
         y0 = ycenter - RADIUS
         y1 = ycenter + RADIUS
-        self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, tags=tags)
+        return self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, tags=tags)
 
     def register_left_command(self, callback):
         self.left_command = callback
