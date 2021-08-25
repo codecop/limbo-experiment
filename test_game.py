@@ -100,6 +100,14 @@ def test_if_game_is_over_stop_advancing_snake(game):
     assert old_snake_coordinates == new_snake_coordinates
 
 
+def test_game_grows_snake_every_3_ticks(game):
+    game.tick()
+    game.tick()
+    old_snake_length = len(game.snake())
+    game.tick()
+    pass
+
+
 def test_if_snake_hits_itself_game_is_over(game):
     # how does snake grow
     pass
