@@ -107,6 +107,7 @@ def test_game_grows_snake_every_3_ticks(game):
     game.tick()
     new_snake_length = len(game.snake())
     assert new_snake_length == old_snake_length
+    # assert new_snake_length == old_snake_length + 1
 
 
 def test_if_snake_hits_itself_game_is_over(game):
