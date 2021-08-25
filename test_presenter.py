@@ -60,7 +60,7 @@ def test_presenter_is_created_registers_keys(viewGamePresenter):
     view, _, _ = viewGamePresenter
     view.register_left_command.assert_called()
     view.register_right_command.assert_called()
-    # view.register_start_command.assert_called()
+    view.register_start_command.assert_called()
 
 
 def test_presenter_sets_command_right_only_once(viewGamePresenter):
