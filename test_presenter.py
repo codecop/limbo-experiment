@@ -34,9 +34,8 @@ class Presenter:
         self._next_command = TurnCommand.RIGHT
 
     def _loop(self):
-        # self._game_tick(command)
+        self._game.tick(self._next_command)
         # draw snake and draw arena
-        pass
 
     def start(self):
         # register _lop in schedule
