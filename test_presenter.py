@@ -79,6 +79,7 @@ def test_presenter_draws_stuff(viewGamePresenter):
     game.arena = lambda: [Point(8, 9)]
     presenter._loop()
     view.draw_snake.assert_called_with([Point(2, 3)])
+    # view.draw_arena.assert_called_with([Point(8, 9)])
 
 
 if __name__ == "__main__":
