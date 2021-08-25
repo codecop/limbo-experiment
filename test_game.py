@@ -69,3 +69,11 @@ def test_game_tick_turn_right_rotates_and_moves_snake(game):
 
 def test_new_game_is_running(game):
     assert game.is_running() is True
+
+
+def test_if_snake_hits_itself_game_is_over(game):
+    pass
+
+
+def test_if_game_is_over_stop_advancing_snake(game):
+    pass
