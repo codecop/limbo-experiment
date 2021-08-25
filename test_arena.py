@@ -68,3 +68,8 @@ def test_there_is_an_arena_with_walls_around(arena3x4):
 def test_if_areana_position_occupied(arena3x4):
     assert arena3x4.is_position_occupied(Point(2, -3)) is False
     assert arena3x4.is_position_occupied(Point(3, -4)) is True
+
+
+def test_if_arena_positions_are_occupied(arena3x4):
+    # assert arena3x4.are_positions_occupied([Point(2, -3), Point(3, -4)]) is True
+    pass
