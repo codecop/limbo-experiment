@@ -90,7 +90,7 @@ def test_presenter_draws_stuff_in_loop(viewGamePresenter):
 
 
 def test_presenter_reschedules_loop(viewGamePresenter):
-    view, game, presenter = viewGamePresenter
+    view, _, presenter = viewGamePresenter
     presenter._loop()
     # view.schedule_tick.assert_called()
 
