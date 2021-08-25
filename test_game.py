@@ -22,6 +22,9 @@ class Game:
             self._snake.turn_right()
         self._snake.advance()
 
+    def is_running(self):
+        return True
+
     def snake(self):
         return self._snake.body
 
