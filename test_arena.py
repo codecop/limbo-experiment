@@ -74,5 +74,4 @@ def test_if_areana_position_occupied(arena3x4):
 
 
 def test_if_arena_positions_are_occupied(arena3x4):
-    # assert arena3x4.are_positions_occupied([Point(2, -3), Point(3, -4)]) is True
-    pass
+    assert arena3x4.are_positions_occupied([Point(2, -3), Point(3, -4)]) is True
