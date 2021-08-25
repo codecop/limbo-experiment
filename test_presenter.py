@@ -20,7 +20,7 @@ from unittest.mock import MagicMock
 
 
 class Presenter:
-    def __init__(self, view):
+    def __init__(self, view, game):
         self._view = view
         view.register_left_command(self.left)
         view.register_right_command(self.right)
@@ -46,7 +46,7 @@ class Presenter:
 def viewGamePresenter():
     view = MagicMock()
     game = MagicMock()
-    return view, game, Presenter(view)
+    return view, game, Presenter(view, game)
 
 
 def test_presenter_is_created_registers_keys(viewGamePresenter):
