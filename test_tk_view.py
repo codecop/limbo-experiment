@@ -42,10 +42,9 @@ class TkView:
 
         self._snake_objects = {}
 
-    def draw_snake(self, points):
+    def draw_snake(self, new_points):
 
         old_points = self._snake_objects.keys()
-        new_points = points
 
         points_to_add = set(new_points) - set(old_points)
         points_to_remove = set(old_points) - set(new_points)
@@ -56,7 +55,7 @@ class TkView:
                 point, fill="green", tags=("snake")
             )
 
-        # remove
+        # remove extra points
         for point in points_to_remove:
             self.canvas.delete(self._snake_objects.pop(point))
 
