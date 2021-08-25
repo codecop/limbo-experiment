@@ -60,7 +60,7 @@ def test_presenter_sets_command_left(viewGamePresenter):
     _, game, presenter = viewGamePresenter
     presenter.right()
     presenter._loop()
-    # game.tick.assert_called_with(TurnCommand.RIGHT)
+    game.tick.assert_called_with(TurnCommand.RIGHT)
 
 
 if __name__ == "__main__":
