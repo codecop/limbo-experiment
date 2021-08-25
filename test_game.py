@@ -6,7 +6,7 @@ import pytest
 
 
 class Game:
-    def __init__(self, snake=None):
+    def __init__(self, snake):
         self.snake = snake
 
 
