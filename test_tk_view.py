@@ -92,7 +92,7 @@ class TestTkView(TkinterTestCase):
             55 - 4 * RADIUS,
         ] == view.canvas.coords(item)
 
-    def test_command_keys(self):
+    def test_command_key_left(self):
         view = TkView(self.root)
 
         self._was_callback_called = False
