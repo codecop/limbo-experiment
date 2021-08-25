@@ -11,6 +11,9 @@ class Game:
         self._snake = snake
         self._arena = arena
 
+    def tick(self):
+        pass
+
     def snake(self):
         return self._snake.body
 
