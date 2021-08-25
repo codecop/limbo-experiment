@@ -41,9 +41,6 @@ class Presenter:
         self._view.draw_snake(self._game.snake())
         self._view.draw_arena(self._game.arena())
 
-        # draw snake and draw arena
-        # reset command
-
     def start(self):
         # register _lop in schedule
         pass
