@@ -57,7 +57,7 @@ def test_presenter_is_created_registers_keys(viewGamePresenter):
 
 
 def test_presenter_sets_command_left(viewGamePresenter):
-    view, game, presenter = viewGamePresenter
+    _, game, presenter = viewGamePresenter
     presenter.right()
     presenter._loop()
     # game.tick.assert_called_with(TurnCommand.RIGHT)
