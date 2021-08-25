@@ -1,6 +1,7 @@
-from test_game import Game
-from test_arena import Arena
 import pytest
+
+from test_arena import Arena
+from test_game import Game
 from test_snake import Snake
 
 
@@ -15,5 +16,5 @@ def arena3x4():
 
 
 @pytest.fixture
-def game():
-    return Game(Snake(), Arena(3, 4))
+def game(snake):
+    return Game(snake, Arena(3, 4))
