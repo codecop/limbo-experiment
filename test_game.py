@@ -16,6 +16,7 @@ class Game:
         self._arena = arena
 
     def tick(self, command=None):
+        # if
         self._snake.advance()
 
     def snake(self):
