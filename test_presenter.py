@@ -62,7 +62,7 @@ def test_presenter_sets_command_left_only_once(viewGamePresenter):
     presenter._loop()
     game.tick.assert_called_with(TurnCommand.RIGHT)
     presenter._loop()
-    # game.tick.assert_not_called()
+    # game.tick.assert_called_times(1)
 
 
 if __name__ == "__main__":
