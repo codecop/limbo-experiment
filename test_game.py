@@ -39,3 +39,4 @@ def test_new_game_has_arena(game):
 def test_game_tick_moves_snake(game):
     game.tick()
     snake_coordinates = game.snake()
+    # assert snake_coordinates == [Point(0, 1), Point(0, 0), Point(0, -1)]
