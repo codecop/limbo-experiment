@@ -44,14 +44,14 @@ class Presenter:
 
 
 @pytest.fixture
-def viewGamePresenter():
+def fixture():
     view = MagicMock()
     game = MagicMock()
     return view, game, Presenter(view)
 
 
-def test_presenter_is_created_registers_keys(viewGamePresenter):
-    view, _, _ = viewGamePresenter
+def test_presenter_is_created_registers_keys(fixture):
+    view, _, _ = fixture
     view.register_left_command.assert_called()
     view.register_right_command.assert_called()
 
