@@ -139,6 +139,12 @@ class TestTkView(TkinterTestCase):
         items = view.canvas.find_withtag("snake")
         assert 1 == len(items)
 
+    def test_game_over_draws_message(self):
+        view = TkView(self.root)
+        # view.game_over()
+        # items = view.canvas.find_withtag("gameover")
+        # assert 1 == len(items)
+
 
 # right and start works ;-)
 # arena works ;-)
