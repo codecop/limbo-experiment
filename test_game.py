@@ -11,7 +11,7 @@ class Game:
         self._snake = snake
         self._arena = arena
 
-    def tick(self):
+    def tick(self, command=None):
         self._snake.advance()
 
     def snake(self):
