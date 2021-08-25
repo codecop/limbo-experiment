@@ -41,6 +41,7 @@ class TkView:
         self.canvas = canvas
 
         self._snake_objects = {}
+        self._arena_objects = {}
 
     def draw_generic(self, new_points, point_object_mapping, fill, tags):
 
@@ -61,7 +62,7 @@ class TkView:
         self.draw_generic(new_points, self._snake_objects, "green", ("snake"))
 
     def draw_arena(self, new_points):
-        self.draw_generic(new_points, self._snake_objects, "grey", ("arena"))
+        self.draw_generic(new_points, self._arena_objects, "grey", ("arena"))
 
     def draw_point(self, point, fill, tags):
         xcenter = self._width / 2 + point.x * 2 * RADIUS
