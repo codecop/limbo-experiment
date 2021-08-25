@@ -16,6 +16,7 @@ class Game:
         self._arena = arena
         self._is_running = True
         self._grow_count = grow_count
+        self._tick_count = 0
 
     def tick(self, command=None):
         if not self._is_running:
