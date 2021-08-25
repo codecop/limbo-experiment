@@ -5,5 +5,5 @@ from test_tk_view import TkView
 if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
-    game = Presenter(view)
+    Presenter(view, game)
     root.mainloop()
