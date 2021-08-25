@@ -90,7 +90,13 @@ class TkView:
         self.window.after(millis, callback)
 
     def game_over(self):
-        self.canvas.create_text(0, 0, text="Game Over!", tags=("gameover"))
+        self.canvas.create_text(
+            self._width // 2,
+            self._height // 2,
+            fill="red",
+            text="Game Over!",
+            tags=("gameover"),
+        )
 
 
 class TestTkView(TkinterTestCase):
