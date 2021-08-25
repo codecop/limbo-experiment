@@ -24,14 +24,15 @@ class Presenter:
         self._view = view
         view.register_left_command(self.left)
         view.register_right_command(self.right)
+        self._next_command = None
 
     def left(self):
+        self._next_command = TurnCommand.LEFT
         # set command LEFT
         pass
 
     def right(self):
-        # set command RIGHT
-        pass
+        self._next_command = TurnCommand.RIGHT
 
     def _loop(self):
         # self._game_tick(command)
