@@ -70,9 +70,10 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 
 
 def test_presenter_draws_snake(viewGamePresenter):
-    view, _, presenter = viewGamePresenter
+    view, game, presenter = viewGamePresenter
+    # game.snake =
     presenter._loop()
-    # view.
+    # view.draw_snake.assert_called_with([Point(2,3)]])
 
 
 if __name__ == "__main__":
