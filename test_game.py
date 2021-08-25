@@ -105,6 +105,7 @@ def test_game_grows_snake_every_3_ticks(game):
     game.tick()
     old_snake_length = len(game.snake())
     game.tick()
+    new_snake_length = len(game.snake())
     pass
 
 
