@@ -66,6 +66,9 @@ def test_presenter_sets_command_left_only_once(viewGamePresenter):
     game.tick.assert_called_with(None)
 
 
+# right is just working ;-)
+
+
 if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
