@@ -1,5 +1,4 @@
 # -*- coding: latin-1 -*-
-
 from enum import Enum
 from test_snake import Point, Snake
 from test_arena import Arena
@@ -128,3 +127,6 @@ def test_if_snake_hits_itself_game_is_over(game):
     assert game.is_running() is True
     game.tick(TurnCommand.RIGHT)  # grow
     assert game.is_running() is False
+
+
+# Game is complete.
