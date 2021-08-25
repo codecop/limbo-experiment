@@ -25,4 +25,4 @@ def test_there_is_a_game(game):
 def test_new_game_has_snake(game):
     snake_coordinates = game.snake
 
-    # assert snake.body == [Point(0, 0), Point(0, -1), Point(0, -2)]
+    # assert snake_coordinates == [Point(0, 0), Point(0, -1), Point(0, -2)]
