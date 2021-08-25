@@ -37,6 +37,9 @@ class Presenter:
     def _loop(self):
         self._game.tick(self._next_command)
         self._next_command = None
+
+        self._view.draw_snake(self._game.snake())
+
         # draw snake and draw arena
         # reset command
 
