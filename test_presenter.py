@@ -113,3 +113,10 @@ def test_presenter_does_not_reschedules_loop_on_game_over(viewGamePresenter):
     game.is_running = lambda: False
     presenter._loop()
     view.schedule_tick.assert_not_called()
+
+
+def test_presenter_notifies_view_on_game_over(viewGamePresenter):
+    view, game, presenter = viewGamePresenter
+    game.is_running = lambda: False
+    presenter._loop()
+    # view.gameover.assert_called()
