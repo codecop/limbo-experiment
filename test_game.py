@@ -13,6 +13,9 @@ class Game:
     def snake(self):
         return self._snake.body
 
+    def arena(self):
+        pass
+
 
 @pytest.fixture
 def game():
