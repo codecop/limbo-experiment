@@ -36,6 +36,7 @@ class Presenter:
 
     def _loop(self):
         # self._game_tick(command)
+        # draw snake and draw arena
         pass
 
     def start(self):
