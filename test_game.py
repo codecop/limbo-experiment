@@ -16,7 +16,7 @@ class Game:
 
 @pytest.fixture
 def game():
-    return Game(Snake())
+    return Game(Snake(), Arena())
 
 
 def test_there_is_a_game(game):
