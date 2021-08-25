@@ -26,6 +26,7 @@ class Game:
         if self._ticks_to_grow == self._grow_count:
             self._ticks_to_grow = 0
             self._snake.grow()
+        # self._handle_growth()
 
         self._handle_command(command)
         self._snake.advance()
