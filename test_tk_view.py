@@ -50,11 +50,6 @@ class TkView:
                 point, fill="green", tags=("snake")
             )
 
-        for point, object in self._snake_objects.items():
-            if point not in points:
-                self.canvas.delete(object)
-                self._snake_objects.pop(point)
-
     def draw_arena(self, points):
         for point in points:
             self.draw_point(point, fill="grey", tags=("arena"))
