@@ -7,10 +7,10 @@ class Game:
     pass
 
 
-# @pytest.fixture
-# def game():
-#     return Game()
+@pytest.fixture
+def game():
+    return Game()
 
 
-def test_there_is_a_game():
+def test_there_is_a_game(game):
     pass
