@@ -87,6 +87,7 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 def test_presenter_draws_stuff_in_loop(viewGamePresenter):
     # is related to test_game.test_new_game_has_snake
     # make sure they match
+    # TBD: custom assertions to simplify tests with real game/arena/snake?
     view, game, presenter = viewGamePresenter
     game.snake = lambda: [Point(2, 3)]
     game.arena = lambda: [Point(8, 9)]
