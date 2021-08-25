@@ -23,6 +23,9 @@ class Game:
         if command is TurnCommand.RIGHT:
             self._snake.turn_right()
         self._snake.advance()
+        self._check_running()
+
+    def _check_running(self):
         self._is_game_over |= self._arena.are_positions_occupied(self._snake.body)
 
     def is_running(self):
