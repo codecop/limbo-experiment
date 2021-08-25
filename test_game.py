@@ -17,6 +17,9 @@ class Game:
         self._is_game_over = False
 
     def tick(self, command=None):
+        if self._is_game_over:
+            return
+
         # TBD: keep separated?
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
