@@ -9,6 +9,7 @@ import pytest
 class Game:
     def __init__(self, snake, arena=None):
         self._snake = snake
+        self._arena = arena
 
     def snake(self):
         return self._snake.body
