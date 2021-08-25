@@ -29,11 +29,11 @@ RADIUS = 5
 
 
 class TkView:
-    def __init__(self, root):
+    def __init__(self, root, width=100, height=100):
         self.window = root
         self.window.title("Snake")
-        self._width = 100
-        self._height = 100
+        self._width = width
+        self._height = height
         canvas = Canvas(
             root, width=self._width, height=self._height, background="white"
         )
