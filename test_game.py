@@ -16,11 +16,10 @@ class Game:
         self._arena = arena
 
     def tick(self, command=None):
-        if command:
-            if command is TurnCommand.LEFT:
-                self._snake.turn_left()
-            if command is TurnCommand.RIGHT:
-                self._snake.turn_right()
+        if command is TurnCommand.LEFT:
+            self._snake.turn_left()
+        if command is TurnCommand.RIGHT:
+            self._snake.turn_right()
         self._snake.advance()
 
     def snake(self):
