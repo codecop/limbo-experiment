@@ -85,6 +85,10 @@ def test_if_game_is_over_stop_advancing_snake(game):
     game.tick()
     game.tick()
     game.tick()
+    old_snake_coordinates = game.snake()
+    game.tick()
+    new_snake_coordinates = game.snake()
+    assert old_snake_coordinates != new_snake_coordinates
 
 
 def test_if_snake_hits_itself_game_is_over(game):
