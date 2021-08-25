@@ -21,7 +21,6 @@ class Game:
     def tick(self, command=None):
         if not self._is_running:
             return
-
         self._handle_growth()
         self._handle_command(command)
         self._snake.advance()
