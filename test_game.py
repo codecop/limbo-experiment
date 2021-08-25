@@ -7,7 +7,7 @@ from test_arena import Arena
 import pytest
 
 
-Enum("TurnCommand", "LEFT RIGHT")
+TurnCommand = Enum("TurnCommand", "LEFT RIGHT")
 
 
 class Game:
