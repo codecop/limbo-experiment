@@ -43,12 +43,13 @@ class Presenter:
     def _loop(self):
         self._game.tick(self._next_command)
         self._next_command = None
-        self.start()
+
+        if self._game.is_running:
+            self.start()
 
     def _draw(self):
         self._view.draw_snake(self._game.snake())
         self._view.draw_arena(self._game.arena())
-        # TODO game over handling
 
     def start(self):
         self._draw()
