@@ -69,6 +69,10 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 # turn left is just working ;-)
 
 
+def test_presenter_draws_snake(viewGamePresenter):
+    view, _, presenter = viewGamePresenter
+
+
 if __name__ == "__main__":
     root = Tk()
     view = TkView(root)
