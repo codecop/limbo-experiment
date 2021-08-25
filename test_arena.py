@@ -35,6 +35,9 @@ class Arena:
     def is_position_occupied(self, position):
         return position in self._walls
 
+    def are_positions_occupied(self, positions):
+        return True
+
     # TODO later: place_obstacle
     # TODO later: place apple to eat
 
