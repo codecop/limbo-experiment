@@ -34,11 +34,12 @@ class Presenter:
         # set command RIGHT
         pass
 
-    def start(self):
-        pass
-
     def _loop(self):
         # self._game_tick(command)
+        pass
+
+    def start(self):
+        # register _lop in schedule
         pass
 
 
