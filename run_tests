@@ -1,6 +1,7 @@
 #!/bin/sh
 
-pytest test*.py
+pytest --cov > test_result.log
 error=$?
+cat test_result.log
 
 exit $error

@@ -1,7 +1,5 @@
 # https://coverage.readthedocs.io/en/coverage-5.5/index.html
 # https://coverage.readthedocs.io/en/coverage-5.5/source.html#execution
-# pytest --cov | grep -P "TOTAL\s+\d+\s+\d+\s+(\d+%)"
-# pytest --cov | grep -P "^TOTAL.*\s+(\d+\%)$"
 [run]
 source =
     .
