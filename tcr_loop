@@ -2,8 +2,7 @@
 
 while(true);
 do
-
-  if ! git diff-index --quiet HEAD --; then
+  if ! [[ -z $(git status --porcelain) ]]; then
     ./tcr
   fi
 
