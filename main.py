@@ -1,3 +1,5 @@
+"""TCR driven Snake Game"""
+
 from tkinter import Tk
 
 from test_arena import Arena
