@@ -1,8 +1,10 @@
 #!/bin/sh
+# https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes
+# Note: ^-- SC3010: In POSIX sh, [[ ]] is undefined.
 
 while(true);
 do
-  if ! [[ -z $(git status --porcelain) ]]; then
+  if [[ -n $(git status --porcelain) ]]; then
     ./tcr
   fi
 
