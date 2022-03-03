@@ -1,7 +1,11 @@
 #!/bin/sh
 
-pytest --cov > test_result.log
+# pytest --cov > test_result.log
+coverage run -m pytest > test_result.log
 error=$?
+coverage report >> test_result.log
+coverage json -o coverage_new.json
+
 cat test_result.log
 
 exit $error

@@ -1,5 +1,6 @@
 # Python PIP (package manager) required dependencies
 black
+click
 pytest
 pytest-cov
 pylint
