@@ -13,7 +13,8 @@ python compare_coverage.py $old $new
 
 error=$?
 
-# Overwrite old with new if coverage did not decrease
+# Overwrite old with new if coverage stayed the same or increased
+# TBD: It is not necessary to keep $new, could be removed
 if [ $error -eq 0 ]; then
     cp $new $old
 fi
