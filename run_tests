@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # pytest --cov > test_result.log
 coverage run -m pytest > test_result.log

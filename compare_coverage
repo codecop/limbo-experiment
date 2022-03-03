@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 old="coverage_old.json"
 new="coverage_new.json"
 

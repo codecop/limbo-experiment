@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git stage -A
 git commit -m "[tcr] failing"

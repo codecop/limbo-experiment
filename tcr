@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ./run_tests && ./compare_coverage && ./git_commit || ./git_revert
 
