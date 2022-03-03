@@ -19,10 +19,16 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+      - name: Prepare virtual display for Tk
+        run: |
+          sudo apt install xvfb              # virtual display for tk tests
+          Xvfb :1 -screen 0 1600x1200x16  &  # create virtual display with size 1600x1200 and 16 bit color. Color can be changed to 24 or 8
+          export DISPLAY=':1.0'              # tell X clients to use our virtual DISPLAY :1.0
+
       - name: Run tests
         run: |
           pytest
