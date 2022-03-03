@@ -5,3 +5,4 @@ source =
     .
 omit =
     ./tkinter_snippets/*
+    compare_coverage.py
