@@ -1,7 +1,7 @@
 {
     "meta": {
         "version": "6.3.2",
-        "timestamp": "2022-03-03T12:15:35.814675",
+        "timestamp": "2022-03-03T16:31:55.793614",
         "branch_coverage": false,
         "show_contexts": false
     },
@@ -546,34 +546,14 @@
                 164
             ],
             "excluded_lines": []
-        },
-        "tmp.py": {
-            "executed_lines": [],
-            "summary": {
-                "covered_lines": 0,
-                "num_statements": 6,
-                "percent_covered": 0.0,
-                "percent_covered_display": "0",
-                "missing_lines": 6,
-                "excluded_lines": 0
-            },
-            "missing_lines": [
-                3,
-                6,
-                7,
-                8,
-                9,
-                10
-            ],
-            "excluded_lines": []
         }
     },
     "totals": {
         "covered_lines": 417,
-        "num_statements": 447,
-        "percent_covered": 93.28859060402685,
-        "percent_covered_display": "93",
-        "missing_lines": 30,
+        "num_statements": 441,
+        "percent_covered": 94.5578231292517,
+        "percent_covered_display": "95",
+        "missing_lines": 24,
         "excluded_lines": 0
     }
 }
