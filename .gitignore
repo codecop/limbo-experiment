@@ -1,6 +1,7 @@
 ### Custom ###
 log.*
 test_result.log
+*private*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
