@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes
 # Note: ^-- SC3010: In POSIX sh, [[ ]] is undefined.
 
