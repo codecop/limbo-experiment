@@ -4,7 +4,7 @@
 coverage run -m pytest > test_result.log
 error=$?
 coverage report >> test_result.log
-coverage json -o coverage_new.json
+coverage json -o coverage_new.json --pretty-print
 
 cat test_result.log
 
