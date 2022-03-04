@@ -32,7 +32,7 @@ class Arena:
             self._walls.append(Point(self._width, y))
 
     def _place_apples(self):
-        self._apples = [Point(0,0)]
+        self._apples.append(Point(0,0))
 
     def walls(self):
         return self._walls
