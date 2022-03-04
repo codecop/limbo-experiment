@@ -1,0 +1,11 @@
+#!/bin/bash
+
+while(true);
+do
+  if [[ -n $(git status --porcelain) ]]; then
+    ./tcr+
+  fi
+
+done;
+
+exit 0

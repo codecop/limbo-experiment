@@ -1,5 +1,5 @@
 #!/bin/bash
 
-./run_tests && ./compare_coverage && ./check_change && ./git_commit || ./git_revert
+./run_tests && ./git_commit || ./git_revert
 
 exit 0
