@@ -25,7 +25,7 @@ class Game:
         self._snake.advance()
         if self._arena.is_position_apple(self._snake.position):
             self._snake.grow()
-            # TODO remove apple
+            self._arena.remove_apple(self._snake.position)
         self._check_running()
 
     def _handle_growth(self):
