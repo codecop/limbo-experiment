@@ -141,6 +141,7 @@ def test_apple_is_removed_when_eaten(game):
     game.tick(TurnCommand.RIGHT)  # grow
     game.tick()
     game.tick()
-    pass
+    game.tick(TurnCommand.RIGHT)  # grow
+    game.tick(TurnCommand.RIGHT)
 
 # Game is complete.
