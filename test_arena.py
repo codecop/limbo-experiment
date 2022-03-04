@@ -41,7 +41,7 @@ class Arena:
         return any(self.is_position_occupied(position) for position in positions)
 
     def is_position_apple(self, position):
-        return True # position in self._apples
+        return position in self._apples
 
     # TODO later: place_obstacle
     # TODO later: place apple to eat
