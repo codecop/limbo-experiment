@@ -1,9 +1,14 @@
 #!/bin/bash
 
-# TODO use name from outside, if not given use "failing"
+param = "$1"
+if [ -v param ];then
+    message = "$1"
+else
+    message = "failing"
+if
 
 git stage -A
-git commit -m "[tcr] failing"
+git commit -m "[tcr] ${message}"
 
 git revert -n HEAD
 git stage -A
