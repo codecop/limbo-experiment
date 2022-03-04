@@ -26,8 +26,9 @@ import pytest
 
 
 # https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
+# If GITHUB_ACTION is set, we assume we run in a container and can not service user events
 skipifcontainer_because_event_handling_not_working = pytest.mark.skipif(
-    os.environ.get("GITHUB_ACTION"), reason="Test executed within GitHub action."
+    bool(os.environ.get("GITHUB_ACTION")), reason="Test executed within GitHub action."
 )
 
 
