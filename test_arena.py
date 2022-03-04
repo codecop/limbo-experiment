@@ -21,6 +21,7 @@ class Arena:
         self._apples = []
 
         self._build_wall()
+        # self._set_apple()
 
     def _build_wall(self):
         for x in range(-self._width, self._width + 1):
