@@ -47,7 +47,6 @@ class Arena:
         return position in self._apples
 
     # TODO later: place_obstacle
-    # TODO later: place apple to eat
 
 
 def test_there_is_an_arena_with_walls_around(arena3x4):
