@@ -84,6 +84,12 @@ class Snake:
     def _tail(self):
         return self.body[1:]
 
+    def _foo(self):
+        self.body[1:]
+        self.body[1:]
+        self.body[1:]
+        return self.body[1:]
+
 
 Direction = namedtuple("Direction", ["name", "offset"])
 
