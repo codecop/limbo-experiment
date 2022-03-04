@@ -111,7 +111,7 @@ class Directions:
             cls.NORTH: cls.WEST,
             cls.WEST: cls.SOUTH,
             cls.SOUTH: cls.EAST,
-            cls.EAST: cls.NORTH,
+            cls.EAST: cls.EAST,
         }
 
         return _RIGHT[direction]
