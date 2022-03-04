@@ -1,11 +1,11 @@
 #!/bin/bash
 
-param = "$1"
+param="$1"
 if [ -v param ];then
-    message = "$1"
+    message="$1"
 else
-    message = "failing"
-if
+    message="failing"
+fi
 
 git stage -A
 git commit -m "[tcr] ${message}"
