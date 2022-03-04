@@ -129,6 +129,6 @@ def test_snake_grows_when_eating_an_apple(game):
     # starts at 0,0
     game.tick() # ends at 0,1 -> eats apple
     new_snake_length = len(game.snake())
-
+    assert new_snake_length == old_snake_length # + 1
 
 # Game is complete.
