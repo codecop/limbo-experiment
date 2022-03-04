@@ -46,6 +46,9 @@ class Arena:
     def is_position_apple(self, position):
         return position in self._apples
 
+    def remove_apple(self, position):
+        pass
+
     # TODO later: place_obstacle
 
 
@@ -82,6 +85,6 @@ def test_area_has_apple(arena3x4):
     assert arena3x4.is_position_apple(Point(0, 1)) is True
 
 def test_area_can_remove_apple(arena3x4):
-    # arena3x4.remove_apple(Point(0,1))
+    arena3x4.remove_apple(Point(0,1))
     # assert arena3x4.is_position_apple(Point(0, 1)) is False
     pass
