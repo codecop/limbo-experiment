@@ -123,5 +123,8 @@ def test_if_snake_hits_itself_game_is_over(game):
     game.tick(TurnCommand.RIGHT)  # grow
     assert game.is_running() is False
 
+def test_foo(game):
+    pass
+
 
 # Game is complete.
