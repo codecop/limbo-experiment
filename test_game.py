@@ -147,5 +147,7 @@ def test_apple_is_removed_when_eaten(game):
     game.tick()
     game.tick()  # grow, and would eat apple again
     game.tick()  # has NOT grown
+    new_snake_length = len(game.snake())
+    # assert new_snake_length == old_snake_length + 1
 
 # Game is complete.
