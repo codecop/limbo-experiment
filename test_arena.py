@@ -40,6 +40,9 @@ class Arena:
     def are_positions_occupied(self, positions):
         return any(self.is_position_occupied(position) for position in positions)
 
+    def is_position_apple(self, position):
+        return True # position in self._apples
+
     # TODO later: place_obstacle
     # TODO later: place apple to eat
 
@@ -74,5 +77,5 @@ def test_if_arena_positions_are_occupied(arena3x4):
     assert arena3x4.are_positions_occupied([Point(2, -3), Point(3, -4)]) is True
 
 def test_area_has_apple(arena3x4):
-    # assert arena3x4.is_position_apple(Point(0, 0)) is True
+    assert arena3x4.is_position_apple(Point(0, 0)) is True
     pass
