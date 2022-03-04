@@ -21,6 +21,7 @@ class Game:
         if not self._is_running:
             return
         if self._arena.is_position_apple(self._snake.position):
+            # self._snake.grow()
             pass
         self._handle_growth()
         self._handle_command(command)
