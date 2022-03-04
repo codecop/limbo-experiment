@@ -116,11 +116,6 @@ class Directions:
 
         return _RIGHT[direction]
 
-    def foo(self):
-        print("abc")
-        print("abc")
-        print("abc")
-
 
 def test_there_is_a_snake(snake):
     assert snake.direction == Directions.NORTH
