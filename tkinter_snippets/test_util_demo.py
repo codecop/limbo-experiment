@@ -1,5 +1,8 @@
 import tkinter as tk
-from test_util import TkinterTestCase
+from test_util import (
+    skipifcontainer_because_event_handling_not_working,
+    TkinterTestCase,
+)
 
 
 class ExampleApplication(tk.Frame):
@@ -62,6 +65,7 @@ def examplethatisnotaframe_main():
     root.mainloop()
 
 
+@skipifcontainer_because_event_handling_not_working
 class TestExampleApplication(TkinterTestCase):
     def test_application_that_is_a_frame(self):
         app = ExampleApplication(self.root)

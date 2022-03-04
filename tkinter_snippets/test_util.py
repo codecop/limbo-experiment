@@ -22,6 +22,14 @@ import tkinter as tk
 import _tkinter
 import unittest
 
+import pytest
+
+
+# https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
+skipifcontainer_because_event_handling_not_working = pytest.mark.skipif(
+    os.environ.get("GITHUB_ACTION"), reason="Test executed within GitHub action."
+)
+
 
 class TkinterTestCase(unittest.TestCase):
     """Utility class to facilitate setup, teardown as well as manual GUI updates."""

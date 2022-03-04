@@ -16,9 +16,10 @@ TKinter implementation of domain view of game.
 from test_snake import Point
 
 from tkinter import Tk, Canvas
-from tkinter_snippets.test_util import TkinterTestCase
-
-import pytest
+from tkinter_snippets.test_util import (
+    skipifcontainer_because_event_handling_not_working,
+    TkinterTestCase,
+)
 
 # registerGameTick, time
 
@@ -119,6 +120,7 @@ class TestTkView(TkinterTestCase):
             55 - 4 * RADIUS,
         ] in item_coords
 
+    @skipifcontainer_because_event_handling_not_working
     def test_command_key_left(self):
         view = TkView(self.root)
 
