@@ -1,14 +1,13 @@
 #!/bin/bash
 
-param="$1"
-if [ -v param ];then
-    message="$1"
+if [ "$1" == "" ]; then
+    reason="failing"
 else
-    message="failing"
+    reason="$1"
 fi
 
 git stage -A
-git commit -m "[tcr] ${message}"
+git commit -m "[tcr] ${reason}"
 
 git revert -n HEAD
 git stage -A
