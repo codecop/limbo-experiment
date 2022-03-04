@@ -124,4 +124,8 @@ def test_if_snake_hits_itself_game_is_over(game):
     assert game.is_running() is False
 
 
+def test_snake_grows_when_eating_apple(game):
+    pass
+
+
 # Game is complete.
