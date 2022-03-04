@@ -2,21 +2,21 @@
 
 ./run_tests
 test_result=$?
-if [ test_result -ne 0 ]; then
+if [ "$test_result" -ne 0 ]; then
   ./git_revert "failing_test"
   exit 0
 fi
 
 ./compare_coverage
 coverage_result=$?
-if [ coverage_result -ne 0 ]; then
+if [ "$coverage_result" -ne 0 ]; then
   ./git_revert "missing_coverage"
   exit 0
 fi
 
 ./check_change
 size_result=$?
-if [ size_result -ne 0 ]; then
+if [ "$size_result" -ne 0 ]; then
   ./git_revert "large_change"
   exit 0
 fi
