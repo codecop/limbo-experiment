@@ -6,3 +6,5 @@ source =
 omit =
     ./tkinter_snippets/*
     compare_coverage.py
+    check_change.py
+    test_check_change.py

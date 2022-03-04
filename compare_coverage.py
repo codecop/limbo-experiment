@@ -15,17 +15,13 @@ import click
 @click.argument("old", type=click.Path(exists=True))
 @click.argument("new", type=click.Path(exists=True))
 def cli_is_coverage_geq_than_before(old, new):
-    if is_coverage_geq_than_before(old, new):
-        sys.exit(0)
-    sys.exit(1)
+    old = from_json(old)
+    new = from_json(new)
+    sys.exit(int(is_coverage_geq_than_before(old, new)))
 
 
 def is_coverage_geq_than_before(old, new):
-    return get_percent_covered_from_json(old) <= get_percent_covered_from_json(new)
-
-
-def get_percent_covered_from_json(file):
-    return get_percent_covered(from_json(file))
+    return get_percent_covered(old) <= get_percent_covered(new)
 
 
 def from_json(path):
