@@ -135,4 +135,7 @@ def test_snake_grows_when_eating_an_apple(game):
     new_snake_length = len(game.snake())
     assert new_snake_length == old_snake_length + 1
 
+def test_apple_is_removed_when_eaten(game):
+    pass
+
 # Game is complete.
