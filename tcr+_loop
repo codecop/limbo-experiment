@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# get initial coverage
+rm -f coverage_old.json
+./run_tests
+
 while(true);
 do
   if [[ -n $(git status --porcelain) ]]; then
