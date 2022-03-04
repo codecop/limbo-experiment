@@ -1,5 +1,8 @@
 """
 Check size of change set.
+
+Allows to limit the acceptable size of a change in a single loop.
+If not set, defaults to infinity.
 """
 import sys
 import subprocess
@@ -8,7 +11,7 @@ import click
 
 
 @click.command()
-@click.option("--added", default=5, help="Maximum number of added lines")
+@click.option("--added", default=float("inf"), help="Maximum number of added lines")
 def cli_is_change_size_okay(added):
     git_diff_numstat = get_git_diff_numstat()
     sys.exit(int(not is_change_size_okay(git_diff_numstat, added)))
