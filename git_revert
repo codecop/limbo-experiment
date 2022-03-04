@@ -1,13 +1,13 @@
 #!/bin/bash
 
 if [ "$1" == "" ]; then
-    reason="failing"
+    reason="called_manual"
 else
     reason="$1"
 fi
 
 git stage -A
-git commit -m "[tcr] ${reason}"
+git commit -m "[tcr] failing: ${reason}"
 
 git revert -n HEAD
 git stage -A

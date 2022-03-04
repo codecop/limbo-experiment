@@ -1,5 +1,25 @@
 #!/bin/bash
 
-./run_tests && ./compare_coverage && ./check_change && ./git_commit || ./git_revert
+./run_tests
+test_result=$?
+if [ test_result -ne 0 ]; then
+  ./git_revert "failing_test"
+  exit 0
+fi
 
+./compare_coverage
+coverage_result=$?
+if [ coverage_result -ne 0 ]; then
+  ./git_revert "missing_coverage"
+  exit 0
+fi
+
+./check_change
+size_result=$?
+if [ size_result -ne 0 ]; then
+  ./git_revert "large_change"
+  exit 0
+fi
+
+./git_commit
 exit 0
