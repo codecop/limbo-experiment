@@ -20,6 +20,7 @@ Not sure the details of `pump_events`.
 import os
 import tkinter as tk
 import _tkinter
+import sys
 import unittest
 
 import pytest
@@ -36,7 +37,7 @@ class TkinterTestCase(unittest.TestCase):
     """Utility class to facilitate setup, teardown as well as manual GUI updates."""
 
     def setUp(self):
-        if not os.environ.get("DISPLAY", False):
+        if sys.platform.startswith('linux') and not os.environ.get("DISPLAY", False):
             self.skipTest(
                 "No $DISPLAY environment variable. Cannot run Tk without (virtual) display."
             )
