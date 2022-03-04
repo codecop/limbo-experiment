@@ -17,6 +17,7 @@ https://stackoverflow.com/questions/4083796/how-do-i-run-unittest-on-a-tkinter-a
 
 Not sure the details of `pump_events`.
 """
+import os
 import tkinter as tk
 import _tkinter
 import unittest
@@ -26,6 +27,11 @@ class TkinterTestCase(unittest.TestCase):
     """Utility class to facilitate setup, teardown as well as manual GUI updates."""
 
     def setUp(self):
+        if not os.environ.get("DISPLAY", False):
+            self.skipTest(
+                "No $DISPLAY environment variable. Cannot run Tk without (virtual) display."
+            )
+
         self.root = tk.Tk()
         self.pump_events()
 
