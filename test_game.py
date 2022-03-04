@@ -20,14 +20,13 @@ class Game:
     def tick(self, command=None):
         if not self._is_running:
             return
-        if self._arena.is_position_apple(self._snake.position):
-            exit
-            self._snake.grow()
-            # TODO remove apple
-            pass
         self._handle_growth()
         self._handle_command(command)
         self._snake.advance()
+        if self._arena.is_position_apple(self._snake.position):
+            self._snake.grow()
+            # TODO remove apple
+            pass
         self._check_running()
 
     def _handle_growth(self):
