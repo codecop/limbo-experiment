@@ -46,6 +46,9 @@ class Arena:
     def is_position_apple(self, position):
         return position in self._apples
 
+    def remove_apple(self, position):
+        pass
+
     # TODO later: place_obstacle
 
 
