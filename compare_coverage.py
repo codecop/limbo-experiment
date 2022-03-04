@@ -17,7 +17,7 @@ import click
 def cli_is_coverage_geq_than_before(old, new):
     old = from_json(old)
     new = from_json(new)
-    sys.exit(int(is_coverage_geq_than_before(old, new)))
+    sys.exit(int(not is_coverage_geq_than_before(old, new)))
 
 
 def is_coverage_geq_than_before(old, new):

@@ -11,7 +11,7 @@ import click
 @click.option("--added", default=5, help="Maximum number of added lines")
 def cli_is_change_size_okay(added):
     git_diff_numstat = get_git_diff_numstat()
-    sys.exit(int(is_change_size_okay(git_diff_numstat, added)))
+    sys.exit(int(not is_change_size_okay(git_diff_numstat, added)))
 
 
 def is_change_size_okay(git_diff_numstat, added):
