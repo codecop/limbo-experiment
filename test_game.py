@@ -127,9 +127,7 @@ def test_if_snake_hits_itself_game_is_over(game):
 def test_snake_grows_when_eating_an_apple(game):
     old_snake_length = len(game.snake())
     # starts at 0,0
-    game.tick() #end at 0,1 -> apple
-    game.tick()
-    game.tick()
+    game.tick() # ends at 0,1 -> eats apple
     new_snake_length = len(game.snake())
 
 
