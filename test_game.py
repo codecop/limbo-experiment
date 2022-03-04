@@ -125,7 +125,12 @@ def test_if_snake_hits_itself_game_is_over(game):
 
 
 def test_snake_grows_when_eating_an_apple(game):
-    pass
+    game.tick()
+    game.tick()
+    old_snake_length = len(game.snake())
+    game.tick()
+    new_snake_length = len(game.snake())
+    assert new_snake_length == old_snake_length + 1
 
 
 # Game is complete.
