@@ -125,8 +125,7 @@ def test_if_snake_hits_itself_game_is_over(game):
 
 
 def test_snake_grows_when_eating_an_apple(game):
-    game.tick()
-    game.tick()
+    pass
 
 
 # Game is complete.
