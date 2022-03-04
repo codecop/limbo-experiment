@@ -80,3 +80,6 @@ def test_if_arena_positions_are_occupied(arena3x4):
 
 def test_area_has_apple(arena3x4):
     assert arena3x4.is_position_apple(Point(0, 1)) is True
+
+def test_area_can_remove_apple(arena3x4):
+    pass
