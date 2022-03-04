@@ -137,7 +137,7 @@ def test_snake_grows_when_eating_an_apple(game):
 
 def test_apple_is_removed_when_eaten(game):
     game.tick()
-    game.tick(TurnCommand.RIGHT)
+    game.tick(TurnCommand.RIGHT) # grown
     game.tick(TurnCommand.RIGHT)
     pass
 
