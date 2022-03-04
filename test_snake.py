@@ -139,6 +139,14 @@ def test_snake_rotates_right(snake):
     assert snake.direction == Directions.WEST
     snake.turn_right()
     assert snake.direction == Directions.NORTH
+    snake.turn_right()
+    assert snake.direction == Directions.EAST
+    snake.turn_right()
+    assert snake.direction == Directions.SOUTH
+    snake.turn_right()
+    assert snake.direction == Directions.WEST
+    snake.turn_right()
+    assert snake.direction == Directions.NORTH
 
 
 def test_snake_rotates_left(snake):
