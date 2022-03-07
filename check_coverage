@@ -9,7 +9,7 @@ if ! [ -f $old ]; then
 fi
 
 # Compare coverage
-python compare_coverage.py $old $new
+python check_coverage.py $old $new
 
 error=$?
 
