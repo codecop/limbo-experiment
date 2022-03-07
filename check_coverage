@@ -1,6 +1,6 @@
 #!/bin/bash
-old="coverage_old.json"
-new="coverage_new.json"
+old="log/coverage_old.json"
+new="log/coverage_new.json"
 
 # Create old file if it does not exist
 if ! [ -f $old ]; then

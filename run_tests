@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # pytest --cov > test_result.log
-coverage run -m pytest -s > test_result.log
+coverage run -m pytest -s > log/test_result.log
 error=$?
-coverage report >> test_result.log
-coverage json -o coverage_new.json --pretty-print
+coverage report >> log/test_result.log
+coverage json -o log/coverage_new.json --pretty-print
 
-cat test_result.log
+cat log/test_result.log
 
 exit $error
