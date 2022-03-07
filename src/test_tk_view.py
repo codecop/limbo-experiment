@@ -16,10 +16,10 @@ TKinter implementation of domain view of game.
 from test_snake import Point
 
 from tkinter import Tk, Canvas
-from tkinter_snippets.test_util import (
+from tkutil.testing import TkinterTestCase
+from conftest import (
     skipifcontainer_because_event_handling_not_working,
-    TkinterTestCase,
-)
+)  # TODO: resolve differently
 
 # registerGameTick, time
 

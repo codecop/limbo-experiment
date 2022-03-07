@@ -26,19 +26,11 @@ import unittest
 import pytest
 
 
-# https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
-# If GITHUB_ACTION is set, we assume we run in a container and can not service user events
-skipifcontainer_because_event_handling_not_working = pytest.mark.skipif(
-    bool(os.environ.get("GITHUB_ACTION")) or sys.platform.startswith('win'),
-    reason="Test not working within GitHub action and on Windows."
-)
-
-
 class TkinterTestCase(unittest.TestCase):
     """Utility class to facilitate setup, teardown as well as manual GUI updates."""
 
     def setUp(self):
-        if sys.platform.startswith('linux') and not os.environ.get("DISPLAY", False):
+        if sys.platform.startswith("linux") and not os.environ.get("DISPLAY", False):
             self.skipTest(
                 "No $DISPLAY environment variable. Cannot run Tk without (virtual) display."
             )

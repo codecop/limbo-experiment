@@ -3,7 +3,7 @@
 Snippet showing how to find items on a canvas using tags.
 """
 from tkinter import Tk, Canvas
-from test_util import TkinterTestCase
+from tkutil.testing import TkinterTestCase
 
 
 def create_canvas_with_items(root):

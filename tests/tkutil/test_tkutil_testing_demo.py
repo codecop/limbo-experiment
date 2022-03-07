@@ -1,8 +1,8 @@
 import tkinter as tk
-from test_util import (
+from tkutil.testing import TkinterTestCase
+from conftest import (
     skipifcontainer_because_event_handling_not_working,
-    TkinterTestCase,
-)
+)  # TODO: resolve differently
 
 
 class ExampleApplication(tk.Frame):

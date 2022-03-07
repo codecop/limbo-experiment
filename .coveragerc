@@ -4,7 +4,7 @@
 source =
     .
 omit =
-    ./tkinter_snippets/*
+    ./tkutil/*
     check_coverage.py
     check_change.py
     test_check_change.py
