@@ -1,10 +1,5 @@
 # -*- coding: latin-1 -*-
 from enum import Enum
-from game.snake import Point, Snake
-from game.arena import Arena
-
-import pytest
-
 
 TurnCommand = Enum("TurnCommand", "LEFT RIGHT")
 
@@ -52,4 +47,3 @@ class Game:
 
     def arena(self):
         return self._arena.walls()
-

@@ -8,9 +8,7 @@ Domain
 - Arena
   - Obstacle
 """
-from game.snake import Point
-
-import pytest
+from .snake import Point
 
 
 class Arena:

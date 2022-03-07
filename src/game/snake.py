@@ -33,8 +33,6 @@ Domain
 """
 from collections import namedtuple
 
-import pytest
-
 
 class Point(namedtuple("Point", ["x", "y"])):
     def __add__(self, other):

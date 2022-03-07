@@ -13,13 +13,7 @@ TKinter implementation of domain view of game.
   * Tick speed
 * "Game Loop" = tick wird scheduled
 """
-from game.snake import Point
-
 from tkinter import Tk, Canvas
-from tkutil.testing import TkinterTestCase
-from conftest import (
-    skipifcontainer_because_event_handling_not_working,
-)  # TODO: resolve differently
 
 # registerGameTick, time
 
