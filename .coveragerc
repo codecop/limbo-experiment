@@ -3,10 +3,11 @@
 [run]
 source =
     .
-omit =
-    ./tkutil/*
-    check_coverage.py
-    check_change.py
-    test_check_change.py
-    .virtual3/*
 
+omit =
+    setup.py
+    ./tkutil/*
+    ./src/tkutil/*
+    ./src/tcr/*
+    ./tests/*
+    .virtual3/*
