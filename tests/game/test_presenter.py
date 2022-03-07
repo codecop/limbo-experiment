@@ -6,56 +6,13 @@ Grundanforderungen:
 - X trifft Snake sich selbst ist Spiel aus - von aussen gesteuert
 - X trifft Snake eine Wand ist Spiel aus - von aussen gesteuert
 """
-from test_snake import Point
-from test_game import Game, TurnCommand
+from game.snake import Point
+from game.game import Game, TurnCommand
 from tkinter import Tk
-from test_tk_view import TkView
-
+from game.tkview import TkView
+from game.presenter import Presenter
 import pytest
 from unittest.mock import MagicMock
-
-# create game: create Arena, create Snake, get View
-# right/left pressed
-# tick = draw on view
-# game ended!
-
-
-class Presenter:
-    def __init__(self, view, game, update_interval=100):
-        self._view = view
-        self._game = game
-        self._next_command = None
-        self._update_interval = update_interval
-
-        self._register_command_callbacks(view)
-
-    def _register_command_callbacks(self, view):
-        view.register_start_command(self.start)
-        view.register_left_command(self.left)
-        view.register_right_command(self.right)
-
-    def left(self):
-        self._next_command = TurnCommand.LEFT
-
-    def right(self):
-        self._next_command = TurnCommand.RIGHT
-
-    def _loop(self):
-        self._game.tick(self._next_command)
-        self._next_command = None
-
-        if self._game.is_running():
-            self.start()
-        else:
-            self._view.game_over()
-
-    def _draw(self):
-        self._view.draw_snake(self._game.snake())
-        self._view.draw_arena(self._game.arena())
-
-    def start(self):
-        self._draw()
-        self._view.schedule_tick(self._loop, self._update_interval)
 
 
 @pytest.fixture

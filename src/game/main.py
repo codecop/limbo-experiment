@@ -2,14 +2,15 @@
 
 from tkinter import Tk
 
-from test_arena import Arena
-from test_game import Game
-from test_presenter import Presenter
-from test_snake import Snake
-from test_tk_view import TkView
+from game.arena import Arena
+from game.game import Game
+from game.presenter import Presenter
+from game.snake import Snake
+from game.tkview import TkView
 
 if __name__ == "__main__":
     # TODO: pull out config (RADIUS, ..., growth rate)
+    # TODO: add as entry point
     root = Tk()
     view = TkView(root, 500, 500)
 

@@ -2,9 +2,9 @@ import os
 import sys
 import pytest
 
-from test_arena import Arena
-from test_game import Game
-from test_snake import Snake
+from game.arena import Arena
+from game.game import Game
+from game.snake import Snake
 
 
 # https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
