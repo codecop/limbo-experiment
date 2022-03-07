@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python check_change.py --added 3
+check_change --added 3
 
 error=$?
 

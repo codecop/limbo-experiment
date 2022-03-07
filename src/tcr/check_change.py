@@ -12,7 +12,7 @@ import click
 
 @click.command()
 @click.option("--added", default=float("inf"), help="Maximum number of added lines")
-def cli_is_change_size_okay(added):
+def cli(added):
     git_diff_numstat = get_git_diff_numstat()
     sys.exit(int(not is_change_size_okay(git_diff_numstat, added)))
 
@@ -36,7 +36,3 @@ def compute_lines_changed(git_diff_numstat):
         total_added += int(added)
         total_removed += int(removed)
     return (total_added, total_removed)
-
-
-if __name__ == "__main__":
-    cli_is_change_size_okay()

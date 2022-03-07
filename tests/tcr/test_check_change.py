@@ -1,4 +1,4 @@
-from check_change import compute_lines_changed
+from tcr.check_change import compute_lines_changed
 
 
 def test_compute_number_of_lines_changed():

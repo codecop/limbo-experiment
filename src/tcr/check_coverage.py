@@ -14,7 +14,7 @@ import click
 @click.command()
 @click.argument("old", type=click.Path(exists=True))
 @click.argument("new", type=click.Path(exists=True))
-def cli_is_coverage_geq_than_before(old, new):
+def cli(old, new):
     old = from_json(old)
     new = from_json(new)
     sys.exit(int(not is_coverage_geq_than_before(old, new)))
@@ -32,7 +32,3 @@ def from_json(path):
 
 def get_coverage_metric(data):
     return data["totals"]["missing_lines"]
-
-
-if __name__ == "__main__":
-    cli_is_coverage_geq_than_before()
