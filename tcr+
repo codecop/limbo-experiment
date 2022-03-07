@@ -7,7 +7,7 @@ if [ "$test_result" -ne 0 ]; then
   exit 0
 fi
 
-./compare_coverage
+./check_coverage
 coverage_result=$?
 if [ "$coverage_result" -ne 0 ]; then
   ./git_revert "missing_coverage"
