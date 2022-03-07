@@ -6,13 +6,13 @@ Grundanforderungen:
 - X trifft Snake sich selbst ist Spiel aus - von aussen gesteuert
 - X trifft Snake eine Wand ist Spiel aus - von aussen gesteuert
 """
-from game.snake import Point
-from game.game import Game, TurnCommand
-from tkinter import Tk
-from game.tkview import TkView
-from game.presenter import Presenter
-import pytest
 from unittest.mock import MagicMock
+
+import pytest
+
+from game.game import TurnCommand
+from game.presenter import Presenter
+from game.snake import Point
 
 
 @pytest.fixture

@@ -1,7 +1,5 @@
 # -*- coding: latin-1 -*-
 from game.snake import Point
-from game.arena import Arena
-import pytest
 
 
 def test_there_is_an_arena_with_walls_around(arena3x4):

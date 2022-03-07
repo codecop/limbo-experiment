@@ -1,13 +1,12 @@
 # -*- coding: latin-1 -*-
-from game.snake import Point
+from tkinter import Tk
 
-from tkinter import Tk, Canvas
-from tkutil.testing import TkinterTestCase
-
-from game.tkview import TkView, RADIUS
 from conftest import (
     skipifcontainer_because_event_handling_not_working,
 )  # TODO: resolve differently
+from tkutil.testing import TkinterTestCase
+from game.snake import Point
+from game.tkview import RADIUS, TkView
 
 
 class TestTkView(TkinterTestCase):

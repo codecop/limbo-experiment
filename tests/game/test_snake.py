@@ -1,9 +1,5 @@
 # -*- coding: latin-1 -*-
-from collections import namedtuple
-
-from game.snake import Point, Snake, Directions
-
-import pytest
+from game.snake import Point, Directions
 
 
 def test_there_is_a_snake(snake):

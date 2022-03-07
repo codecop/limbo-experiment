@@ -1,11 +1,6 @@
 # -*- coding: latin-1 -*-
-from enum import Enum
-from game.snake import Point, Snake
-from game.arena import Arena
-
-import pytest
-
-from game.game import Game, TurnCommand
+from game.game import TurnCommand
+from game.snake import Point
 
 
 def test_new_game_has_snake(game):
