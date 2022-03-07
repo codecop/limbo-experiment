@@ -10,6 +10,7 @@ setup(
         "console_scripts": [
             "check_coverage = tcr.check_coverage:cli",
             "check_change = tcr.check_change:cli",
+            "snake = game.main:run",
         ]
     },
 )
