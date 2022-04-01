@@ -12,7 +12,7 @@ from .snake import Point
 
 
 class Arena:
-    def __init__(self, width, height, apples=[Point(0, 1)]):
+    def __init__(self, width, height, initial_apple=Point(0, 1)):
         self._width = width
         self._height = height
         self._walls = []
