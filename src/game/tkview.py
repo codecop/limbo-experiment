@@ -60,7 +60,7 @@ class TkView:
     def draw_arena(self, new_points):
         self.draw_generic(new_points, self._arena_objects, "gray", ("arena"))
 
-    def draw_apple(self, new_points):
+    def draw_apples(self, new_points):
         self.draw_generic(new_points, self._apple_objects, "red", ("apple"))
 
     def draw_point(self, point, fill, tags):
