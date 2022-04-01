@@ -56,8 +56,8 @@ class TestTkView(TkinterTestCase):
             55 - 4 * RADIUS,
         ] in item_coords
 
-    def test_draw_same_snake_twice_draws_only_once(self):
-        view = TkView(self.root)
+        # def test_draw_same_snake_twice_draws_only_once(self):
+        #    view = TkView(self.root)
         view.draw_snake([Point(0, 0), Point(1, 2)])
         view.draw_snake([Point(0, 0), Point(1, 2)])
         items = view.canvas.find_withtag("snake")
