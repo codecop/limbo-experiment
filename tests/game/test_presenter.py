@@ -48,6 +48,7 @@ def test_presenter_draws_stuff_in_loop(view_game_presenter):
     view, game, presenter = view_game_presenter
     game.snake = lambda: [Point(2, 3)]
     game.arena = lambda: [Point(8, 9)]
+    game.apples = lambda: [Point(4, 6)]
     presenter._loop()
     view.draw_snake.assert_called_with([Point(2, 3)])
     view.draw_arena.assert_called_with([Point(8, 9)])
