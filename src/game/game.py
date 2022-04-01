@@ -11,6 +11,7 @@ class Game:
         self._is_running = True
         self._grow_count = grow_count
         self._ticks_to_grow = 0
+        self._apple_count = apple_count
 
     def tick(self, command=None):
         if not self._is_running:
