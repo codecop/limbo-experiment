@@ -21,6 +21,8 @@ def cli(old, new):
 
 
 def is_coverage_geq_than_before(old, new):
+    print("old metric", get_coverage_metric(old))
+    print("new metric", get_coverage_metric(new))
     return get_coverage_metric(old) >= get_coverage_metric(new)
 
 
