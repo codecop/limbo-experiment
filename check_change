@@ -1,5 +1,7 @@
 #!/bin/bash
-
+# Note: We do not discount empty lines, i.e. newline-changes.
+# Given that a new method or function is accompanied by
+# blank lines, consider adding 2 to below threshold.
 check_change --added 3
 
 error=$?
