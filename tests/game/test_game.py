@@ -14,6 +14,7 @@ def test_new_game_has_arena(game):
 
 
 def test_new_game_has_apples(game):
+    apple_coordinates = game.arena()
     pass
 
 
