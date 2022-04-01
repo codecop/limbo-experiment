@@ -10,7 +10,6 @@ from .tkview import TkView
 
 def run():
     # TODO: pull out config (RADIUS, ..., growth rate)
-    # TODO: add as entry point
     root = Tk()
     view = TkView(root, 500, 500)
 

@@ -11,7 +11,7 @@ Grundanforderungen:
 - X Rund um die Arena ist eine Wand
 
 Nice to have
-- Es kann ein Labyrint von Datei als Level geladen werden
+- Es kann ein Labyrinth von Datei als Level geladen werden
 - Geschwindigkeit
 - Schwierigkeitsgrad
 - Essen verlängert Schlange sofort
@@ -51,6 +51,7 @@ class Snake:
 
     def advance(self):
         advanced_position = self.position + self.direction.offset
+        # TBD simplify? deserves comment?
         if self._is_growing():
             self._times_to_grow -= 1
             whole_body = slice(len(self.body))
@@ -85,7 +86,7 @@ class Snake:
 
 Direction = namedtuple("Direction", ["name", "offset"])
 
-
+# TBD: move to geometry module?
 class Directions:
     NORTH = Direction("N", Point(0, 1))
     EAST = Direction("E", Point(1, 0))
@@ -105,14 +106,14 @@ class Directions:
 
     @classmethod
     def turn_left(cls, direction):
-        _RIGHT = {
+        _LEFT = {
             cls.NORTH: cls.WEST,
             cls.WEST: cls.SOUTH,
             cls.SOUTH: cls.EAST,
             cls.EAST: cls.NORTH,
         }
 
-        return _RIGHT[direction]
+        return _LEFT[direction]
 
 
 # Snake is complete

@@ -5,7 +5,7 @@ TKinter implementation of domain view of game.
 * X draw arena
   * X draw wall
 * update/redraw
-* ? key commands - k�nnte auch was anderes sein
+* ? key commands - kÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶nnte auch was anderes sein
 * extras
   * game over state
   * display score
@@ -57,7 +57,7 @@ class TkView:
         self.draw_generic(new_points, self._snake_objects, "green", ("snake"))
 
     def draw_arena(self, new_points):
-        self.draw_generic(new_points, self._arena_objects, "grey", ("arena"))
+        self.draw_generic(new_points, self._arena_objects, "gray", ("arena"))
 
     def draw_point(self, point, fill, tags):
         xcenter = self._width / 2 + point.x * 2 * RADIUS
@@ -69,15 +69,12 @@ class TkView:
         return self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, tags=tags)
 
     def register_left_command(self, callback):
-        self.left_command = callback
         self.window.bind("<Left>", lambda event: callback())
 
     def register_right_command(self, callback):
-        self.left_command = callback
         self.window.bind("<Right>", lambda event: callback())
 
     def register_start_command(self, callback):
-        self.start_command = callback
         self.window.bind("<Return>", lambda event: callback())
 
     def schedule_tick(self, callback, millis):
@@ -91,6 +88,15 @@ class TkView:
             fill="red",
             text="Game Over!",
             tags=("gameover"),
+        )
+
+    def game_start(self):
+        self.canvas.create_text(
+            self._width // 2,
+            self._height // 2,
+            fill="blue",
+            text="Hit <Return> to start!",
+            tags=("gamestart"),
         )
 
 

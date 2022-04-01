@@ -16,21 +16,21 @@ from game.snake import Point
 
 
 @pytest.fixture
-def viewGamePresenter():
+def view_game_presenter():  # TODO: fix casing
     view = MagicMock()
     game = MagicMock()
     return view, game, Presenter(view, game)
 
 
-def test_presenter_is_created_registers_keys(viewGamePresenter):
-    view, _, _ = viewGamePresenter
+def test_presenter_is_created_registers_keys(view_game_presenter):
+    view, _, _ = view_game_presenter
     view.register_left_command.assert_called()
     view.register_right_command.assert_called()
     view.register_start_command.assert_called()
 
 
-def test_presenter_sets_command_right_only_once(viewGamePresenter):
-    _, game, presenter = viewGamePresenter
+def test_presenter_sets_command_right_only_once(view_game_presenter):
+    _, game, presenter = view_game_presenter
     presenter.right()
     presenter._loop()
     game.tick.assert_called_with(TurnCommand.RIGHT)
@@ -41,11 +41,11 @@ def test_presenter_sets_command_right_only_once(viewGamePresenter):
 # turn left is just working ;-)
 
 
-def test_presenter_draws_stuff_in_loop(viewGamePresenter):
+def test_presenter_draws_stuff_in_loop(view_game_presenter):
     # is related to test_game.test_new_game_has_snake
     # make sure they match
     # TBD: custom assertions to simplify tests with real game/arena/snake?
-    view, game, presenter = viewGamePresenter
+    view, game, presenter = view_game_presenter
     game.snake = lambda: [Point(2, 3)]
     game.arena = lambda: [Point(8, 9)]
     presenter._loop()
@@ -53,14 +53,14 @@ def test_presenter_draws_stuff_in_loop(viewGamePresenter):
     view.draw_arena.assert_called_with([Point(8, 9)])
 
 
-def test_presenter_reschedules_loop(viewGamePresenter):
-    view, _, presenter = viewGamePresenter
+def test_presenter_reschedules_loop(view_game_presenter):
+    view, _, presenter = view_game_presenter
     presenter._loop()
     view.schedule_tick.assert_called()
 
 
-def test_presenter_start_schedules_loop_and_draws_stuff(viewGamePresenter):
-    view, _, presenter = viewGamePresenter
+def test_presenter_start_schedules_loop_and_draws_stuff(view_game_presenter):
+    view, _, presenter = view_game_presenter
     presenter.start()
     view.schedule_tick.assert_called()
     view.draw_snake.assert_called()
@@ -69,16 +69,17 @@ def test_presenter_start_schedules_loop_and_draws_stuff(viewGamePresenter):
 
 # game over handling
 
-
-def test_presenter_does_not_reschedules_loop_on_game_over(viewGamePresenter):
-    view, game, presenter = viewGamePresenter
+# TODO fix typing
+# TODO little bit of duplication here
+def test_presenter_does_not_reschedules_loop_on_game_over(view_game_presenter):
+    view, game, presenter = view_game_presenter
     game.is_running = lambda: False
     presenter._loop()
     view.schedule_tick.assert_not_called()
 
 
-def test_presenter_notifies_view_on_game_over(viewGamePresenter):
-    view, game, presenter = viewGamePresenter
+def test_presenter_notifies_view_on_game_over(view_game_presenter):
+    view, game, presenter = view_game_presenter
     game.is_running = lambda: False
     presenter._loop()
     view.game_over.assert_called()

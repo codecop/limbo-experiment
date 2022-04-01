@@ -30,7 +30,7 @@ class TestTkView(TkinterTestCase):
         ] in item_coords
 
     @skipifcontainer_because_event_handling_not_working
-    def test_command_key_left(self):
+    def test_command_key_left_triggers_associated_callback(self):
         view = TkView(self.root)
 
         self._was_callback_called = False
@@ -63,6 +63,12 @@ class TestTkView(TkinterTestCase):
         view = TkView(self.root)
         view.game_over()
         items = view.canvas.find_withtag("gameover")
+        assert 1 == len(items)
+
+    def test_game_start_draws_message(self):
+        view = TkView(self.root)
+        view.game_start()
+        items = view.canvas.find_withtag("gamestart")
         assert 1 == len(items)
 
 
