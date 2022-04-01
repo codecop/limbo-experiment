@@ -46,6 +46,7 @@ class Presenter:
     def _draw(self):
         self._view.draw_snake(self._game.snake())
         self._view.draw_arena(self._game.arena())
+        self._view.draw_apples(self._game.apples())
 
     def start(self):
         self._draw()
