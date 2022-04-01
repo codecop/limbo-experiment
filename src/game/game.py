@@ -31,9 +31,6 @@ class Game:
             self._ticks_to_grow -= self._grow_count
             self._snake.grow()
 
-    def _handle_apple_growth(self):
-        pass
-
     def _handle_command(self, command):
         if command is TurnCommand.LEFT:
             self._snake.turn_left()
