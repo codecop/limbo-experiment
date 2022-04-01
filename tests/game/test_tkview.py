@@ -72,7 +72,10 @@ class TestTkView(TkinterTestCase):
         assert 1 == len(items)
 
     def test_draw_apple(self):
-        pass
+        view = TkView(self.root)
+        view.draw_snake([Point(0, 0), Point(1, 2)])
+        items = view.canvas.find_withtag("snake")
+        assert 2 == len(items)
 
 
 # right and start works ;-)
