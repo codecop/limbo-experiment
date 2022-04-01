@@ -38,7 +38,7 @@ class TkView:
         # hi
         self._snake_objects = {}
         self._arena_objects = {}
-        # self._apple_objects = {}
+        self._apple_objects = {}
 
     def draw_generic(self, new_points, point_object_mapping, fill, tags):
 
