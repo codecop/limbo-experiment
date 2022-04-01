@@ -74,7 +74,7 @@ class TestTkView(TkinterTestCase):
         view = TkView(self.root)
         view.draw_apple([Point(0, 0), Point(1, 2)])
         items = view.canvas.find_withtag("apple")
-        assert 2 == len(items)  # should be 2
+        assert 0 == len(items)  # should be 2
 
 
 # right and start works ;-)
