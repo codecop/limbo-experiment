@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # pytest --cov > test_result.log
-coverage run -m pytest -s > log/test_result.log
+coverage run -sm pytest tests/game/ > log/test_result.log
 error=$?
 coverage report >> log/test_result.log
 coverage json -o log/coverage_new.json --pretty-print
