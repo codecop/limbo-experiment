@@ -52,7 +52,7 @@ def test_presenter_draws_stuff_in_loop(view_game_presenter):
     presenter._loop()
     view.draw_snake.assert_called_with([Point(2, 3)])
     view.draw_arena.assert_called_with([Point(8, 9)])
-    # view.draw_apples.assert_called_with([Point(4, 6)])
+    view.draw_apples.assert_called_with([Point(4, 6)])
 
 
 def test_presenter_reschedules_loop(view_game_presenter):
