@@ -33,6 +33,7 @@ class Game:
             self._snake.grow()
 
     def _handle_apple_growth(self):
+        self._ticks_to_apple += 1
         pass
 
     def _handle_command(self, command):
