@@ -24,9 +24,8 @@ def test_game_can_set_apples():
     arena = Arena(50, 50, initial_apple=Point(-1, 0))
     game = Game(snake, arena)
     assert len(game.apples()) == 1
-    game.tick()
-    # for tick in range(10):
-    #    game.tick()
+    for tick in range(10):
+        game.tick()
 
 
 def test_game_tick_moves_snake(game):
