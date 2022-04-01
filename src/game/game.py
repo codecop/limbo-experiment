@@ -47,3 +47,6 @@ class Game:
 
     def arena(self):
         return self._arena.walls()
+
+    def apples(self):
+        pass
