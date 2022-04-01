@@ -28,3 +28,4 @@ def arena3x4():
 @pytest.fixture
 def game(snake, arena3x4):
     return Game(snake, arena3x4)
+
