@@ -14,14 +14,14 @@ class TestTkView(TkinterTestCase):
         view = TkView(self.root)
         assert view.window.title() == "Snake"
 
-    def test_game_start_draws_message(self):
-        view = TkView(self.root)
+        # def test_game_start_draws_message(self):
+        #    view = TkView(self.root)
         view.game_start()
         items = view.canvas.find_withtag("gamestart")
         assert 1 == len(items)
 
-    def test_game_over_draws_message(self):
-        view = TkView(self.root)
+        # def test_game_over_draws_message(self):
+        #    view = TkView(self.root)
         view.game_over()
         items = view.canvas.find_withtag("gameover")
         assert 1 == len(items)
