@@ -14,6 +14,12 @@ class TestTkView(TkinterTestCase):
         view = TkView(self.root)
         assert view.window.title() == "Snake"
 
+    def test_game_over_draws_message(self):
+        view = TkView(self.root)
+        view.game_over()
+        items = view.canvas.find_withtag("gameover")
+        assert 1 == len(items)
+
     def test_view_draws_snake(self):
         view = TkView(self.root)
         view.draw_snake([Point(0, 0), Point(1, 2)])
@@ -57,12 +63,6 @@ class TestTkView(TkinterTestCase):
         view.draw_snake([Point(0, 0)])
         view.draw_snake([Point(1, 0)])
         items = view.canvas.find_withtag("snake")
-        assert 1 == len(items)
-
-    def test_game_over_draws_message(self):
-        view = TkView(self.root)
-        view.game_over()
-        items = view.canvas.find_withtag("gameover")
         assert 1 == len(items)
 
     def test_game_start_draws_message(self):
