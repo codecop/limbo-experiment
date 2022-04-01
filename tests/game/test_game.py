@@ -29,6 +29,10 @@ def test_game_can_set_apples():
     assert len(game.apples()) == 2
 
 
+def test_game_set_apples_at_different_locations():
+    snake = Snake()
+
+
 def test_game_tick_moves_snake(game):
     game.tick()
     snake_coordinates = game.snake()
