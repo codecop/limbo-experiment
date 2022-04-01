@@ -35,6 +35,9 @@ class Arena:
     def walls(self):
         return self._walls
 
+    def apples(self):
+        return self._apples
+
     def is_position_occupied(self, position):
         return position in self._walls
 
