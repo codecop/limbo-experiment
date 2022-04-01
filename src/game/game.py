@@ -39,6 +39,7 @@ class Game:
         if self._ticks_to_apple == self._apple_count:
             self._ticks_to_apple -= self._apple_count
             candidate_apple = Point(-1, -1)
+            self.arena.place_apple(candidate_apple)
             # TODO: create apple at suitable position
         pass
 
