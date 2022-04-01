@@ -1,6 +1,6 @@
 # -*- coding: latin-1 -*-
 from game.arena import Arena
-from game.game import TurnCommand
+from game.game import Game, TurnCommand
 from game.snake import Point, Snake
 
 # TBD: Could these tests be simplified?
@@ -21,8 +21,11 @@ def test_new_game_has_apples(game):
 
 def test_game_can_set_apples():
     snake = Snake()
-    arena = Arena(50, 50, initial_apple=Point(0, 1))
-    pass
+    arena = Arena(50, 50, initial_apple=Point(-1, 0))
+    game = Game(snake, arena)
+    assert len(game.apples()) == 1
+    # for tick in range(10):
+    #    game.tick()
 
 
 def test_game_tick_moves_snake(game):
