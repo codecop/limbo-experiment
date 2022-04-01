@@ -1,4 +1,5 @@
 # -*- coding: latin-1 -*-
+from game.arena import Arena
 from game.game import TurnCommand
 from game.snake import Point
 
@@ -18,7 +19,8 @@ def test_new_game_has_apples(game):
     assert apple_coordinates == [Point(0, 1)]
 
 
-def test_game_can_set_apples(game):
+def test_game_can_set_apples():
+    arena = Arena(50, 50, initial_apple=Point(0, 1))
     pass
 
 
