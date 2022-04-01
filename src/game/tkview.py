@@ -5,7 +5,7 @@ TKinter implementation of domain view of game.
 * X draw arena
   * X draw wall
 * update/redraw
-* ? key commands - kÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¶nnte auch was anderes sein
+* ? key commands - k�nnte auch was anderes sein
 * extras
   * game over state
   * display score
