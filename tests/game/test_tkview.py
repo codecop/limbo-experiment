@@ -57,7 +57,7 @@ class TestTkView(TkinterTestCase):
         ] in item_coords
 
     def test_draw_same_snake_twice_draws_only_once(self):
-        # do not draw what is there
+        # Idea: do not draw what is there
         view = TkView(self.root)
         view.draw_snake([Point(0, 0), Point(1, 2)])
         view.draw_snake([Point(0, 0), Point(1, 2)])
