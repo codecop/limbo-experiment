@@ -49,4 +49,4 @@ class Game:
         return self._arena.walls()
 
     def apples(self):
-        return self.snake()
+        return self._arena.apples()
