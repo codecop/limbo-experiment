@@ -19,7 +19,7 @@ class Arena:
         self._apples = []
 
         self._build_wall()
-        self._place_initial_apple()
+        self._place_initial_apple(initial_apple)
 
     def _build_wall(self):
         for x in range(-self._width, self._width + 1):
@@ -29,8 +29,8 @@ class Arena:
             self._walls.append(Point(-self._width, y))
             self._walls.append(Point(self._width, y))
 
-    def _place_initial_apple(self):
-        self._apples.append(Point(0, 1))
+    def _place_initial_apple(self, apple):
+        self._apples.append(apple)
 
     def walls(self):
         return self._walls
