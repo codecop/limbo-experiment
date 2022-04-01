@@ -40,9 +40,11 @@ class Game:
             self._ticks_to_apple -= self._apple_count
             candidate_apple = Point(-1, -1)
             while self._arena.is_position_apple(candidate_apple):
+                # TODO: create apple at suitable position
+                # generate random position within walls
+                # check if already is apple or snake, then skip
                 candidate_apple = Point(candidate_apple.x + 1, candidate_apple.y + 1)
             self._arena.place_apple(candidate_apple)
-            # TODO: create apple at suitable position
 
     def _handle_command(self, command):
         if command is TurnCommand.LEFT:
