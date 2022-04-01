@@ -26,7 +26,7 @@ def test_game_can_set_apples(big_game):
     assert len(big_game.apples()) == 2
 
 
-def test_game_set_apples_at_different_locations(big_game):
+def test_game_sets_apples_at_different_locations(big_game):
     pass
 
 
