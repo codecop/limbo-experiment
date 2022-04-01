@@ -71,6 +71,9 @@ class TestTkView(TkinterTestCase):
         items = view.canvas.find_withtag("gamestart")
         assert 1 == len(items)
 
+    def test_draw_apple(self):
+        pass
+
 
 # right and start works ;-)
 # arena works ;-)
