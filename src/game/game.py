@@ -1,6 +1,8 @@
 # -*- coding: latin-1 -*-
 from enum import Enum
 
+from game.snake import Point
+
 TurnCommand = Enum("TurnCommand", "LEFT RIGHT")
 
 
@@ -36,7 +38,8 @@ class Game:
         self._ticks_to_apple += 1
         if self._ticks_to_apple == self._apple_count:
             self._ticks_to_apple -= self._apple_count
-
+            candidate_apple = Point(-1, -1)
+            # TODO: create apple at suitable position
         pass
 
     def _handle_command(self, command):
