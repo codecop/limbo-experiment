@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 from game.arena import Arena
 from game.game import TurnCommand
-from game.snake import Point
+from game.snake import Point, Snake
 
 # TBD: Could these tests be simplified?
 def test_new_game_has_snake(game):
@@ -20,6 +20,7 @@ def test_new_game_has_apples(game):
 
 
 def test_game_can_set_apples():
+    snake = Snake()
     arena = Arena(50, 50, initial_apple=Point(0, 1))
     pass
 
