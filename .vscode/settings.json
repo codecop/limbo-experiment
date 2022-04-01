@@ -1,4 +1,11 @@
 {
     "files.encoding": "windows1252",
-    "python.formatting.provider": "black"
+    "python.formatting.provider": "black",
+    "cSpell.language": "en,de-DE",
+    "cSpell.words": [
+        "aussen",
+        "tkutil",
+        "xcenter",
+        "ycenter"
+    ]
 }
