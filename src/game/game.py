@@ -41,7 +41,6 @@ class Game:
             candidate_apple = Point(-1, -1)
             self._arena.place_apple(candidate_apple)
             # TODO: create apple at suitable position
-        pass
 
     def _handle_command(self, command):
         if command is TurnCommand.LEFT:
