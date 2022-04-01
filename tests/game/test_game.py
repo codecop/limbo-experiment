@@ -18,6 +18,10 @@ def test_new_game_has_apples(game):
     assert apple_coordinates == [Point(0, 1)]
 
 
+def test_game_can_set_apples(game):
+    pass
+
+
 def test_game_tick_moves_snake(game):
     game.tick()
     snake_coordinates = game.snake()
