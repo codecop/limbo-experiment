@@ -42,4 +42,4 @@ def test_arena_can_remove_apple(arena3x4):
 
 
 def test_arena_apples(arena3x4):
-    assert arena3x4.apples() == [Point(0, 1)]
+    assert arena3x4.apples() == [Point(-1, 1)]
