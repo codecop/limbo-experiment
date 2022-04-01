@@ -26,6 +26,7 @@ def test_game_can_set_apples():
     assert len(game.apples()) == 1
     for tick in range(10):
         game.tick()
+    assert len(game.apples()) == 1
 
 
 def test_game_tick_moves_snake(game):
