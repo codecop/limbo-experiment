@@ -19,18 +19,11 @@ def test_new_game_has_apples(game):
     assert apple_coordinates == [Point(0, 1)]
 
 
-def test_game_can_set_apples():
-    game = big_game()
-    assert len(game.apples()) == 1
+def test_game_can_set_apples(big_game):
+    assert len(big_game.apples()) == 1
     for tick in range(10):
-        game.tick()
-    assert len(game.apples()) == 2
-
-
-def big_game():
-    snake = Snake()
-    arena = Arena(50, 50, initial_apple=Point(-1, 0))
-    return Game(snake, arena, apple_count=10)
+        big_game.tick()
+    assert len(big_game.apples()) == 2
 
 
 def test_game_set_apples_at_different_locations():
