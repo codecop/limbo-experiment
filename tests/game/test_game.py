@@ -30,6 +30,7 @@ def test_game_sets_apples_at_different_locations(big_game):
     for tick in range(20):
         big_game.tick()
     assert len(big_game.apples()) == 3
+    assert len(set(big_game.apples())) == 2
 
 
 def test_game_tick_moves_snake(game):
