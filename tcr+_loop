@@ -9,8 +9,7 @@ do
   if [[ -n $(git status --porcelain) ]]; then
     ./tcr+
   fi
-  sleep 0.1
-
+  sleep 0.05
 done;
 
 exit 0
