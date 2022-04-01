@@ -39,7 +39,6 @@ class Game:
         if self._ticks_to_apple == self._apple_count:
             self._ticks_to_apple -= self._apple_count
             candidate_apple = Point(-1, -1)
-
             while self._arena.is_position_apple(candidate_apple):
                 candidate_apple = Point(candidate_apple.x + 1, candidate_apple.y + 1)
             self._arena.place_apple(candidate_apple)
