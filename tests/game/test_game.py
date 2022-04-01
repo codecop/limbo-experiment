@@ -15,7 +15,7 @@ def test_new_game_has_arena(game):
 
 def test_new_game_has_apples(game):
     apple_coordinates = game.apples()
-    assert apple_coordinates == [Point(-1, 1)]
+    assert apple_coordinates == [Point(0, 1)]
 
 
 def test_game_can_set_apples(game):
