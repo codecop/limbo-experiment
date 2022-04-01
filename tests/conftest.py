@@ -31,7 +31,6 @@ def game(snake, arena3x4):
 
 
 @pytest.fixture
-def big_game():
-    snake = Snake()
+def big_game(snake):
     arena = Arena(50, 50, initial_apple=Point(-1, 0))
     return Game(snake, arena, apple_count=10)
