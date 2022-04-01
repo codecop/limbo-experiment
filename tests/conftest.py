@@ -4,7 +4,7 @@ import pytest
 
 from game.arena import Arena
 from game.game import Game
-from game.snake import Snake
+from game.snake import Point, Snake
 
 
 # https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
@@ -22,7 +22,7 @@ def snake():
 
 @pytest.fixture
 def arena3x4():
-    return Arena(3, 4)
+    return Arena(3, 4, initial_apple=Point(0, 1))
 
 
 @pytest.fixture
