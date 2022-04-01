@@ -15,7 +15,7 @@ def run():
 
     snake = Snake()
     arena = Arena(20, 20)
-    game = Game(snake, arena)
+    game = Game(snake, arena, grow_count=3)
     # TODO: window focus
     Presenter(view, game, update_interval=100)
     root.mainloop()
