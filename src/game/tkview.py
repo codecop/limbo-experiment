@@ -59,9 +59,6 @@ class TkView:
     def draw_arena(self, new_points):
         self.draw_generic(new_points, self._arena_objects, "gray", ("arena"))
 
-    def draw_apple(self, new_apples):
-        pass
-
     def draw_point(self, point, fill, tags):
         xcenter = self._width / 2 + point.x * 2 * RADIUS
         ycenter = self._height / 2 - point.y * 2 * RADIUS
