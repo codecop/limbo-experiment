@@ -34,7 +34,7 @@ class TkView:
         )
         canvas.pack()
         self.canvas = canvas
-
+        # hi there
         self._snake_objects = {}
         self._arena_objects = {}
         # self._apple_objects = {}
