@@ -27,6 +27,20 @@ class TestTkView(TkinterTestCase):
         items = view.canvas.find_withtag("gameover")
         assert 1 == len(items)
 
+    @skipifcontainer_because_event_handling_not_working
+    def test_command_key_left_triggers_associated_callback(self):
+        view = TkView(self.root)
+
+        self._was_callback_called = False
+
+        def callback():
+            self._was_callback_called = True
+
+        view.register_left_command(callback)
+        view.window.event_generate("<Left>")
+
+        assert self._was_callback_called is True
+
     def test_view_draws_snake(self):
         view = TkView(self.root)
         view.draw_snake([Point(0, 0), Point(1, 2)])
@@ -42,23 +56,8 @@ class TestTkView(TkinterTestCase):
             55 - 4 * RADIUS,
         ] in item_coords
 
-    @skipifcontainer_because_event_handling_not_working
-    def test_command_key_left_triggers_associated_callback(self):
-        view = TkView(self.root)
-
-        self._was_callback_called = False
-
-        def callback():
-            self._was_callback_called = True
-
-        view.register_left_command(callback)
-        view.window.event_generate("<Left>")
-
-        assert self._was_callback_called is True
-
-    # do not draw what is there
-
     def test_draw_same_snake_twice_draws_only_once(self):
+        # do not draw what is there
         view = TkView(self.root)
         view.draw_snake([Point(0, 0), Point(1, 2)])
         view.draw_snake([Point(0, 0), Point(1, 2)])
