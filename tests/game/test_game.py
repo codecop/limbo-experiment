@@ -22,7 +22,7 @@ def test_new_game_has_apples(game):
 def test_game_can_set_apples():
     snake = Snake()
     arena = Arena(50, 50, initial_apple=Point(-1, 0))
-    game = Game(snake, arena)
+    game = Game(snake, arena, apple_count=10)
     assert len(game.apples()) == 1
     for tick in range(10):
         game.tick()
