@@ -65,10 +65,10 @@ class TestTkView(TkinterTestCase):
 
     def test_draw_new_snake_removes_old_snake(self):
         view = TkView(self.root)
-        view.draw_snake([Point(0, 0)])
-        view.draw_snake([Point(1, 0)])
+        view.draw_snake([Point(0, 0), Point(1, 2)])
+        view.draw_snake([Point(1, 0), Point(0, 0)])
         items = view.canvas.find_withtag("snake")
-        assert 1 == len(items)
+        assert 2 == len(items)
 
     def test_draw_apple(self):
         view = TkView(self.root)
