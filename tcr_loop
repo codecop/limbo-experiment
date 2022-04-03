@@ -2,9 +2,14 @@
 # https://stackoverflow.com/questions/3878624/how-do-i-programmatically-determine-if-there-are-uncommitted-changes
 # Note: ^-- SC3010: In POSIX sh, [[ ]] is undefined.
 
+# get initial coverage
+rm -f coverage_old.json
+./run_tests
+
 while(true);
 do
   if [[ -n $(git status --porcelain) ]]; then
+    sleep 0.2
     ./tcr
   fi
   sleep 0.05
