@@ -1,3 +1,12 @@
+"""
+Geometry Objects
+
+The game is grid based and the snake moves into different
+directions.
+
+The grid is represented using `Point`.
+The snake's direction using `Directions`.
+"""
 from collections import namedtuple
 
 
