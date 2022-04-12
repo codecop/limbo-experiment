@@ -8,7 +8,7 @@ Domain
 - Arena
   - Obstacle
 """
-from .snake import Point
+from .geometry import Point
 
 
 class Arena:

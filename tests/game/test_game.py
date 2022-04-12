@@ -1,7 +1,6 @@
 # -*- coding: latin-1 -*-
-from game.arena import Arena
-from game.game import Game, TurnCommand
-from game.snake import Point, Snake
+from game.game import TurnCommand
+from game.geometry import Point
 
 # TBD: Could these tests be simplified?
 def test_new_game_has_snake(game):

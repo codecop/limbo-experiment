@@ -4,7 +4,8 @@ from tkinter import Tk
 from .arena import Arena
 from .game import Game
 from .presenter import Presenter
-from .snake import Point, Snake
+from .snake import Snake
+from .geometry import Point
 from .tkview import TkView
 
 

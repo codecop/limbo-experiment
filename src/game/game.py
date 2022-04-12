@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 from enum import Enum
 
-from game.snake import Point
+from .geometry import Point
 
 TurnCommand = Enum("TurnCommand", "LEFT RIGHT")
 

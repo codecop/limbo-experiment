@@ -1,5 +1,5 @@
 # -*- coding: latin-1 -*-
-from game.snake import Point, Directions
+from game.geometry import Point, Directions
 
 
 def test_there_is_a_snake(snake):
