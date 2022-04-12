@@ -171,8 +171,9 @@ Thumbs.db
 # VirtualEnv Peter
 .virtual3/
 env3.bat
-constraint.txt
-with_*.txt
+sleep.exe
+src/game/constraint.txt
+src/game/with_*.txt
 
 # Windows links
 *.lnk

@@ -1,5 +1,11 @@
 #!/bin/bash
 
-./run_tests && ./git_commit || ./git_revert
+./run_tests
+test_result=$?
+if [ "$test_result" -ne 0 ]; then
+  ./git_revert "failing_test"
+  exit 0
+fi
 
+./git_commit
 exit 0
