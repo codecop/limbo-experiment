@@ -14,6 +14,7 @@ Links:
 import _tkinter
 import tkinter as tk
 import pytest
+from unittest.mock import Mock
 
 from conftest import (
     skipifcontainer_because_event_handling_not_working,
@@ -70,21 +71,14 @@ def test_game_over_draws_message(view):
 @skipifcontainer_because_event_handling_not_working
 def test_command_key_left_triggers_associated_callback(fresh_toplevel):
     view = TkView(fresh_toplevel)
-
     handle_events(fresh_toplevel)
-
-    _was_callback_called = False
-
-    def callback():
-        nonlocal _was_callback_called
-        _was_callback_called = True
+    callback = Mock()
 
     view.register_left_command(callback)
     view.window.event_generate("<Left>")
 
+    callback.assert_called_once()
     # handle_events(fresh_toplevel)  # TBD: Unclear. We need it above but not here. Why?
-
-    assert _was_callback_called is True
 
 
 def test_view_draws_snake(view):
