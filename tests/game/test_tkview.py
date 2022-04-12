@@ -36,7 +36,7 @@ def fresh_toplevel(hidden_root):
     """Create new toplevel window on top of root."""
     toplevel = tk.Toplevel(hidden_root)
     yield toplevel
-    toplevel.destroy()  # I think we do not need that at all
+    toplevel.destroy()  # TBD: Need this setup for test involving `handle_events`.
 
 
 def handle_events(window):
