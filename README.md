@@ -25,7 +25,7 @@ $ ./tcr_loop   # for plain TCR
 $ ./tcr+_loop  # for additional checks
 ```
 
-For debugging purposes, consider running the bits and pieces 
+For debugging purposes, consider running the bits and pieces
 in `tcr` and `tcr+` in isolation.
 
 
@@ -35,4 +35,13 @@ To play the game:
 
 ```console
 $ snake
+```
+
+
+## Inspection
+
+To display [test duration](https://docs.pytest.org/en/latest/how-to/usage.html#profiling-test-execution-duration):
+
+```console
+pytest --durations=0  # 0: display all instead of n-th slowest
 ```
