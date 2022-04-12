@@ -2,8 +2,12 @@
 """
 Snippet showing how to find items on a canvas using tags.
 """
+import pytest
+
 from tkinter import Tk, Canvas
 from tkutil.testing import TkinterTestCase
+
+pytestmark = pytest.mark.tkutil
 
 
 def create_canvas_with_items(root):
