@@ -12,7 +12,7 @@ class Game:
         self._arena = arena
         self._is_running = True
 
-        self._growth = Growth()
+        self._growth = Growth(grow_count=grow_count)
         self._grow_count = grow_count
         self._ticks_to_grow = 0
         self._apple_count = apple_count
