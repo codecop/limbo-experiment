@@ -121,5 +121,4 @@ def test_apple_is_removed_when_eaten(game):
 
 # Game is complete.
 def test_growth():
-    # growth = Growth()
-    pass
+    growth = Growth()
