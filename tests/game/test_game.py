@@ -1,6 +1,10 @@
 # -*- coding: latin-1 -*-
+from unittest.mock import Mock
+
 from game.game import TurnCommand
+from game.game import Cycle
 from game.geometry import Point
+
 
 # TBD: Could these tests be simplified?
 def test_new_game_has_snake(game):
@@ -118,9 +122,6 @@ def test_apple_is_removed_when_eaten(game):
     new_snake_length = len(game.snake())
     assert new_snake_length == old_snake_length + 3 + 1 + 0
 
-
-from game.game import Cycle
-from unittest.mock import Mock
 
 # Game is complete.
 def test_growth_calls_callback_after_grow_count():
