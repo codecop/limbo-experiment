@@ -66,7 +66,7 @@ class Game:
 
 
 class Cycle:
-    def __init__(self, limit=1, callback=None):
+    def __init__(self, callback, limit=1):
         self._limit = limit
         self._count = 0
         self._callback = callback
