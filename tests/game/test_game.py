@@ -120,8 +120,10 @@ def test_apple_is_removed_when_eaten(game):
 
 
 from game.game import Growth
+from unittest.mock import Mock
 
 # Game is complete.
 def test_growth():
+
     growth = Growth()
     growth.tick()
