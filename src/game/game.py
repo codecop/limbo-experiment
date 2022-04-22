@@ -13,8 +13,6 @@ class Game:
         self._is_running = True
 
         self._growth = Growth(grow_count=grow_count, callback=self._snake.grow)
-        self._grow_count = grow_count
-        self._ticks_to_grow = 0
         self._apple_count = apple_count
         self._ticks_to_apple = 0
 
