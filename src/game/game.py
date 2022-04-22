@@ -19,7 +19,7 @@ class Game:
     def tick(self, command=None):
         if not self._is_running:
             return
-        self._snake_growth.tick()
+        self._snake_growth.handle()
         self._handle_command(command)
         self._snake.advance()
         if self._arena.is_position_apple(self._snake.position):
@@ -70,7 +70,7 @@ class Growth:
         self._ticks_to_grow = 0
         self._callback = callback
 
-    def tick(self):
+    def handle(self):
         self._ticks_to_grow += 1
         if self._ticks_to_grow == self._grow_count:
             self._ticks_to_grow = 0
