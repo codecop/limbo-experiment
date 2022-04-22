@@ -7,7 +7,7 @@ directions.
 The grid is represented using `Point`.
 The snake's direction using `Directions`.
 """
-from collections import namedtuple
+from collections import namedtuplex
 
 
 class Point(namedtuple("Point", ["x", "y"])):
