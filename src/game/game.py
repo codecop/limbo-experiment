@@ -13,8 +13,6 @@ class Game:
         self._is_running = True
         self._snake_growth_counter = Cycle(self._snake.grow, limit=grow_count)
         self._apple_placement_counter = Cycle(self._place_apple, limit=apple_count)
-        self._apple_count = apple_count
-        self._ticks_to_apple = 0
 
     def tick(self, command=None):
         if not self._is_running:
