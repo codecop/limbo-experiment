@@ -43,3 +43,7 @@ def test_arena_can_remove_apple(arena3x4):
 
 def test_arena_apples(arena3x4):
     assert arena3x4.apples() == [Point(0, 1)]
+
+
+def test_arena_creates_random_point():
+    pass
