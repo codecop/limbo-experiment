@@ -16,7 +16,7 @@ from game.geometry import Point
 
 
 @pytest.fixture
-def view_game_presenter():  # TODO: fix casing
+def view_game_presenter():
     view = MagicMock()
     game = MagicMock()
     return view, game, Presenter(view, game)
