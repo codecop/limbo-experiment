@@ -75,4 +75,4 @@ class Growth:
         self._callback = callback
 
     def tick(self):
-        pass
+        self._callback()
