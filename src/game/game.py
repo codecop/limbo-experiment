@@ -13,14 +13,14 @@ class Game:
         self._is_running = True
         # self._snake_growth_counter = Cycle(counter=3, call=self._snake.grow)
         # self._snake_growth_counter.next()
-        self._snake_growth = Cycle(limit=grow_count, callback=self._snake.grow)
+        self._snake_growth_counter = Cycle(self._snake.grow, limit=grow_count)
         self._apple_count = apple_count
         self._ticks_to_apple = 0
 
     def tick(self, command=None):
         if not self._is_running:
             return
-        self._snake_growth.next()  # self._snake.grow
+        self._snake_growth_counter.next()  # self._snake.grow
         self._handle_command(command)
         self._snake.advance()
         if self._arena.is_position_apple(self._snake.position):
