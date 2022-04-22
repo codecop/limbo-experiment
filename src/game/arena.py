@@ -50,4 +50,7 @@ class Arena:
     def remove_apple(self, position):
         self._apples.remove(position)
 
+    def sample_free_point(self):
+        pass
+
     # TODO later: place_obstacle

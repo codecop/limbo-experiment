@@ -46,5 +46,4 @@ def test_arena_apples(arena3x4):
 
 
 def test_arena_creates_random_point(arena3x4):
-    # arena3x4.sample_free_point()
-    pass
+    arena3x4.sample_free_point()
