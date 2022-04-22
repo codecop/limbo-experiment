@@ -13,7 +13,7 @@ class Game:
         self._is_running = True
         # self._snake_growth_counter = Cycle(counter=3, call=self._snake.grow)
         # self._snake_growth_counter.next()
-        self._snake_growth = Cycle(count=grow_count, callback=self._snake.grow)
+        self._snake_growth = Cycle(limit=grow_count, callback=self._snake.grow)
         self._apple_count = apple_count
         self._ticks_to_apple = 0
 
@@ -66,13 +66,13 @@ class Game:
 
 
 class Cycle:
-    def __init__(self, count=1, callback=None):
-        self._count = count
-        self._ticks_to_grow = 0
+    def __init__(self, limit=1, callback=None):
+        self._limit = limit
+        self._count = 0
         self._callback = callback
 
     def handle(self):
-        self._ticks_to_grow += 1
-        if self._ticks_to_grow == self._count:
-            self._ticks_to_grow = 0
+        self._count += 1
+        if self._count == self._limit:
+            self._count = 0
             self._callback()
