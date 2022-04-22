@@ -7,3 +7,7 @@ def test_point_supports_addition():
 
 def test_dimension():
     dimension = Dimension()
+
+
+def test_axis():
+    pass
