@@ -11,3 +11,4 @@ def test_dimension():
 
 def test_axis():
     axis = Axis(3)
+    # TODO: range method, random method
