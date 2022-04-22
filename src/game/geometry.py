@@ -52,4 +52,5 @@ class Dimension:
 
 
 class Axis:
-    pass
+    def __init__(self, length):
+        self._length = length
