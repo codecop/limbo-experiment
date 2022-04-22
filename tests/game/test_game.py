@@ -125,7 +125,7 @@ from unittest.mock import Mock
 # Game is complete.
 def test_growth_calls_callback_after_grow_count():
     callback = Mock()
-    growth = Cycle(grow_count=2, callback=callback)
+    growth = Cycle(count=2, callback=callback)
     growth.handle()
     callback.assert_not_called()
     growth.handle()
