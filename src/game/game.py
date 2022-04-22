@@ -67,12 +67,12 @@ class Game:
 
 class Cycle:
     def __init__(self, count=1, callback=None):
-        self._grow_count = count
+        self._count = count
         self._ticks_to_grow = 0
         self._callback = callback
 
     def handle(self):
         self._ticks_to_grow += 1
-        if self._ticks_to_grow == self._grow_count:
+        if self._ticks_to_grow == self._count:
             self._ticks_to_grow = 0
             self._callback()
