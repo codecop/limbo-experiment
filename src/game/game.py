@@ -20,7 +20,7 @@ class Game:
     def tick(self, command=None):
         if not self._is_running:
             return
-        self._snake_growth.handle()  # self._snake.grow
+        self._snake_growth.next()  # self._snake.grow
         self._handle_command(command)
         self._snake.advance()
         if self._arena.is_position_apple(self._snake.position):
@@ -71,7 +71,7 @@ class Cycle:
         self._count = 0
         self._callback = callback
 
-    def handle(self):
+    def next(self):
         self._count += 1
         if self._count == self._limit:
             self._count = 0
