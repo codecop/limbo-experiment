@@ -1,4 +1,4 @@
-from game.geometry import Point
+from game.geometry import Point, Dimension
 
 
 def test_point_supports_addition():
@@ -6,4 +6,4 @@ def test_point_supports_addition():
 
 
 def test_dimension():
-    pass
+    dimension = Dimension()
