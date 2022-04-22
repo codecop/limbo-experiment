@@ -119,7 +119,8 @@ def test_apple_is_removed_when_eaten(game):
     assert new_snake_length == old_snake_length + 3 + 1 + 0
 
 
+from game.game import Growth
+
 # Game is complete.
 def test_growth():
-    # growth = Growth()
-    pass
+    growth = Growth()
