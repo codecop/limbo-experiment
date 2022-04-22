@@ -10,4 +10,4 @@ def test_dimension():
 
 
 def test_axis():
-    pass
+    axis = Axis()
