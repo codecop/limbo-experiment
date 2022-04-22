@@ -25,14 +25,15 @@ class Game:
         if self._arena.is_position_apple(self._snake.position):
             self._snake.grow()
             self._arena.remove_apple(self._snake.position)
-        self._handle_apple_growth()
+        self._apple_placement_counter.next()
+        # self._handle_apple_growth()
         self._check_running()
 
-    def _handle_apple_growth(self):
-        self._ticks_to_apple += 1
-        if self._ticks_to_apple == self._apple_count:
-            self._ticks_to_apple = 0
-            self._place_apple()
+    # def _handle_apple_growth(self):
+    #     self._ticks_to_apple += 1
+    #     if self._ticks_to_apple == self._apple_count:
+    #         self._ticks_to_apple = 0
+    #         self._place_apple()
 
     def _place_apple(self):
         candidate_apple = Point(-1, -1)
