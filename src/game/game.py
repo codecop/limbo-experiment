@@ -73,6 +73,3 @@ class Game:
 class Growth:
     def tick(self):
         pass
-
-    def __init__(self):
-        pass
