@@ -124,3 +124,4 @@ from game.game import Growth
 # Game is complete.
 def test_growth():
     growth = Growth()
+    growth.tick()
