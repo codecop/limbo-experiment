@@ -123,7 +123,6 @@ def test_apple_is_removed_when_eaten(game):
     assert new_snake_length == old_snake_length + 3 + 1 + 0
 
 
-# Game is complete.
 def test_growth_calls_callback_after_grow_count():
     callback = Mock()
     growth = Cycle(callback, limit=2)
