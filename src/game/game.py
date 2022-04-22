@@ -72,7 +72,7 @@ class Game:
 
 class Growth:
     def __init__(self, callback=None):
-        self.callback = callback
+        self._callback = callback
 
     def tick(self):
         pass
