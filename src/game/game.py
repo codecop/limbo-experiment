@@ -73,7 +73,11 @@ class Game:
 class Growth:
     def __init__(self, grow_count=1, callback=None):
         self._grow_count = grow_count
+        self._ticks_to_grow = 0
         self._callback = callback
 
     def tick(self):
-        self._callback()
+        self._ticks_to_grow += 1
+        if self._ticks_to_grow == self._grow_count:
+            self._ticks_to_grow = 0
+            self._callback()
