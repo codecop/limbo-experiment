@@ -119,13 +119,13 @@ def test_apple_is_removed_when_eaten(game):
     assert new_snake_length == old_snake_length + 3 + 1 + 0
 
 
-from game.game import Growth
+from game.game import Cycle
 from unittest.mock import Mock
 
 # Game is complete.
 def test_growth_calls_callback_after_grow_count():
     callback = Mock()
-    growth = Growth(grow_count=2, callback=callback)
+    growth = Cycle(grow_count=2, callback=callback)
     growth.handle()
     callback.assert_not_called()
     growth.handle()
