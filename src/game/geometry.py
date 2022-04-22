@@ -49,3 +49,7 @@ class Directions:
 
 class Dimension:
     pass
+
+
+class Axis:
+    pass
