@@ -37,7 +37,7 @@ class Game:
     def _handle_apple_growth(self):
         self._ticks_to_apple += 1
         if self._ticks_to_apple == self._apple_count:
-            self._ticks_to_apple -= self._apple_count
+            self._ticks_to_apple = 0
             candidate_apple = Point(-1, -1)
             while self._arena.is_position_apple(candidate_apple):
                 # TODO: create apple at suitable position
