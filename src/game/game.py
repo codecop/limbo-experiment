@@ -69,6 +69,3 @@ class Game:
     def apples(self):
         return self._arena.apples()
 
-
-class Growth:
-    pass
