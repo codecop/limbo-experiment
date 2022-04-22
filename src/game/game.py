@@ -11,8 +11,8 @@ class Game:
         self._snake = snake
         self._arena = arena
         self._is_running = True
-        # self._snake_growth = Cycle(counter=3, call=self._snake.grow)
-        # self.snake_growth.next()
+        # self._snake_growth_counter = Cycle(counter=3, call=self._snake.grow)
+        # self._snake_growth_counter.next()
         self._snake_growth = Growth(grow_count=grow_count, callback=self._snake.grow)
         self._apple_count = apple_count
         self._ticks_to_apple = 0
