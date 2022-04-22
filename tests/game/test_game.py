@@ -127,3 +127,4 @@ def test_growth():
     callback = Mock()
     growth = Growth(callback=callback)
     growth.tick()
+    callback.assert_called_once()
