@@ -71,7 +71,7 @@ class Game:
 
 
 class Growth:
-    def __init__(self, callback=None):
+    def __init__(self, grow_count=1, callback=None):
         self._callback = callback
 
     def tick(self):
