@@ -47,5 +47,5 @@ def test_arena_apples(arena3x4):
 
 def test_arena_creates_random_point(arena3x4):
     point = arena3x4.sample_free_point()
-    assert point != Point(0, 1)  # <-- initial apple
+    assert not arena3x4.is_position_apple(point)
     assert not arena3x4.is_position_occupied(point)
