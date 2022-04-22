@@ -12,6 +12,7 @@ class Game:
         self._arena = arena
         self._is_running = True
         self._snake_growth_counter = Cycle(self._snake.grow, limit=grow_count)
+        self._apple_placement_counter = Cycle(self._place_apple, limit=apple_count)
         self._apple_count = apple_count
         self._ticks_to_apple = 0
 
