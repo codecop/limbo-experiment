@@ -31,7 +31,7 @@ class Game:
     def _handle_growth(self):
         self._ticks_to_grow += 1
         if self._ticks_to_grow == self._grow_count:
-            self._ticks_to_grow -= self._grow_count
+            self._ticks_to_grow = 0
             self._snake.grow()
 
     def _handle_apple_growth(self):
