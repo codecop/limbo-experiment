@@ -45,3 +45,7 @@ class Directions:
         }
 
         return _LEFT[direction]
+
+
+class Dimension:
+    pass
