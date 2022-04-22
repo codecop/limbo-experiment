@@ -18,7 +18,7 @@ class Game:
     def tick(self, command=None):
         if not self._is_running:
             return
-        self._snake_growth_counter.next()  # self._snake.grow
+        self._snake_growth_counter.next()
         self._handle_command(command)
         self._snake.advance()
         if self._arena.is_position_apple(self._snake.position):
