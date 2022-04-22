@@ -51,14 +51,6 @@ class Arena:
         self._apples.remove(position)
 
     def sample_free_point(self):
-        candidate_apple = Point(-1, -1)
-        while self.is_position_apple(candidate_apple):
-            # TODO: create apple at suitable position
-            # generate random position within walls
-            # cf Arena._build_wall for suitable x and y ranges
-            # check if already is apple or snake, if so then skip
-            # candidate_apple = Point(candidate_apple.x + 1, candidate_apple.y + 1)
-            pass
-        return candidate_apple
+        return Point(1, 1)
 
     # TODO later: place_obstacle
