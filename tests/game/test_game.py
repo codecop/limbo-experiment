@@ -1,5 +1,6 @@
 # -*- coding: latin-1 -*-
 from unittest.mock import Mock
+import pytest
 
 from game.game import TurnCommand
 from game.game import Cycle
