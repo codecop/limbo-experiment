@@ -52,7 +52,7 @@ class Dimension:
     def __init__(self, width, height):
         self._width = width
         self._height = height
-        self._xaxis = Axis(width)
+        self._x = Axis(width)
 
     def rangex(self):
         pass
