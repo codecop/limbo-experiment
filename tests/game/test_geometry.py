@@ -26,7 +26,8 @@ def test_axis_range():
     assert list(result) == [-2, -1, 0, 1, 2]
 
 
-def test_axis_random():
+@pytest.mark.parametrize("execution_number", range(100))
+def test_axis_random(execution_number):
     axis = Axis(2)
     result = axis.random()
     # assert result is None
