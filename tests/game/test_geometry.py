@@ -1,5 +1,7 @@
 """
 * Vorgehensmuster prüfen und daneben liegen haben (spez. Coverage Check)
+* Axis ist eine Seite von -length bis +length+1 und hat range():Generator oder each() und random()
+* Dimension hat 2 Axis und ein randomPoint() und rangeX und rangeY
 """
 
 from game.geometry import Point, Dimension, Axis
