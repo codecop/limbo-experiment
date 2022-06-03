@@ -28,7 +28,7 @@ def test_dimension_rangey():
 
 
 def test_dimension_random_point():
-    pass
+    dimension = Dimension(width=2, height=3)
 
 
 def test_axis_range():
