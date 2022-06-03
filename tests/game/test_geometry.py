@@ -22,7 +22,7 @@ def test_dimension_rangex():
 
 
 def test_dimension_rangey():
-    pass
+    dimension = Dimension(width=2, height=3)
 
 
 def test_axis_range():
