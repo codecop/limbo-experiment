@@ -17,6 +17,7 @@ def test_point_supports_addition():
 
 def test_dimension_rangex():
     dimension = Dimension()
+    dimension.rangex()
 
 
 def test_axis_range():

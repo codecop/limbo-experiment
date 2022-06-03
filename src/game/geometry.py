@@ -52,6 +52,9 @@ class Dimension:
     def __init__(self):
         pass
 
+    def rangex(self):
+        pass
+
 
 class Axis:
     def __init__(self, length):
