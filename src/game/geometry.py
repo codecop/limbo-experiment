@@ -49,7 +49,8 @@ class Directions:
 
 
 class Dimension:
-    pass
+    def __init__(self):
+        pass
 
 
 class Axis:
