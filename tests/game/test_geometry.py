@@ -27,4 +27,5 @@ def test_axis_range():
 
 def test_axis_random():
     axis = Axis(2)
-    axis.random()
+    result = axis.random()
+    assert result is None
