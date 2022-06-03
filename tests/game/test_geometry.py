@@ -26,4 +26,5 @@ def test_axis_range():
 
 
 def test_axis_random():
-    pass
+    axis = Axis(2)
+    axis.random()

@@ -57,3 +57,6 @@ class Axis:
 
     def range(self):
         return range(-self._length, self._length + 1)
+
+    def random(self):
+        pass
