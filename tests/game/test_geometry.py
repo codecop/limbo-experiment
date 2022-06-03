@@ -21,6 +21,12 @@ def test_dimension_rangex():
     assert list(result) == [-2, -1, 0, 1, 2]
 
 
+def test_dimension_rangey():
+    dimension = Dimension(width=2, height=3)
+    result = dimension.rangex()
+    assert list(result) == [-2, -1, 0, 1, 2]
+
+
 def test_axis_range():
     axis = Axis(2)
     result = axis.range()
