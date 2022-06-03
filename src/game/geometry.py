@@ -55,8 +55,7 @@ class Dimension:
         self._x = Axis(width)
 
     def rangex(self):
-        self._x.range()
-        pass
+        return self._x.range()
 
 
 class Axis:
