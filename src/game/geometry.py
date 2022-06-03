@@ -60,4 +60,4 @@ class Axis:
         return range(-self._length, self._length + 1)
 
     def random(self):
-        return 0
+        return random.randint(-self._length, self._length)
