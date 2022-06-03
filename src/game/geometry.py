@@ -7,6 +7,7 @@ directions.
 The grid is represented using `Point`.
 The snake's direction using `Directions`.
 """
+import random
 from collections import namedtuple
 
 
