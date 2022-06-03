@@ -19,7 +19,8 @@ def test_dimension():
 
 
 def test_axis():
-    axis = Axis(3)
+    axis = Axis(2)
     # TODO: range method, random method
     result = axis.range()
     assert list(result) == []
+    # assert list(result) == [-2, -1, 0, 1, 2]
