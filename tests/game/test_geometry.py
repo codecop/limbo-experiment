@@ -1,3 +1,7 @@
+"""
+* Vorgehensmuster prüfen und daneben liegen haben (spez. Coverage Check)
+"""
+
 from game.geometry import Point, Dimension, Axis
 
 
