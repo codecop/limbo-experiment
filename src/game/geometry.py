@@ -56,7 +56,7 @@ class Dimension:
     def rangex(self):
         return self.x.range()
 
-    def rangey(self):
+    def range_y(self):
         return self.y.range()
 
 

@@ -23,7 +23,7 @@ def test_dimension_rangex():
 
 def test_dimension_rangey():
     dimension = Dimension(width=2, height=3)
-    result = dimension.rangey()
+    result = dimension.range_y()
     assert list(result) == [-3, -2, -1, 0, 1, 2, 3]
 
 
