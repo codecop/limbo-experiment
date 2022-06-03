@@ -6,6 +6,7 @@
 * Test für random_free_sample() im Arena fertig implementieren (Random mocken)
 * Zuruckgehen und im Game einbauen - wie testen wir?
 """
+import pytest
 
 from game.geometry import Point, Dimension, Axis
 
