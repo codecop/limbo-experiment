@@ -56,4 +56,4 @@ class Axis:
         self._length = length
 
     def range(self):
-        pass
+        return []

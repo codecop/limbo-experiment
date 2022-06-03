@@ -22,4 +22,4 @@ def test_axis():
     axis = Axis(3)
     # TODO: range method, random method
     result = axis.range()
-    # assert list(result) == []
+    assert list(result) == []
