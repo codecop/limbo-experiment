@@ -27,7 +27,8 @@ def test_dimension_rangey():
     assert list(result) == [-3, -2, -1, 0, 1, 2, 3]
 
 
-def test_dimension_random_point():
+@pytest.mark.parametrize("execution_number", range(100))
+def test_dimension_random_point(execution_number):
     dimension = Dimension(width=2, height=3)
     point = dimension.random_point()
     assert -2 <= point.x <= 2 and -3 <= point.y <= 3
