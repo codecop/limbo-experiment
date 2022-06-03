@@ -24,6 +24,7 @@ def test_dimension_rangex():
 def test_dimension_rangey():
     dimension = Dimension(width=2, height=3)
     result = dimension.rangey()
+    assert result is None
 
 
 def test_axis_range():
