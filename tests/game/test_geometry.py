@@ -23,3 +23,7 @@ def test_axis_range():
     # TODO: range method, random method
     result = axis.range()
     assert list(result) == [-2, -1, 0, 1, 2]
+
+
+def test_axis_random():
+    pass
