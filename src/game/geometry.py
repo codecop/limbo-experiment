@@ -50,6 +50,7 @@ class Directions:
 
 class Dimension:
     def __init__(self, width, height):
+        self._width = width
         pass
 
     def rangex(self):
