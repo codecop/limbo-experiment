@@ -61,7 +61,7 @@ class Dimension:
 
     def random_point(self):
         point = Point(0, 0)
-        pass
+        return point
 
 
 class Axis:
