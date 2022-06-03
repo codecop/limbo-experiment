@@ -30,7 +30,7 @@ def test_dimension_rangey():
 def test_dimension_random_point():
     dimension = Dimension(width=2, height=3)
     point = dimension.random_point()
-    assert -2 <= point.x <= 2 and point.y == 0
+    assert -2 <= point.x <= 2 and -3 <= point.y <= 3
 
 
 def test_axis_range():
