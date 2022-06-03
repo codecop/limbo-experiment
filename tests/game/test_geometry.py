@@ -18,7 +18,7 @@ def test_dimension():
     dimension = Dimension()
 
 
-def test_axis():
+def test_axis_range():
     axis = Axis(2)
     # TODO: range method, random method
     result = axis.range()
