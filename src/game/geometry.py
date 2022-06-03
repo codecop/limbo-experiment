@@ -51,13 +51,13 @@ class Directions:
 class Dimension:
     def __init__(self, width, height):
         self.x = Axis(width)
-        self._y = Axis(height)
+        self.y = Axis(height)
 
     def rangex(self):
         return self.x.range()
 
     def rangey(self):
-        return self._y.range()
+        return self.y.range()
 
 
 class Axis:
