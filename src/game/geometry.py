@@ -49,7 +49,7 @@ class Directions:
 
 
 class Dimension:
-    def __init__(self, width=2, height=3):
+    def __init__(self, width, height):
         pass
 
     def rangex(self):
