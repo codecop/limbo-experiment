@@ -21,7 +21,6 @@ def test_dimension():
 
 def test_axis_range():
     axis = Axis(2)
-    # TODO: range method, random method
     result = axis.range()
     assert list(result) == [-2, -1, 0, 1, 2]
 
