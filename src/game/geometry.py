@@ -57,7 +57,7 @@ class Dimension:
         return self._x.range()
 
     def rangey(self):
-        pass
+        return self._y.range()
 
 
 class Axis:
