@@ -17,7 +17,8 @@ def test_point_supports_addition():
 
 def test_dimension_rangex():
     dimension = Dimension()
-    assert dimension.rangex() is None
+    result = dimension.rangex()
+    assert result is None
 
 
 def test_axis_range():
