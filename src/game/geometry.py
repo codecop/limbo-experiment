@@ -60,8 +60,7 @@ class Dimension:
         return self.y.range()
 
     def random_point(self):
-        point = Point(self.x.random(), self.y.random())
-        return point
+        return Point(self.x.random(), self.y.random())
 
 
 class Axis:
