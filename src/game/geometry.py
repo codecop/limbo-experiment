@@ -59,6 +59,9 @@ class Dimension:
     def range_y(self):
         return self.y.range()
 
+    def random_point(self):
+        pass
+
 
 class Axis:
     def __init__(self, length):

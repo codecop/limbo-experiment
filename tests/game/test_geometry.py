@@ -29,7 +29,8 @@ def test_dimension_rangey():
 
 def test_dimension_random_point():
     dimension = Dimension(width=2, height=3)
-    # point = dimension.random_point()
+    point = dimension.random_point()
+    assert point is None
 
 
 def test_axis_range():
