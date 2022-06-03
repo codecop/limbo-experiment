@@ -50,7 +50,6 @@ class Directions:
 
 class Dimension:
     def __init__(self, width, height):
-        self._width = width
         self._height = height
         self._x = Axis(width)
 
