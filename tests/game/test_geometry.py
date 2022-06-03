@@ -1,13 +1,3 @@
-"""
-* Vorgehensmuster prüfen und daneben liegen haben (spez. Coverage Check)
-* Axis ist eine Seite von -length bis +length+1 und hat range():Generator oder each() und random()
-* Dimension hat 2 Axis und ein randomPoint() und rangeX und rangeY
-* Dann verwenden wir das im Arena -> weniger Code dort
-* Test für random_free_sample() im Arena fertig implementieren (Random mocken)
-* Zurückgehen und im Game einbauen - wie testen wir?
-"""
-
-
 from game.geometry import Point, Dimension, Axis
 
 
