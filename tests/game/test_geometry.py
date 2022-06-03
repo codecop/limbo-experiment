@@ -27,6 +27,10 @@ def test_dimension_rangey():
     assert list(result) == [-3, -2, -1, 0, 1, 2, 3]
 
 
+def test_dimension_random_point():
+    pass
+
+
 def test_axis_range():
     axis = Axis(2)
     result = axis.range()
