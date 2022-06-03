@@ -59,4 +59,4 @@ class Axis:
         return range(-self._length, self._length + 1)
 
     def random(self):
-        pass
+        return 0

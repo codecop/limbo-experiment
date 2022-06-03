@@ -28,5 +28,4 @@ def test_axis_range():
 def test_axis_random():
     axis = Axis(2)
     result = axis.random()
-    assert result is None
-    # assert -2 <= result <= 2
+    assert -2 <= result <= 2
