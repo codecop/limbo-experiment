@@ -19,6 +19,7 @@ def test_dimension_rangex():
     dimension = Dimension()
     result = dimension.rangex()
     assert result is None
+    # assert list(result) == [-2, -1, 0, 1, 2]
 
 
 def test_axis_range():
