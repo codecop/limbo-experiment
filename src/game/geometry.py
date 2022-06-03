@@ -60,6 +60,7 @@ class Dimension:
         return self.y.range()
 
     def random_point(self):
+        point = Point(0, 0)
         pass
 
 
