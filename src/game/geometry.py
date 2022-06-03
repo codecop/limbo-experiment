@@ -72,3 +72,5 @@ class Axis:
 
     def random(self):
         return random.randint(-self._length, self._length)
+
+    # TODO: min, max für Verwendung in Area walls
