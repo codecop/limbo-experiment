@@ -16,7 +16,7 @@ def test_point_supports_addition():
 
 
 def test_dimension_rangex():
-    dimension = Dimension()
+    dimension = Dimension(width=2, height=3)
     result = dimension.rangex()
     assert result is None
     # assert list(result) == [-2, -1, 0, 1, 2]
