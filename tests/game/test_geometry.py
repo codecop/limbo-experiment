@@ -1,3 +1,4 @@
+# -*- coding: latin-1 -*-
 """
 * Dann verwenden wir das im Arena -> weniger Code dort
 * Test für random_free_sample() im Arena fertig implementieren (Random mocken)
