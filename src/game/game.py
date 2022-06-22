@@ -27,7 +27,7 @@ class Game:
         self._check_running()
 
     def _place_apple(self):
-        candidate_apple = Point(-1, -1)
+        candidate_apple = self._arena.sample_free_point()
         while self._arena.is_position_apple(candidate_apple):
             # TODO: create apple at suitable position
             # generate random position within walls
