@@ -1,6 +1,5 @@
 # -*- coding: latin-1 -*-
 from unittest.mock import Mock
-import pytest
 
 from game.game import TurnCommand
 from game.game import Cycle
@@ -39,12 +38,6 @@ def test_game_sets_apples_at_different_locations(big_game):
 
 
 # apple not at snake
-
-
-@pytest.mark.skip
-def test_game_does_not_set_apple_in_walls(game):
-    pass
-
 
 # SNAKE TESTS
 #############
