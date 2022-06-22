@@ -45,6 +45,12 @@ class Arena:
     def is_position_apple(self, position):
         return position in self._apples
 
+    def is_position_occupied(self, candidate_free_point):
+        # fmt:off
+        return self.is_position_wall(candidate_free_point) or \
+            self.is_position_apple(candidate_free_point)
+        # fmt:on
+
     def remove_apple(self, position):
         self._apples.remove(position)
 
@@ -53,11 +59,5 @@ class Arena:
         while self.is_position_occupied(candidate_free_point):
             candidate_free_point = self._box.random_point()
         return candidate_free_point
-
-    def is_position_occupied(self, candidate_free_point):
-        # fmt:off
-        return self.is_position_wall(candidate_free_point) or \
-            self.is_position_apple(candidate_free_point)
-        # fmt:on
 
     # TODO later: place_obstacle
