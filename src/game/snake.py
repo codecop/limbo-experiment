@@ -14,7 +14,7 @@ Nice to have
 - Es kann ein Labyrinth von Datei als Level geladen werden
 - Geschwindigkeit
 - Schwierigkeitsgrad
-- Essen verlängert Schlange sofort
+- X Essen verlängert Schlange sofort
 
 Domain
 - Snake
@@ -28,8 +28,8 @@ Domain
 - Game?
   - X Tick
 - User Input/UI
-  - Game Loop
-  - Turn
+  - X Game Loop
+  - X Turn
 """
 from .geometry import Directions, Point
 
