@@ -12,7 +12,7 @@ from .geometry import Point
 
 
 class Arena:
-    def __init__(self, box, initial_apple=None):
+    def __init__(self, box):
         self._box = box
         self._walls = set()
         self._apples = []
