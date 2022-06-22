@@ -38,6 +38,7 @@ def test_axis_range():
 
 
 def test_axis_min():
+    axis = Axis(2)
     pass
 
 
