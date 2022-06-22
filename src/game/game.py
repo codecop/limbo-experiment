@@ -1,8 +1,6 @@
 # -*- coding: latin-1 -*-
 from enum import Enum
 
-from .geometry import Point
-
 TurnCommand = Enum("TurnCommand", "LEFT RIGHT")
 
 
@@ -28,12 +26,10 @@ class Game:
 
     def _place_apple(self):
         candidate_apple = self._arena.sample_free_point()
-        while self._arena.is_position_apple(candidate_apple):
-            # TODO: create apple at suitable position
-            # generate random position within walls
-            # cf Arena._build_wall for suitable x and y ranges
-            # check if already is apple or snake, if so then skip
-            candidate_apple = Point(candidate_apple.x + 1, candidate_apple.y + 1)
+        # TODO: create apple at suitable position
+        # generate random position within walls
+        # cf Arena._build_wall for suitable x and y ranges
+        # check if already is apple or snake, if so then skip
         self._arena.place_apple(candidate_apple)
 
     def _handle_command(self, command):
