@@ -24,7 +24,7 @@ class Arena:
 
     def _build_wall(self):
         for x in self._dimension.range_x():
-            self._walls.append(Point(x, -self._height))
+            self._walls.append(Point(x, self._dimension.y.min()))
             self._walls.append(Point(x, self._height))
         for y in range(-self._height + 1, self._height + 1 - 1):
             self._walls.append(Point(-self._width, y))
