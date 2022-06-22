@@ -1,9 +1,11 @@
 # -*- coding: latin-1 -*-
 from unittest.mock import Mock
+from game.arena import Arena
 
 from game.game import TurnCommand
 from game.game import Cycle
-from game.geometry import Point
+from game.geometry import Box, Point
+from game.snake import Snake
 
 
 # TBD: Could these tests be simplified?
@@ -38,7 +40,8 @@ def test_game_sets_apples_at_different_locations(big_game):
 
 
 def test_game_sets_apple_not_at_snake():
-    pass
+    Snake()
+    Arena(Box(1, 2))
 
 
 # apple not at snake
