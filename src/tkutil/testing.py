@@ -23,8 +23,6 @@ import _tkinter
 import sys
 import unittest
 
-import pytest
-
 
 class TkinterTestCase(unittest.TestCase):
     """Utility class to facilitate setup, teardown as well as manual GUI updates."""

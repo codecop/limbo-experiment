@@ -136,4 +136,3 @@ def test_growth_calls_callback_after_grow_count():
     callback.assert_not_called()
     growth.next()
     callback.assert_called_once()
-

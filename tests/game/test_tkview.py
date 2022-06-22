@@ -123,18 +123,18 @@ def test_draw_apple(view):
 if __name__ == "__main__":
     # exemplary view
     root = tk.Tk()
-    view = TkView(root)
+    TkView(root)
     root.mainloop()
 
     # exemplary test setup
     import tkinter as tk
 
-    hidden_root = tk.Tk()
-    hidden_root.title("Hidden root <-- we will never see it ;)")
-    hidden_root.withdraw()
+    hidden_root_window = tk.Tk()
+    hidden_root_window.title("Hidden root <-- we will never see it ;)")
+    hidden_root_window.withdraw()
 
-    actual_window = tk.Toplevel(hidden_root)
+    actual_window = tk.Toplevel(hidden_root_window)
     actual_window.title("We use this!")
 
     # actual_window.mainloop()
-    hidden_root.mainloop()  # Kill the root to close all
+    hidden_root_window.mainloop()  # Kill the root to close all

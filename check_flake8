@@ -1,0 +1,6 @@
+#!/bin/bash
+flake8 --ignore E501
+
+error=$?
+
+exit $error

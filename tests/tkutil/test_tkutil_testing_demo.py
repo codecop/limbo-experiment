@@ -19,7 +19,7 @@ class ExampleApplication(tk.Frame):
         self.parent.bind("<Return>", self.save)
 
     def create_widgets(self):
-        self.label = tk.Label(self, text=u"Value:")
+        self.label = tk.Label(self, text="Value:")
         self.label.pack()
         self.entry = tk.Entry(self)
         self.entry.pack()
@@ -50,7 +50,7 @@ class ExampleApplicationThatIsNotAFrame:
         self.parent.bind("<Return>", self.save)
 
     def create_widgets(self):
-        self.label = tk.Label(self.parent, text=u"Value:")
+        self.label = tk.Label(self.parent, text="Value:")
         self.label.pack()
         self.entry = tk.Entry(self.parent)
         self.entry.pack()
@@ -66,7 +66,7 @@ class ExampleApplicationThatIsNotAFrame:
 
 def examplethatisnotaframe_main():
     root = tk.Tk()
-    app = ExampleApplicationThatIsNotAFrame(root)
+    ExampleApplicationThatIsNotAFrame(root)
     root.mainloop()
 
 
