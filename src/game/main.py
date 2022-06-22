@@ -16,7 +16,8 @@ def run():
 
     snake = Snake()
     box = Box(20, 20)
-    arena = Arena(box=box, initial_apple=Point(-1, 1))
+    arena = Arena(box=box)
+    arena.place_apple(Point(-1, 1))
     game = Game(snake, arena, grow_count=3)
     # TODO: window focus
     Presenter(view, game, update_interval=100)
