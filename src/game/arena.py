@@ -18,8 +18,6 @@ class Arena:
         self._apples = []
 
         self._build_wall()
-        if initial_apple:
-            self.place_apple(initial_apple)
 
     def _build_wall(self):
         for x in self._box.x.range():
