@@ -55,8 +55,9 @@ class Arena:
         return candidate_free_point
 
     def is_position_occupied(self, candidate_free_point):
-        return self.is_position_wall(candidate_free_point) or self.is_position_apple(
-            candidate_free_point
-        )
+        # fmt:off
+        return self.is_position_wall(candidate_free_point) or \
+            self.is_position_apple(candidate_free_point)
+        # fmt:on
 
     # TODO later: place_obstacle
