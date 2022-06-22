@@ -15,7 +15,8 @@ def run():
     view = TkView(root, 500, 500)
 
     snake = Snake()
-    arena = Arena(box=Box(20, 20), initial_apple=Point(-1, 1))
+    box = Box(20, 20)
+    arena = Arena(box=box, initial_apple=Point(-1, 1))
     game = Game(snake, arena, grow_count=3)
     # TODO: window focus
     Presenter(view, game, update_interval=100)
