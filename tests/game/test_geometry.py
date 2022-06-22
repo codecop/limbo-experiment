@@ -42,6 +42,10 @@ def test_axis_min():
     assert axis.min() == -2
 
 
+def test_axis_max():
+    pass
+
+
 @pytest.mark.parametrize("execution_number", range(100))
 def test_axis_random(execution_number):
     axis = Axis(2)
