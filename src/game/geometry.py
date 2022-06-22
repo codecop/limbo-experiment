@@ -53,12 +53,6 @@ class Dimension:
         self.x = Axis(width)
         self.y = Axis(height)
 
-    def range_x(self):
-        return self.x.range()
-
-    def range_y(self):
-        return self.y.range()
-
     def random_point(self):
         return Point(self.x.random(), self.y.random())
 
