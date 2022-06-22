@@ -41,8 +41,9 @@ def test_game_sets_apples_at_different_locations(big_game):
 
 def test_game_sets_apple_not_at_snake():
     snake = Snake()
-    arena = Arena(Box(1, 2))
-    Game(snake, arena, grow_count=99, apple_count=1)
+    arena = Arena(Box(1, 3))
+    game = Game(snake, arena, grow_count=99, apple_count=1)
+    game.tick()
 
 
 # apple not at snake
