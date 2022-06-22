@@ -13,7 +13,7 @@ from .geometry import Box, Point
 
 class Arena:
     def __init__(self, width, height, initial_apple=Point(0, 1)):
-        self._dimension = Box(width, height)
+        self._box = Box(width, height)
         self._walls = set()
         self._apples = []
 
@@ -21,12 +21,12 @@ class Arena:
         self.place_apple(initial_apple)
 
     def _build_wall(self):
-        for x in self._dimension.x.range():
-            self._walls.add(Point(x, self._dimension.y.min()))
-            self._walls.add(Point(x, self._dimension.y.max()))
-        for y in self._dimension.y.range():
-            self._walls.add(Point(self._dimension.x.min(), y))
-            self._walls.add(Point(self._dimension.x.max(), y))
+        for x in self._box.x.range():
+            self._walls.add(Point(x, self._box.y.min()))
+            self._walls.add(Point(x, self._box.y.max()))
+        for y in self._box.y.range():
+            self._walls.add(Point(self._box.x.min(), y))
+            self._walls.add(Point(self._box.x.max(), y))
 
     def place_apple(self, apple):
         self._apples.append(apple)
