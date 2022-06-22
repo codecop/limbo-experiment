@@ -56,8 +56,6 @@ class Box:
     def random_point(self):
         return Point(self.x.random(), self.y.random())
 
-    # TODO/TBD: dimension.x.range() vs dimension.range_x()
-
 
 class Axis:
     def __init__(self, length):
