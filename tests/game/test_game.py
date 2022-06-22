@@ -34,7 +34,7 @@ def test_game_can_set_apples(big_game):
 
 
 def test_game_sets_apples_at_different_locations(big_game):
-    for _ in range(10 + 10):  # TODO: 10 is ticks_to_apple
+    for _ in range(10 + 10):  # 10 is ticks_to_apple in big_game
         big_game.tick()
     assert len(set(big_game.apples())) == 1 + 2
 
