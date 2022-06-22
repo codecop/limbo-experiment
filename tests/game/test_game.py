@@ -37,6 +37,10 @@ def test_game_sets_apples_at_different_locations(big_game):
     assert len(set(big_game.apples())) == 3  # expected: 3
 
 
+def test_game_sets_apple_not_at_snake():
+    pass
+
+
 # apple not at snake
 
 # SNAKE TESTS
