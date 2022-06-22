@@ -23,7 +23,9 @@ def snake():
 
 @pytest.fixture
 def arena3x4():
-    return Arena(box=Box(3, 4), initial_apple=Point(0, 1))
+    arena = Arena(box=Box(3, 4))
+    arena.place_apple(Point(0, 1))
+    return arena
 
 
 @pytest.fixture
