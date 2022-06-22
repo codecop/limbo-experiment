@@ -1,11 +1,13 @@
 # -*- coding: latin-1 -*-
 from enum import Enum
 
+from game.snake import Snake
+
 TurnCommand = Enum("TurnCommand", "LEFT RIGHT")
 
 
 class Game:
-    def __init__(self, snake, arena, grow_count=3, apple_count=20):
+    def __init__(self, snake: Snake, arena, grow_count=3, apple_count=20):
         self._snake = snake
         self._arena = arena
         self._is_running = True
