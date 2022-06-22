@@ -16,7 +16,7 @@ class Arena:
         self._width = width
         self._height = height
         self._dimension = Dimension(width, height)
-        self._walls = set()
+        self._walls = []
         self._apples = []
 
         self._build_wall()
