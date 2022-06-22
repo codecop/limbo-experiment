@@ -50,6 +50,8 @@ class Arena:
 
     def sample_free_point(self):
         candidate_free_point = Point(-1, -1)
+        while self._arena.is_position_apple(candidate_free_point):
+            pass
         return candidate_free_point
 
     # TODO later: place_obstacle
