@@ -41,7 +41,7 @@ def test_game_sets_apples_at_different_locations(big_game):
     assert len(set(big_game.apples())) == 1 + 2
 
 
-@pytest.mark.parametrize("execution_number", range(100))
+@pytest.mark.parametrize("execution_number", range(10))
 def test_game_sets_apple_not_at_snake(execution_number):
     snake = Snake()
     snake.grow()
