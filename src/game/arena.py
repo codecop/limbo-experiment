@@ -61,4 +61,6 @@ class Arena:
             # TODO (ignore) stop loop on full arena
         return candidate_free_point
 
-    # TODO later: place_obstacle
+
+# Arena is complete
+# TODO later: place_obstacle
