@@ -64,5 +64,6 @@ def test_arena_creates_random_point_not_on_apple():
 
 
 def test_arena_creates_random_point_not_place():
-    Arena(Box(1, 1))
+    arena = Arena(Box(1, 1))
+    arena.place_apple(Point(0, 0))
     # point = arena.sample_free_point()
