@@ -39,8 +39,7 @@ def test_axis_range():
 
 def test_axis_min():
     axis = Axis(2)
-    axis.min()
-    pass
+    assert axis.min() is None
 
 
 @pytest.mark.parametrize("execution_number", range(100))
