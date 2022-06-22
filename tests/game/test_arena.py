@@ -64,4 +64,4 @@ def test_arena_creates_random_point_not_on_apple():
 
 
 def test_arena_creates_random_point_not_place():
-    pass
+    Arena(Box(1, 1))
