@@ -2,7 +2,7 @@
 """
 Grundanforderungen:
 - X trifft Snake eine Wand ist Spiel aus
-- x Rund um die Arena ist eine Wand
+- X Rund um die Arena ist eine Wand
 
 Domain
 - Arena
