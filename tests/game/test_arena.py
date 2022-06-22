@@ -1,5 +1,6 @@
 # -*- coding: latin-1 -*-
-from game.geometry import Point
+from game.arena import Arena
+from game.geometry import Box, Point
 
 
 def test_there_is_an_arena_with_walls_around(arena3x4):
@@ -52,6 +53,5 @@ def test_arena_creates_random_point(arena3x4):
     # TODO: Continue implementation later when Dimension is introduced
 
 
-def test_arena_creates_random_point_not_on_apple(arena3x4):
-    arena3x4.place_apple(Point(-1, -1))
-    arena3x4.sample_free_point()
+def test_arena_creates_random_point_not_on_apple():
+    Arena(Box(1, 2))
