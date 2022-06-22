@@ -50,3 +50,7 @@ def test_arena_creates_random_point(arena3x4):
     assert not arena3x4.is_position_apple(point)
     assert not arena3x4.is_position_occupied(point)
     # TODO: Continue implementation later when Dimension is introduced
+
+
+def test_arena_foo():
+    pass
