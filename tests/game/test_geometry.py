@@ -44,7 +44,7 @@ def test_axis_min():
 
 def test_axis_max():
     axis = Axis(3)
-    assert axis.max() is None
+    assert axis.max() is None or axis.max() == 3
 
 
 @pytest.mark.parametrize("execution_number", range(100))
