@@ -39,7 +39,7 @@ class Arena:
     def is_position_wall(self, position):
         return position in self._walls
 
-    def are_positions_occupied(self, positions):
+    def are_positions_wall(self, positions):
         return any(self.is_position_wall(position) for position in positions)
 
     def is_position_apple(self, position):

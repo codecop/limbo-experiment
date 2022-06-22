@@ -37,7 +37,7 @@ class Game:
             self._snake.turn_right()
 
     def _check_running(self):
-        self._is_running &= not self._arena.are_positions_occupied(self._snake.body)
+        self._is_running &= not self._arena.are_positions_wall(self._snake.body)
         self._is_running &= not self._snake.has_crossed_itself()
 
     def is_running(self):
