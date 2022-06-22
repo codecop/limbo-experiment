@@ -2,7 +2,7 @@
 from unittest.mock import Mock
 from game.arena import Arena
 
-from game.game import TurnCommand
+from game.game import Game, TurnCommand
 from game.game import Cycle
 from game.geometry import Box, Point
 from game.snake import Snake
@@ -40,8 +40,9 @@ def test_game_sets_apples_at_different_locations(big_game):
 
 
 def test_game_sets_apple_not_at_snake():
-    Snake()
-    Arena(Box(1, 2))
+    snake = Snake()
+    arena = Arena(Box(1, 2))
+    Game(snake, arena, grow_count=99, apple_count=1)
 
 
 # apple not at snake
