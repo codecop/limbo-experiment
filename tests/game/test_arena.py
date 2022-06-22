@@ -50,7 +50,6 @@ def test_arena_creates_random_point(arena3x4):
     point = arena3x4.sample_free_point()
     assert not arena3x4.is_position_apple(point)
     assert not arena3x4.is_position_wall(point)
-    # TODO: Continue implementation later when Dimension is introduced
 
 
 def test_arena_creates_random_point_not_on_apple():
