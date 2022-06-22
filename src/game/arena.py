@@ -8,13 +8,14 @@ Domain
 - Arena
   - Obstacle
 """
-from .geometry import Point
+from .geometry import Dimension, Point
 
 
 class Arena:
     def __init__(self, width, height, initial_apple=Point(0, 1), dimension=None):
         self._width = width
         self._height = height
+        self._dimension = dimension or Dimension(width, height)
         self._walls = []
         self._apples = []
 
