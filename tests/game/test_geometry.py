@@ -43,7 +43,7 @@ def test_axis_min():
 
 
 def test_axis_max():
-    pass
+    axis = Axis(3)
 
 
 @pytest.mark.parametrize("execution_number", range(100))
