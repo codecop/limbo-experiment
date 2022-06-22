@@ -49,8 +49,7 @@ class Arena:
         self._apples.remove(position)
 
     def sample_free_point(self):
-        candidate_free_point = self.Point(-1, -1)
-        #        candidate_free_point = self._box.random_point()
+        candidate_free_point = Point(-1, -1)
         return candidate_free_point
 
     # TODO later: place_obstacle
