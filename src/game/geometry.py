@@ -48,7 +48,7 @@ class Directions:
         return _LEFT[direction]
 
 
-class Dimension:
+class Box:
     def __init__(self, width, height):
         self.x = Axis(width)
         self.y = Axis(height)

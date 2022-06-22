@@ -5,7 +5,7 @@ from .arena import Arena
 from .game import Game
 from .presenter import Presenter
 from .snake import Snake
-from .geometry import Dimension, Point
+from .geometry import Box, Point
 from .tkview import TkView
 
 
@@ -15,7 +15,7 @@ def run():
     view = TkView(root, 500, 500)
 
     snake = Snake()
-    dimension = Dimension(20, 20)
+    dimension = Box(20, 20)
     arena = Arena(20, 20, initial_apple=Point(-1, 1))
     game = Game(snake, arena, grow_count=3)
     # TODO: window focus

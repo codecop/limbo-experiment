@@ -5,7 +5,7 @@
 """
 import pytest
 
-from game.geometry import Point, Dimension, Axis
+from game.geometry import Point, Box, Axis
 
 
 def test_point_supports_addition():
@@ -14,7 +14,7 @@ def test_point_supports_addition():
 
 @pytest.mark.parametrize("execution_number", range(100))
 def test_dimension_random_point(execution_number):
-    dimension = Dimension(width=2, height=3)
+    dimension = Box(width=2, height=3)
     point = dimension.random_point()
     assert -2 <= point.x <= 2 and -3 <= point.y <= 3
 
