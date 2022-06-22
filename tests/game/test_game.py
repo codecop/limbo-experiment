@@ -49,8 +49,6 @@ def test_game_sets_apple_not_at_snake():
     assert game.apples()[0] == Point(0, 2)
 
 
-# apple not at snake
-
 # SNAKE TESTS
 #############
 def test_game_tick_moves_snake(game):
