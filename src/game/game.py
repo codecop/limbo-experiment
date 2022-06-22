@@ -28,6 +28,8 @@ class Game:
 
     def _place_apple(self):
         candidate_apple = self._arena.sample_free_point()
+        while candidate_apple in self._snake.body:
+            candidate_apple = self._arena.sample_free_point()
         # TODO: create apple at suitable position
         # check if already is snake, if so then skip
         self._arena.place_apple(candidate_apple)
