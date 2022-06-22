@@ -1,5 +1,6 @@
 # -*- coding: latin-1 -*-
-from game.geometry import Point
+from game.arena import Arena
+from game.geometry import Box, Point
 
 
 def test_there_is_an_arena_with_walls_around(arena3x4):
@@ -53,4 +54,5 @@ def test_arena_creates_random_point(arena3x4):
 
 
 def test_arena_foo():
+    arena = Arena(Box(5, 4))
     pass
