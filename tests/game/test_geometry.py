@@ -1,8 +1,8 @@
 # -*- coding: latin-1 -*-
 """
 * Dann verwenden wir das im Arena -> weniger Code dort
-* Test fÃ¼r random_free_sample() im Arena fertig implementieren (Random mocken)
-* Zuruckgehen und im Game einbauen - wie testen wir?
+* Test für random_free_sample() im Arena fertig implementieren (Random mocken)
+* Zurückgehen und im Game einbauen - wie testen wir?
 """
 import pytest
 
