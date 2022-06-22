@@ -58,6 +58,7 @@ class Arena:
         candidate_free_point = self._box.random_point()
         while self.is_position_occupied(candidate_free_point):
             candidate_free_point = self._box.random_point()
+            # TODO (ignore) stop loop on full arena
         return candidate_free_point
 
     # TODO later: place_obstacle
