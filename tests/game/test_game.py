@@ -1,5 +1,7 @@
 # -*- coding: latin-1 -*-
 from unittest.mock import Mock
+
+import pytest
 from game.arena import Arena
 
 from game.game import Game, TurnCommand
@@ -39,7 +41,8 @@ def test_game_sets_apples_at_different_locations(big_game):
     assert len(set(big_game.apples())) == 1 + 2
 
 
-def test_game_sets_apple_not_at_snake():
+@pytest.mark.parametrize("execution_number", range(100))
+def test_game_sets_apple_not_at_snake(execution_number):
     snake = Snake()
     snake.grow()
     arena = Arena(Box(1, 3))
