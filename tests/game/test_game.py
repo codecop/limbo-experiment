@@ -20,7 +20,7 @@ def test_new_game_has_arena(game):
 
 # APPLE TESTS
 #############
-def test_new_game_has_apples(game):
+def test_new_game_has_initial_apple(game):
     apple_coordinates = game.apples()
     assert apple_coordinates == [Point(0, 1)]
 
