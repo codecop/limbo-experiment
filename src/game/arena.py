@@ -13,7 +13,7 @@ from .geometry import Box, Point
 
 class Arena:
     def __init__(self, width, height, box=None, initial_apple=Point(0, 1)):
-        self._box = Box(width, height)
+        self._box = box or Box(width, height)
         self._walls = set()
         self._apples = []
 
