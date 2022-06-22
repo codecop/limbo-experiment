@@ -55,6 +55,9 @@ class Game:
         return self._arena.apples()
 
 
+# Game is complete
+
+
 class Cycle:
     def __init__(self, callback, limit=1):
         self._limit = limit
