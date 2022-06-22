@@ -25,8 +25,8 @@ def test_there_is_an_arena_with_walls_around(arena3x4):
 
 
 def test_if_areana_position_occupied(arena3x4):
-    assert arena3x4.is_position_occupied(Point(2, -3)) is False
-    assert arena3x4.is_position_occupied(Point(3, -4)) is True
+    assert arena3x4.is_position_wall(Point(2, -3)) is False
+    assert arena3x4.is_position_wall(Point(3, -4)) is True
 
 
 def test_if_arena_positions_are_occupied(arena3x4):
@@ -49,7 +49,7 @@ def test_arena_apples(arena3x4):
 def test_arena_creates_random_point(arena3x4):
     point = arena3x4.sample_free_point()
     assert not arena3x4.is_position_apple(point)
-    assert not arena3x4.is_position_occupied(point)
+    assert not arena3x4.is_position_wall(point)
     # TODO: Continue implementation later when Dimension is introduced
 
 
@@ -60,4 +60,4 @@ def test_arena_creates_random_point_not_on_apple():
     point = arena.sample_free_point()
     assert point == Point(-1, -1) or Point(0, 1)
     # assert not arena.is_position_apple(point)
-    # assert not arena.is_position_occupied(point)
+    # assert not arena.is_position_wall(point)

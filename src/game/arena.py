@@ -36,11 +36,11 @@ class Arena:
     def apples(self):
         return self._apples
 
-    def is_position_occupied(self, position):
+    def is_position_wall(self, position):
         return position in self._walls
 
     def are_positions_occupied(self, positions):
-        return any(self.is_position_occupied(position) for position in positions)
+        return any(self.is_position_wall(position) for position in positions)
 
     def is_position_apple(self, position):
         return position in self._apples
@@ -50,7 +50,7 @@ class Arena:
 
     def sample_free_point(self):
         candidate_free_point = Point(-1, -1)
-        while self.is_position_occupied(candidate_free_point) or self.is_position_apple(
+        while self.is_position_wall(candidate_free_point) or self.is_position_apple(
             candidate_free_point
         ):
             candidate_free_point = self._box.random_point()
