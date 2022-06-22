@@ -45,7 +45,6 @@ def test_game_sets_apple_not_at_snake():
     game = Game(snake, arena, grow_count=99, apple_count=1)
     game.tick()
     assert len(game.apples()) == 1
-    assert game.apples() in [Point(-2, 0), Point(2, 0)]
 
 
 # apple not at snake
