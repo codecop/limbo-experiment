@@ -4,6 +4,7 @@ import pytest
 
 from game.arena import Arena
 from game.game import Game
+from game.geometry import Box
 from game.snake import Point, Snake
 
 
@@ -22,7 +23,7 @@ def snake():
 
 @pytest.fixture
 def arena3x4():
-    return Arena(3, 4, initial_apple=Point(0, 1))
+    return Arena(box=Box(3, 4), initial_apple=Point(0, 1))
 
 
 @pytest.fixture
