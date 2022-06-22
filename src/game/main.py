@@ -8,8 +8,6 @@ from .snake import Snake
 from .geometry import Box, Point
 from .tkview import TkView
 
-import pytest
-
 
 def run():
     # TODO: pull out config (RADIUS, ..., growth rate)
