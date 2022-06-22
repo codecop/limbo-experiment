@@ -50,10 +50,13 @@ class Arena:
 
     def sample_free_point(self):
         candidate_free_point = Point(-1, -1)
-        while self.is_position_wall(candidate_free_point) or self.is_position_apple(
-            candidate_free_point
-        ):
+        while self.is_position_occupied(candidate_free_point):
             candidate_free_point = self._box.random_point()
         return candidate_free_point
+
+    def is_position_occupied(self, candidate_free_point):
+        return self.is_position_wall(candidate_free_point) or self.is_position_apple(
+            candidate_free_point
+        )
 
     # TODO later: place_obstacle
