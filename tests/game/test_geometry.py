@@ -13,9 +13,9 @@ def test_point_supports_addition():
 
 
 @pytest.mark.parametrize("execution_number", range(100))
-def test_dimension_random_point(execution_number):
-    dimension = Box(width=2, height=3)
-    point = dimension.random_point()
+def test_box_random_point(execution_number):
+    box = Box(width=2, height=3)
+    point = box.random_point()
     assert -2 <= point.x <= 2 and -3 <= point.y <= 3
 
 
