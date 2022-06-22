@@ -21,12 +21,5 @@ if [ "$size_result" -ne 0 ]; then
   exit 0
 fi
 
-./check_flake8
-flake8_result=$?
-if [ "$flake8_result" -ne 0 ]; then
-  ./git_revert "flake8"
-  exit 0
-fi
-
 ./git_commit
 exit 0
