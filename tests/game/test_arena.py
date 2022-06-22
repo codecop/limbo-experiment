@@ -67,3 +67,4 @@ def test_arena_creates_random_point_not_place():
     arena = Arena(Box(1, 1))
     arena.place_apple(Point(0, 0))
     # point = arena.sample_free_point()
+    # assert point is None
