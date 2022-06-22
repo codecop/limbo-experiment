@@ -61,3 +61,7 @@ def test_arena_creates_random_point_not_on_apple():
     assert point == Point(0, 1)
     assert not arena.is_position_apple(point)
     assert not arena.is_position_wall(point)
+
+
+def test_arena_creates_random_point_not_place():
+    pass
