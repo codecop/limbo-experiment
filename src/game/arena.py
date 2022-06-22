@@ -49,7 +49,11 @@ class Arena:
         self._apples.remove(position)
 
     def sample_free_point(self):
-        candidate_free_point = Point(1, 1)
+        candidate_free_point = Point(-1, -1)
+        while self._arena.is_position_apple(candidate_free_point):
+            candidate_free_point = Point(
+                candidate_free_point.x + 1, candidate_free_point.y + 1
+            )
         return candidate_free_point
 
     # TODO later: place_obstacle
