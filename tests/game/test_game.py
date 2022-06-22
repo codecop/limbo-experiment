@@ -18,6 +18,8 @@ def test_new_game_has_arena(game):
     assert len(arena_coordinates) == 4 + 7 + 7 + 5 + 5
 
 
+# APPLE TESTS
+#############
 def test_new_game_has_apples(game):
     apple_coordinates = game.apples()
     assert apple_coordinates == [Point(0, 1)]
