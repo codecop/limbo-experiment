@@ -46,7 +46,6 @@ class Snake:
 
     def advance(self):
         advanced_position = self.position + self.direction.offset
-        # TBD simplify? deserves comment?
         if self._is_growing():
             self._times_to_grow -= 1
             whole_body = slice(len(self.body))
