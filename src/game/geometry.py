@@ -70,7 +70,7 @@ class Axis:
         self._length = length
 
     def range(self):
-        return range(-self._length, self._length + 1)
+        return range(self.min(), self._length + 1)
 
     def random(self):
         return random.randint(-self._length, self._length)
