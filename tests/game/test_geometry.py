@@ -38,8 +38,8 @@ def test_axis_range():
 
 
 def test_axis_min():
-    axis = Axis(2)
-    assert axis.min() == -2
+    axis = Axis(4)
+    assert axis.min() == -4
 
 
 def test_axis_max():
