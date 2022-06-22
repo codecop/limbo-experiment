@@ -38,10 +38,7 @@ def test_game_sets_apples_at_different_locations(big_game):
     assert len(set(big_game.apples())) == 3  # expected: 3
 
 
-# apple not at wall
 # apple not at snake
-# apple not at apple (DONE)
-# apple set random
 
 
 @pytest.mark.skip
