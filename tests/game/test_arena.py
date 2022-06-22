@@ -57,6 +57,6 @@ def test_arena_creates_random_point_not_on_apple():
     arena.place_apple(Point(0, 0))
     arena.place_apple(Point(0, -1))
     point = arena.sample_free_point()
-    assert point == Point(-1, -1) or Point(0, 1)
+    assert point == Point(0, 1)
     # assert not arena.is_position_apple(point)
     # assert not arena.is_position_wall(point)
