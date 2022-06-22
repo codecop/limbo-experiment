@@ -78,4 +78,7 @@ class Axis:
     def min(self):
         return -self._length
 
+    def max(self):
+        pass
+
     # TODO: min, max für Verwendung in Area walls
