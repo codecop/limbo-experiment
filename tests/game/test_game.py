@@ -41,11 +41,6 @@ def test_game_sets_apples_at_different_locations(big_game):
 # apple not at snake
 
 
-@pytest.mark.skip
-def test_game_does_not_set_apple_in_walls(game):
-    pass
-
-
 # SNAKE TESTS
 #############
 def test_game_tick_moves_snake(game):
