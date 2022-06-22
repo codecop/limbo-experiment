@@ -26,7 +26,7 @@ class Arena:
         for x in self._dimension.x.range():
             self._walls.add(Point(x, self._dimension.y.min()))
             self._walls.add(Point(x, self._dimension.y.max()))
-        for y in self._dimension.range_y():
+        for y in self._dimension.y.range():
             self._walls.add(Point(self._dimension.x.min(), y))
             self._walls.add(Point(self._dimension.x.max(), y))
 
