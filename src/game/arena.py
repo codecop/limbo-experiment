@@ -23,7 +23,7 @@ class Arena:
         self.place_apple(initial_apple)
 
     def _build_wall(self):
-        for x in self._dimension.range_x():
+        for x in self._dimension.x.range():
             self._walls.add(Point(x, self._dimension.y.min()))
             self._walls.add(Point(x, self._dimension.y.max()))
         for y in self._dimension.range_y():
