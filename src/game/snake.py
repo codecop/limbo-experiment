@@ -37,7 +37,9 @@ from .geometry import Directions, SquareTiling
 class Snake:
     def __init__(self, tiling: SquareTiling):
         self.direction = tiling.starting_direction()
+        new_body = []
         center = tiling.origin()
+
         second = center - self.direction.offset
         third = second - self.direction.offset
         new_body = [center, second, third]
