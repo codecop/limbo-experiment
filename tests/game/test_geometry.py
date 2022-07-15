@@ -6,7 +6,7 @@
 """
 import pytest
 
-from game.geometry import Point, Box, Axis
+from game.geometry import Directions, Point, Box, Axis
 
 
 def test_point_supports_addition():
@@ -48,4 +48,4 @@ def test_axis_random(execution_number):
 
 
 def test_opposite_direction():
-    pass
+    Directions.NORTH
