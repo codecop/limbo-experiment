@@ -1,8 +1,9 @@
 #!/bin/bash
-flake8 --ignore E501,E302,E303
+flake8 --ignore E501,E301,E302,E303
 # E501: too long line
 # E302: too few blank lines
 # E303: too many blank lines
+# E301 expected 1 blank line, found 0
 
 error=$?
 
