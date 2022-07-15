@@ -1,12 +1,12 @@
 # -*- coding: latin-1 -*-
 """
 * Dann verwenden wir das im Arena -> weniger Code dort
-* Test für random_free_sample() im Arena fertig implementieren (Random mocken)
-* Zurückgehen und im Game einbauen - wie testen wir?
+* Test fÃ¼r random_free_sample() im Arena fertig implementieren (Random mocken)
+* ZurÃ¼ckgehen und im Game einbauen - wie testen wir?
 """
 import pytest
 
-from game.geometry import Point, Box, Axis
+from game.geometry import Directions, Point, Box, Axis
 
 
 def test_point_supports_addition():
@@ -48,4 +48,5 @@ def test_axis_random(execution_number):
 
 
 def test_opposite_direction():
-    pass
+    direction = Directions.NORTH
+    # direction.opposite()
