@@ -40,10 +40,9 @@ class Snake:
         new_body = []
         center = tiling.origin()
         new_body.append(center)
-        center = center - self.direction.offset
-        new_body.append(center)
-        center = center - self.direction.offset
-        new_body.append(center)
+        for _ in range(2):
+            center = center - self.direction.offset
+            new_body.append(center)
         self.body = new_body
         self._times_to_grow = 0
 
