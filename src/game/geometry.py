@@ -27,7 +27,7 @@ class Point(namedtuple("Point", ["x", "y"])):
 
 
 Direction = namedtuple("Direction", ["name", "offset"])
-
+Direction.opposite = lambda self: self
 
 class Directions:
     NORTH = Direction("N", Point(0, 1))
