@@ -33,23 +33,23 @@ Domain
 """
 from .geometry import Directions, SquareTiling
 
+def make_body(start, direction, length):
+    new_body = []
+    center = start
+    new_body.append(center)
+    for _ in range(length-1):
+        center = center - direction.offset
+        new_body.append(center)
+    return new_body
 
 class Snake:
     def __init__(self, tiling: SquareTiling):
         self.direction = tiling.starting_direction()
         start = tiling.origin()
-        new_body = self.make_body(start, self.direction, length=3)
+        new_body = make_body(start, self.direction, length=3)
         self.body = new_body
         self._times_to_grow = 0
 
-    def make_body(self, start, direction, length):
-        new_body = []
-        center = start
-        new_body.append(center)
-        for _ in range(length-1):
-            center = center - direction.offset
-            new_body.append(center)
-        return new_body
 
     @property
     def position(self):
