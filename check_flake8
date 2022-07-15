@@ -1,12 +1,12 @@
 #!/bin/bash
-flake8 --ignore E2,E3,E501
+flake8 --ignore E2,E3,E501,W292
 # flake8 --ignore E501,E301,E302,E303,E304,E305,E306
 # E501: too long line
 # E301: expected 1 blank line, found 0
 # E302: too few blank lines
 # E303: too many blank lines
 # E305: expected 2 blank lines after class or function definition, found 1
-
+# W292: no newline at end of file
 error=$?
 
 exit $error
