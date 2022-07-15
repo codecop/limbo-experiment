@@ -7,7 +7,6 @@ from game.arena import Arena
 from game.game import Game, TurnCommand
 from game.game import Cycle
 from game.geometry import Box, Point
-from game.snake import Snake
 
 
 # TBD: Could these tests be simplified?
@@ -42,9 +41,8 @@ def test_game_sets_apples_at_different_locations(big_game):
 
 
 @pytest.mark.parametrize("execution_number", range(10))
-def test_game_sets_apple_not_at_snake(execution_number):
+def test_game_sets_apple_not_at_snake(snake, execution_number):
     # random_point has 1/5 probability to not have coverage
-    snake = Snake()
     snake.grow()
     arena = Arena(Box(1, 3))
     game = Game(snake, arena, grow_count=99, apple_count=1)
