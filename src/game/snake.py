@@ -37,7 +37,7 @@ from .geometry import Directions, Point, SquareTiling
 class Snake:
     def __init__(self, tiling: SquareTiling):
         self.direction = tiling.starting_direction()
-        center = Point(0, 0)
+        center = tiling.origin()
         self.body = [center, Point(0, -1), Point(0, -2)]
         self._times_to_grow = 0
 

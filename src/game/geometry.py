@@ -15,6 +15,9 @@ class SquareTiling:
     def starting_direction(self):
         return Directions.NORTH
 
+    def origin(self):
+        return Point(0, 0)
+
 
 class Point(namedtuple("Point", ["x", "y"])):
     def __add__(self, other):
