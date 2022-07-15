@@ -42,8 +42,8 @@ class Snake:
         new_body.append(center)
         center = center - self.direction.offset
         new_body.append(center)
-        third = center - self.direction.offset
-        new_body.append(third)
+        center = center - self.direction.offset
+        new_body.append(center)
         self.body = new_body
         self._times_to_grow = 0
 
