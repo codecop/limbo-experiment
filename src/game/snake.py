@@ -45,9 +45,10 @@ class Snake:
     def make_body(self, start, length=2):
         new_body = []
         center = start
+        direction = self.direction.offset
         new_body.append(center)
         for _ in range(length):
-            center = center - self.direction.offset
+            center = center - direction
             new_body.append(center)
         return new_body
 
