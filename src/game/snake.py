@@ -31,7 +31,7 @@ Domain
   - X Game Loop
   - X Turn
 """
-from .geometry import Directions, Point, SquareTiling
+from .geometry import Directions, SquareTiling
 
 
 class Snake:
@@ -39,7 +39,7 @@ class Snake:
         self.direction = tiling.starting_direction()
         center = tiling.origin()
         second = center - self.direction.offset  # Point(0, -1)
-        third = second - self.direction.offset or Point(0, -2)
+        third = second - self.direction.offset # or Point(0, -2)
         self.body = [center, second, third]
         self._times_to_grow = 0
 
