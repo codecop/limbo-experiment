@@ -5,7 +5,7 @@ from game.geometry import Point, Directions
 def test_there_is_a_snake(snake):
     assert snake.direction == Directions.NORTH
     assert snake.position == Point(0, 0)
-    assert snake.body == [Point(0, 0), Point(0, -1), Point(0, -2)]
+    assert snake.body == [Point(0, 0),  Point(0, -2)]
 
 
 def test_snake_advances_without_growing(snake):
