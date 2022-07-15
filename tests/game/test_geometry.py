@@ -14,8 +14,7 @@ def test_point_supports_addition():
 
 
 def test_point_supports_subtraction():
-    assert Point(1, 2) - Point(3, 4) == Point(4, 6)
-    # assert Point(1, 2) - Point(3, 5) == Point(-2, -3)
+    assert Point(1, 2) - Point(3, 5) == Point(-2, -3)
 
 @pytest.mark.parametrize("execution_number", range(100))
 def test_box_random_point(execution_number):
