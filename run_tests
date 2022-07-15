@@ -2,11 +2,13 @@
 # https://stackoverflow.com/questions/27397865/how-to-write-stdout-to-file-with-colors
 
 # pytest --cov > test_result.log
-script -q -c "coverage run -m pytest -s tests/game/" > log/test_result.log
+script log/test_result.log --quiet --return --command "coverage run -m pytest -s tests/game/" > /dev/null
 error=$?
-script -q -c "coverage report --show-missing" >> log/test_result.log
-coverage json -o log/coverage_new.json --pretty-print
+script log/test_result.log --append --quiet --command "coverage report --show-missing" > /dev/null
+coverage json -o log/coverage_new.json --pretty-print > /dev/null
 
-cat log/test_result.log
+if [ "$error" -ne 0 ]; then
+  cat log/test_result.log
+fi
 
 exit $error
