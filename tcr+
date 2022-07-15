@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 ./run_tests
 test_result=$?
 if [ "$test_result" -ne 0 ]; then
