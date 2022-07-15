@@ -48,4 +48,5 @@ def test_axis_random(execution_number):
 
 
 def test_opposite_direction():
-    Directions.NORTH
+    direction = Directions.NORTH
+    assert direction == Directions.NORTH
