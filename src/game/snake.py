@@ -37,14 +37,19 @@ from .geometry import Directions, SquareTiling
 class Snake:
     def __init__(self, tiling: SquareTiling):
         self.direction = tiling.starting_direction()
+        start = tiling.origin()
+        new_body = self.make_body(start)
+        self.body = new_body
+        self._times_to_grow = 0
+
+    def make_body(self, start):
         new_body = []
-        center = tiling.origin()
+        center = start
         new_body.append(center)
         for _ in range(2):
             center = center - self.direction.offset
             new_body.append(center)
-        self.body = new_body
-        self._times_to_grow = 0
+        return new_body
 
     @property
     def position(self):
