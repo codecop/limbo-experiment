@@ -38,17 +38,16 @@ class Snake:
     def __init__(self, tiling: SquareTiling):
         self.direction = tiling.starting_direction()
         start = tiling.origin()
-        new_body = self.make_body(start)
+        new_body = self.make_body(start, self.direction)
         self.body = new_body
         self._times_to_grow = 0
 
-    def make_body(self, start, length=2):
+    def make_body(self, start, direction, length=2):
         new_body = []
         center = start
-        direction = self.direction.offset
         new_body.append(center)
         for _ in range(length):
-            center = center - direction
+            center = center - direction.offset
             new_body.append(center)
         return new_body
 
