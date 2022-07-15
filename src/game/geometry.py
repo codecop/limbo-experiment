@@ -12,7 +12,8 @@ from collections import namedtuple
 
 
 class SquareTiling:
-    pass
+    def starting_direction(self):
+        return Directions.NORTH
 
 
 class Point(namedtuple("Point", ["x", "y"])):
