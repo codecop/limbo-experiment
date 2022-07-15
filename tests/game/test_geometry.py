@@ -45,3 +45,7 @@ def test_axis_random(execution_number):
     axis = Axis(2)
     result = axis.random()
     assert -2 <= result <= 2
+
+
+def test_opposite_direction():
+    pass
