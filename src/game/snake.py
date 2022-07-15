@@ -38,8 +38,7 @@ class Snake:
     def __init__(self, tiling: SquareTiling):
         self.direction = tiling.starting_direction()
         center = tiling.origin()
-        second = center - self.direction.offset
-        self.body = [center, second, Point(0, -2)]
+        self.body = [center, Point(0, -1), Point(0, -2)]
         self._times_to_grow = 0
 
     @property
