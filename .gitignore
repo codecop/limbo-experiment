@@ -1,6 +1,7 @@
 ### Custom ###
 log.*
 test_result.log
+coverage_result.log
 coverage_new.json
 coverage_old.json
 
