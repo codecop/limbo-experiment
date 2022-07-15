@@ -3,16 +3,16 @@
 ./run_tests
 test_result=$?
 if [ "$test_result" -ne 0 ]; then
-  ./git_revert "failing_test"
   cat log/test_result.log
+  ./git_revert "failing_test"
   exit 0
 fi
 
 ./check_coverage
 coverage_result=$?
 if [ "$coverage_result" -ne 0 ]; then
-  ./git_revert "missing_coverage"
   cat log/coverage_result.log
+  ./git_revert "missing_coverage"
   exit 0
 fi
 
