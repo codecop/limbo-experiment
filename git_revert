@@ -1,4 +1,7 @@
 #!/bin/bash
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+echo -e "${RED}"
 
 if [ "$1" == "" ]; then
     reason="called_manual"
@@ -12,5 +15,7 @@ git commit -m "[tcr] failing: ${reason}"
 git revert -n HEAD
 git stage -A
 git commit -m "[tcr] revert"
+
+echo -e "${NC}"
 
 exit 0
