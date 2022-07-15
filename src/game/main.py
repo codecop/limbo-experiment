@@ -5,7 +5,7 @@ from .arena import Arena
 from .game import Game
 from .presenter import Presenter
 from .snake import Snake
-from .geometry import Box, Point, SquareTiling
+from .geometry import Box, Point
 from .tkview import TkView
 
 
@@ -13,8 +13,6 @@ def run():
     # TODO: pull out config (RADIUS, ..., growth rate)
     root = Tk()
     view = TkView(root, 500, 500)
-
-    tiling = SquareTiling()
 
     snake = Snake()
     box = Box(20, 20)
