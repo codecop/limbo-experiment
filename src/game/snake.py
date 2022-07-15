@@ -42,11 +42,11 @@ class Snake:
         self.body = new_body
         self._times_to_grow = 0
 
-    def new_method(self, start):
+    def new_method(self, start, length=2):
         new_body = []
         center = start
         new_body.append(center)
-        for _ in range(2):
+        for _ in range(length):
             center = center - self.direction.offset
             new_body.append(center)
         return new_body
