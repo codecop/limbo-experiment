@@ -4,8 +4,8 @@ import pytest
 
 from game.arena import Arena
 from game.game import Game
-from game.geometry import Box, SquareTiling
-from game.snake import Point, Snake
+from game.geometry import Point, Box, SquareTiling
+from game.snake import Snake
 
 
 # https://docs.github.com/en/actions/learn-github-actions/environment-variables#default-environment-variables
