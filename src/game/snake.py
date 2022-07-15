@@ -31,11 +31,11 @@ Domain
   - X Game Loop
   - X Turn
 """
-from .geometry import Directions, Point
+from .geometry import Directions, Point, SquareTiling
 
 
 class Snake:
-    def __init__(self, tiling):
+    def __init__(self, tiling: SquareTiling):
         self.direction = Directions.NORTH
         self.body = [Point(0, 0), Point(0, -1), Point(0, -2)]
         self._times_to_grow = 0
