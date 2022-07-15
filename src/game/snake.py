@@ -35,7 +35,7 @@ from .geometry import Directions, Point
 
 
 class Snake:
-    def __init__(self):
+    def __init__(self, tiling=None):
         self.direction = Directions.NORTH
         self.body = [Point(0, 0), Point(0, -1), Point(0, -2)]
         self._times_to_grow = 0
