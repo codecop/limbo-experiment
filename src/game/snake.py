@@ -56,10 +56,6 @@ class Snake:
 
         self.body = [advanced_position] + self.body[keep_tail]
 
-    def thisisournew(self):
-        print()
-        pass
-
     def _is_growing(self):
         return self._times_to_grow > 0
 
