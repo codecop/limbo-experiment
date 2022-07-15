@@ -11,7 +11,7 @@ import random
 from collections import namedtuple
 
 
-class TwoDGeometry:
+class SquareTiling:
     pass
 
 
