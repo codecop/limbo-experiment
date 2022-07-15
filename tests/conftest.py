@@ -4,7 +4,7 @@ import pytest
 
 from game.arena import Arena
 from game.game import Game
-from game.geometry import Box
+from game.geometry import Box, SquareTiling
 from game.snake import Point, Snake
 
 
@@ -18,7 +18,7 @@ skipifcontainer_because_event_handling_not_working = pytest.mark.skipif(
 
 @pytest.fixture
 def snake():
-    return Snake()
+    return Snake(tiling=SquareTiling())
 
 
 @pytest.fixture
