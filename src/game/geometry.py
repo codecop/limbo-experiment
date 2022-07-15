@@ -10,9 +10,9 @@ The snake's direction using `Directions`.
 import random
 from collections import namedtuple
 
+
 class SquareTiling:
-    def starting_direction(self):
-        return Directions.NORTH
+    pass
 
 
 class Point(namedtuple("Point", ["x", "y"])):
