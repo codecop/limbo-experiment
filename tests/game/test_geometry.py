@@ -49,6 +49,4 @@ def test_axis_random(execution_number):
 
 @pytest.mark.parametrize("current,opposition", [[Directions.NORTH, Directions.SOUTH],])
 def test_opposite_direction(current, opposition):
-    direction = current
-    direction = direction.opposite()
-    assert direction == opposition
+    assert current.opposite() == opposition
