@@ -27,8 +27,11 @@ class Point(namedtuple("Point", ["x", "y"])):
 
 
 Direction = namedtuple("Direction", ["name", "offset"])
+
+
 def foo(direction):
     return direction
+
 Direction.opposite = foo
 # NEXT: Implement opposite as class method using a lookup table
 
