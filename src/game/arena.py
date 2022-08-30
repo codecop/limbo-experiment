@@ -8,11 +8,11 @@ Domain
 - Arena
   - Obstacle
 """
-from .geometry import Point
+from .geometry import Point, SquareTiling
 
 
 class Arena:
-    def __init__(self, box):
+    def __init__(self, box, tiling: SquareTiling = None):
         self._box = box
         self._walls = set()
         self._apples = []
