@@ -72,12 +72,6 @@ class Box:
 
     def boundary_points(self):
         walls = set()
-        for x in self._box.x.range():
-            walls.add(Point(x, self.y.min()))
-            walls.add(Point(x, self.y.max()))
-        for y in self.y.range():
-            walls.add(Point(self.x.min(), y))
-            walls.add(Point(self.x.max(), y))
         return walls
 
 
