@@ -33,16 +33,14 @@ Domain
 """
 from .geometry import Directions, SquareTiling
 
-
 def make_body(start, direction, length):
     new_body = []
     center = start
     new_body.append(center)
-    for _ in range(length - 1):
+    for _ in range(length-1):
         center = center - direction.offset
         new_body.append(center)
     return new_body
-
 
 class Snake:
     def __init__(self, tiling: SquareTiling):
@@ -51,6 +49,7 @@ class Snake:
         new_body = make_body(start, self.direction, length=3)
         self.body = new_body
         self._times_to_grow = 0
+
 
     @property
     def position(self):
