@@ -13,10 +13,6 @@ from collections import namedtuple
 from .geometry import Tiling
 
 
-class XTiling:  # TODO: ABC
-    pass
-
-
 class SquareTiling(Tiling):
     def starting_direction(self):
         return Directions.NORTH
