@@ -72,7 +72,7 @@ class Snake:
         return self._times_to_grow > 0
 
     def turn_right(self):
-        self.direction = Directions.turn_right(self.direction)
+        self.direction = self.direction.turn_right()
 
     def turn_left(self):
         self.direction = Directions.turn_left(self.direction)

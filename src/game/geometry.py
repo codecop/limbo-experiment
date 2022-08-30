@@ -37,7 +37,20 @@ def _direction_opposite(direction):
     return _OPPOSITE[direction]
 
 
+def turn_right(self):
+    # TODO add an instance method and call this
+    _RIGHT = {
+        Directions.NORTH: Directions.EAST,
+        Directions.EAST: Directions.SOUTH,
+        Directions.SOUTH: Directions.WEST,
+        Directions.WEST: Directions.NORTH,
+    }
+
+    return _RIGHT[self]
+
+
 Direction.opposite = _direction_opposite
+Direction.turn_right = turn_right
 # NEXT: Implement opposite as class method using a lookup table
 
 
@@ -46,18 +59,6 @@ class Directions:
     EAST = Direction("E", Point(1, 0))
     SOUTH = Direction("S", Point(0, -1))
     WEST = Direction("W", Point(-1, 0))
-
-    @classmethod
-    def turn_right(cls, direction):
-        # TODO add an instance method and call this
-        _RIGHT = {
-            cls.NORTH: cls.EAST,
-            cls.EAST: cls.SOUTH,
-            cls.SOUTH: cls.WEST,
-            cls.WEST: cls.NORTH,
-        }
-
-        return _RIGHT[direction]
 
     @classmethod
     def turn_left(cls, direction):
