@@ -17,6 +17,7 @@ def run():
 
     snake = Snake(tiling=tiling)
     arena = Arena(box=tiling.box_of(20))
+    arena.place_apple(Point(-1, 1))
     game = Game(snake, arena, grow_count=3)
     # TODO: window focus
     Presenter(view, game, update_interval=100)
