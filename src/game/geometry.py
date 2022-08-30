@@ -49,6 +49,7 @@ class Directions:
 
     @classmethod
     def turn_right(cls, direction):
+        # TODO add an instance method and call this
         _RIGHT = {
             cls.NORTH: cls.EAST,
             cls.EAST: cls.SOUTH,
