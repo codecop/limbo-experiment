@@ -70,7 +70,7 @@ class TkView:
         x1 = xcenter + RADIUS
         y0 = ycenter - RADIUS
         y1 = ycenter + RADIUS
-        return self.canvas.create_polygon(x0, y0, x0, y1, x1, y1, x1, y0, fill=fill, tags=tags)
+        return self.canvas.create_polygon(x0, y0, x1, y1, fill=fill, tags=tags)
 
     def register_left_command(self, callback):
         self.window.bind("<Left>", lambda event: callback())
