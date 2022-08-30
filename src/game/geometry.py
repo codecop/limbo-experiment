@@ -65,7 +65,6 @@ def _direction_turn_left(self):
 Direction.opposite = _direction_opposite
 Direction.turn_right = _direction_turn_right
 Direction.turn_left = _direction_turn_left
-# NEXT: Implement opposite as class method using a lookup table
 
 
 class Directions:
