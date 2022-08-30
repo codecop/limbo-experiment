@@ -75,7 +75,7 @@ class Snake:
         self.direction = self.direction.turn_right()
 
     def turn_left(self):
-        self.direction = Directions.turn_left(self.direction)
+        self.direction = self.direction.turn_left()
 
     def grow(self):
         self._times_to_grow += 1
