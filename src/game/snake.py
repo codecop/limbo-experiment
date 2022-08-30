@@ -31,7 +31,7 @@ Domain
   - X Game Loop
   - X Turn
 """
-from .geometry import SquareTiling
+from .geometry import Tiling
 
 
 def make_body(start, direction, length):
@@ -45,7 +45,7 @@ def make_body(start, direction, length):
 
 
 class Snake:
-    def __init__(self, tiling: SquareTiling):
+    def __init__(self, tiling: Tiling):
         self.direction = tiling.starting_direction()
         start = tiling.origin()
         new_body = make_body(start, self.direction, length=3)
