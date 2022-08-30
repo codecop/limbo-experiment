@@ -15,7 +15,7 @@ class Tiling:
     pass
 
 
-class SquareTiling:
+class SquareTiling(Tiling):
     def starting_direction(self):
         return Directions.NORTH
 
