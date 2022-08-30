@@ -48,7 +48,7 @@ def _direction_turn_right(self):
     return _RIGHT[self]
 
 
-def turn_left(direction):
+def turn_left(self):
     _LEFT = {
         Directions.NORTH: Directions.WEST,
         Directions.WEST: Directions.SOUTH,
@@ -56,7 +56,7 @@ def turn_left(direction):
         Directions.EAST: Directions.NORTH,
     }
 
-    return _LEFT[direction]
+    return _LEFT[self]
 
 
 Direction.opposite = _direction_opposite
