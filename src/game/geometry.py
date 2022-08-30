@@ -47,19 +47,15 @@ class Direction(namedtuple("Direction", ["name", "offset"])):
 
         return _RIGHT[self]
 
+    def turn_left(self):
+        _LEFT = {
+            Directions.NORTH: Directions.WEST,
+            Directions.WEST: Directions.SOUTH,
+            Directions.SOUTH: Directions.EAST,
+            Directions.EAST: Directions.NORTH,
+        }
 
-def _direction_turn_left(self):
-    _LEFT = {
-        Directions.NORTH: Directions.WEST,
-        Directions.WEST: Directions.SOUTH,
-        Directions.SOUTH: Directions.EAST,
-        Directions.EAST: Directions.NORTH,
-    }
-
-    return _LEFT[self]
-
-
-Direction.turn_left = _direction_turn_left
+        return _LEFT[self]
 
 
 class Directions:
