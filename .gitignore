@@ -1,4 +1,5 @@
 ### Custom ###
+*.tmp
 log.*
 test_result.log
 coverage_result.log
