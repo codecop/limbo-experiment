@@ -21,7 +21,7 @@ class Arena:
 
     def _build_wall(self):
         # TODO NEXT move logic into box, tiling gives us proper box then
-        walls = set()
+        walls = self._box.boundary_points()
         for x in self._box.x.range():
             walls.add(Point(x, self._box.y.min()))
             walls.add(Point(x, self._box.y.max()))

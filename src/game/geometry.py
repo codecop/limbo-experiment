@@ -70,6 +70,10 @@ class Box:
     def random_point(self):
         return Point(self.x.random(), self.y.random())
 
+    def boundary_points(self):
+        walls = set()
+        return walls
+
 
 class Axis:
     def __init__(self, length):
