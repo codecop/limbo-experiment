@@ -6,7 +6,7 @@
 """
 import pytest
 
-from game.square_geometry import Directions, Point, Box, Axis, PointTransformer
+from game.square_geometry import Directions, Point, Box, Axis
 
 
 def test_point_supports_addition():
@@ -59,4 +59,4 @@ def test_project_point():
 
 
 def test_point_transformer():
-    point_transformer = PointTransformer()
+    pass
