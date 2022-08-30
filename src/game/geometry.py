@@ -27,7 +27,8 @@ class Point(namedtuple("Point", ["x", "y"])):
         return Point(self.x - other.x, self.y - other.y)
 
 
-Direction = namedtuple("Direction", ["name", "offset"])
+class Direction(namedtuple("Direction", ["name", "offset"])):
+    pass
 
 
 def _direction_opposite(self):
