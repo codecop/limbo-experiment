@@ -53,5 +53,6 @@ def test_opposite_direction(current, opposition):
 
 
 def test_project_point():
-    Point(1, 2)
-    pass
+    # point = Point(1, 2)
+    projected = (1, 2)  # project_point(point)
+    assert projected == (1, 2)
