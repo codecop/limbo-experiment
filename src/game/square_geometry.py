@@ -14,6 +14,7 @@ from .geometry import Tiling
 
 
 class SquareTiling(Tiling):
+    # TODO NEXT: get for PointTransformer
     def starting_direction(self):
         return Directions.NORTH
 

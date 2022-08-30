@@ -7,6 +7,7 @@ directions.
 
 
 class Tiling:  # TODO: ABC
+    # TODO: getter for PointTransformer
     def starting_direction(self):  # pragma: no cover
         pass
 
