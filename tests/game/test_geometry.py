@@ -51,3 +51,7 @@ def test_opposite_direction_north():
     direction = Directions.NORTH
     direction = direction.opposite()
     assert direction == Directions.SOUTH
+
+
+def test_opposite_direction_east():
+    pass
