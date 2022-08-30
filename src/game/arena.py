@@ -19,8 +19,7 @@ class Arena:
         self._build_wall()
 
     def _build_wall(self):
-        walls = self._box.boundary_points()
-        self._walls = self._walls.union(walls)
+        pass
 
     def place_apple(self, apple):
         self._apples.append(apple)
