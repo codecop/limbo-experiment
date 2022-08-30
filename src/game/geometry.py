@@ -12,7 +12,8 @@ from collections import namedtuple
 
 
 class Tiling:
-    pass
+    def starting_direction(self):
+        pass
 
 
 class SquareTiling(Tiling):
