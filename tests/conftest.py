@@ -4,7 +4,7 @@ import pytest
 
 from game.arena import Arena
 from game.game import Game
-from game.geometry import Point, Box, SquareTiling
+from game.square_geometry import Point, Box, SquareTiling
 from game.snake import Snake
 
 

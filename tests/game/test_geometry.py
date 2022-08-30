@@ -6,7 +6,7 @@
 """
 import pytest
 
-from game.geometry import Directions, Point, Box, Axis
+from game.square_geometry import Directions, Point, Box, Axis
 
 
 def test_point_supports_addition():

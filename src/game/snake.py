@@ -31,7 +31,7 @@ Domain
   - X Game Loop
   - X Turn
 """
-from .geometry import Tiling
+from .square_geometry import Tiling
 
 
 def make_body(start, direction, length):

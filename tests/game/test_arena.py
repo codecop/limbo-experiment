@@ -1,7 +1,7 @@
 # -*- coding: latin-1 -*-
 import pytest
 from game.arena import Arena
-from game.geometry import Box, Point
+from game.square_geometry import Box, Point
 
 
 def test_there_is_an_arena_with_walls_around(arena3x4):
