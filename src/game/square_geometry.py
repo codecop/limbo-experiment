@@ -15,9 +15,6 @@ class Tiling:  # TODO: ABC
     def starting_direction(self):  # pragma: no cover
         pass
 
-    def origin(self):  # pragma: no cover
-        pass
-
 
 class SquareTiling(Tiling):
     def starting_direction(self):
