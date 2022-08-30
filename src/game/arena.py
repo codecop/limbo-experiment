@@ -28,7 +28,7 @@ class Arena:
         for y in self._box.y.range():
             self._walls.add(Point(self._box.x.min(), y))
             self._walls.add(Point(self._box.x.max(), y))
-        self._walls.union(walls)
+        self._walls = self._walls.union(walls)
 
     def place_apple(self, apple):
         self._apples.append(apple)
