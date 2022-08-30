@@ -16,6 +16,11 @@ class Arena:
         self._walls = box.boundary_points()
         self._apples = []
 
+        self._build_wall()
+
+    def _build_wall(self):
+        pass
+
     def place_apple(self, apple):
         self._apples.append(apple)
 
