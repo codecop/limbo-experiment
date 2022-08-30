@@ -16,6 +16,8 @@ if [ "$coverage_result" -ne 0 ]; then
   exit 0
 fi
 
+black .
+
 ./check_change
 size_result=$?
 if [ "$size_result" -ne 0 ]; then
