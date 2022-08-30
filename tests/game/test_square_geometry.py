@@ -53,4 +53,6 @@ def test_opposite_direction(current, opposition):
 
 
 def test_point_transformer():
+    # drive function 1: get x and y from point
+    # drive function 2: get four corners of shape when given a radius
     pass
