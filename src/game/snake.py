@@ -31,7 +31,7 @@ Domain
   - X Game Loop
   - X Turn
 """
-from .geometry import Directions, SquareTiling
+from .geometry import SquareTiling
 
 
 def make_body(start, direction, length):
@@ -75,7 +75,7 @@ class Snake:
         self.direction = self.direction.turn_right()
 
     def turn_left(self):
-        self.direction = Directions.turn_left(self.direction)
+        self.direction = self.direction.turn_left()
 
     def grow(self):
         self._times_to_grow += 1
