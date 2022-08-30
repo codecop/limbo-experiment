@@ -52,9 +52,5 @@ def test_opposite_direction(current, opposition):
     assert opposition.opposite() == current
 
 
-def test_project_point():
-    pass
-
-
 def test_point_transformer():
     pass
