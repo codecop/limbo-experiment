@@ -34,7 +34,7 @@ def _direction_opposite(direction):
     _OPPOSITE = {
         Directions.NORTH: Directions.SOUTH,
     }
-    return Directions.opposite(direction)
+    return _OPPOSITE[direction]
 
 
 Direction.opposite = _direction_opposite
@@ -69,13 +69,6 @@ class Directions:
         }
 
         return _LEFT[direction]
-
-    @classmethod
-    def opposite(cls, direction):
-        _RIGHT = {
-            cls.NORTH: cls.SOUTH,
-        }
-        return _RIGHT[direction]
 
 
 class Box:
