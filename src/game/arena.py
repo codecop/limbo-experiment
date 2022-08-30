@@ -13,7 +13,7 @@ Domain
 class Arena:
     def __init__(self, box):
         self._box = box
-        self._walls = set()
+        self._walls = box.boundary_points()
         self._apples = []
 
         self._build_wall()
