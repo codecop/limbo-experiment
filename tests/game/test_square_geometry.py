@@ -50,3 +50,7 @@ def test_axis_random(execution_number):
 def test_opposite_direction(current, opposition):
     assert current.opposite() == opposition
     assert opposition.opposite() == current
+
+
+def test_project_point():
+    pass
