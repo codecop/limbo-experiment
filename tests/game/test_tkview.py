@@ -87,12 +87,16 @@ def test_view_draws_snake(view):
     assert 2 == len(items)
 
     item_coords = [view.canvas.coords(item) for item in items]
-    assert [45, 45, 55, 55] in item_coords
+    assert [45, 45, 45, 55, 55, 55, 55, 45] in item_coords
     assert [
         45 + 2 * RADIUS,
         45 - 4 * RADIUS,
+        45 + 2 * RADIUS,
+        55 - 4 * RADIUS,
         55 + 2 * RADIUS,
         55 - 4 * RADIUS,
+        55 + 2 * RADIUS,
+        45 - 4 * RADIUS,
     ] in item_coords
 
 
