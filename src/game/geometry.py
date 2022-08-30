@@ -70,9 +70,6 @@ class Directions:
 
         return _LEFT[direction]
 
-    @classmethod
-    def opposite(cls, direction): pass
-
 
 class Box:
     def __init__(self, width, height):
