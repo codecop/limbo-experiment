@@ -39,7 +39,8 @@ def make_body(start, direction, length):
     center = start
     new_body.append(center)
     for _ in range(length - 1):
-        center = center - direction.offset
+        center = center - direction.opposite().offset
+        # center = center + direction.opposite().offset
         new_body.append(center)
     return new_body
 
