@@ -6,7 +6,7 @@ from game.arena import Arena
 
 from game.game import Game, TurnCommand
 from game.game import Cycle
-from game.square_geometry import Box, Point
+from game.geometry import Box, Point
 
 
 # TBD: Could these tests be simplified?

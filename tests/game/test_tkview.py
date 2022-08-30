@@ -20,7 +20,7 @@ from conftest import (
     skipifcontainer_because_event_handling_not_working,
 )  # TODO: resolve differently
 
-from game.square_geometry import Point
+from game.geometry import Point
 from game.tkview import RADIUS, TkView
 
 
