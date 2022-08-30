@@ -38,7 +38,6 @@ def _direction_opposite(direction):
 
 
 def turn_right(self):
-    # TODO add an instance method and call this
     _RIGHT = {
         Directions.NORTH: Directions.EAST,
         Directions.EAST: Directions.SOUTH,
