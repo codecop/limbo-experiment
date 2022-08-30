@@ -12,7 +12,7 @@ import pytest
 
 from game.game import TurnCommand
 from game.presenter import Presenter
-from game.geometry import Point
+from game.square_geometry import Point
 
 
 @pytest.fixture
