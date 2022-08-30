@@ -64,6 +64,9 @@ class TkView:
         self.draw_generic(new_points, self._apple_objects, "red", ("apple"))
 
     def draw_point(self, point, fill, tags):
+        # transform point to cartesian coordinates
+        # transform coordinates to canvas
+        # compute polygon coordinates depending on tiling
         xcenter = self._width / 2 + point.x * 2 * RADIUS
         ycenter = self._height / 2 - point.y * 2 * RADIUS
         x0 = xcenter - RADIUS
