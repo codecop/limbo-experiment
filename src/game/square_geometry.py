@@ -101,3 +101,7 @@ class Axis:
 
     def max(self):
         return self._length
+
+
+class PointTransformer:
+    pass
