@@ -19,7 +19,7 @@ def cli(added):
 
 def is_change_size_okay(git_diff_numstat, added):
     total_added, total_removed = compute_lines_changed(git_diff_numstat)
-    return total_added - total_removed <= added
+    return abs(total_added - total_removed) <= added
 
 
 def get_git_diff_numstat():
