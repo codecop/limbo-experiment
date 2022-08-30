@@ -10,7 +10,16 @@ The snake's direction using `Directions`.
 import random
 from collections import namedtuple
 
-from .geometry import Tiling
+
+class Tiling:  # TODO: ABC
+    def starting_direction(self):  # pragma: no cover
+        pass
+
+    def origin(self):  # pragma: no cover
+        pass
+
+    def box_of(self, size):  # pragma: no cover
+        pass
 
 
 class SquareTiling(Tiling):
