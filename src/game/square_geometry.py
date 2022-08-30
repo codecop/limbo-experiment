@@ -10,6 +10,8 @@ The snake's direction using `Directions`.
 import random
 from collections import namedtuple
 
+from .geometry import Tiling
+
 
 class Tiling:  # TODO: ABC
     pass
