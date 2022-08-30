@@ -64,15 +64,12 @@ class TkView:
         self.draw_generic(new_points, self._apple_objects, "red", ("apple"))
 
     def draw_point(self, point, fill, tags):
-        # 1. schritt
         xcenter = self._width / 2 + point.x * 2 * RADIUS
         ycenter = self._height / 2 - point.y * 2 * RADIUS
-        # 2. schritt
         x0 = xcenter - RADIUS
         x1 = xcenter + RADIUS
         y0 = ycenter - RADIUS
         y1 = ycenter + RADIUS
-        corners = []
         return self.canvas.create_rectangle(x0, y0, x1, y1, fill=fill, tags=tags)
 
     def register_left_command(self, callback):
