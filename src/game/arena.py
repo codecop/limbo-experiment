@@ -15,7 +15,6 @@ class Arena:
         self._box = box
         self._walls = box.boundary_points()
         self._apples = []
-
         self._build_wall()
 
     def _build_wall(self):
