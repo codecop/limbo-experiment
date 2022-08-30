@@ -64,8 +64,12 @@ class TkView:
         self.draw_generic(new_points, self._apple_objects, "red", ("apple"))
 
     def draw_point(self, point, fill, tags):
-        xcenter = self._width / 2 + point.x * 2 * RADIUS
-        ycenter = self._height / 2 - point.y * 2 * RADIUS
+        # aus Koordinaten des Punktes den Mittelpunkt am Canvas berechnen
+        # xproject, yproject = transform_to_plane(point)
+
+        xcenter = self._width / 2 + xproject * 2 * RADIUS
+        ycenter = self._height / 2 - yproject * 2 * RADIUS
+        #
         x0 = xcenter - RADIUS
         x1 = xcenter + RADIUS
         y0 = ycenter - RADIUS
