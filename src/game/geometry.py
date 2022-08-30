@@ -18,6 +18,9 @@ class Tiling:
     def origin(self):  # pragma: no cover
         pass
 
+    def box_of(self, size):  # pragma: no cover
+        pass
+
 
 class SquareTiling(Tiling):
     def starting_direction(self):
