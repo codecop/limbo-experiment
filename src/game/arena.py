@@ -19,7 +19,6 @@ class Arena:
         self._build_wall()
 
     def _build_wall(self):
-        # TODO NEXT move logic into box, tiling gives us proper box then
         walls = self._box.boundary_points()
         self._walls = self._walls.union(walls)
 
