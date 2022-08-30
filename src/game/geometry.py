@@ -28,17 +28,14 @@ class Point(namedtuple("Point", ["x", "y"])):
 
 
 class Direction(namedtuple("Direction", ["name", "offset"])):
-    pass
-
-
-def _direction_opposite(self):
-    _OPPOSITE = {
-        Directions.NORTH: Directions.SOUTH,
-        Directions.EAST: Directions.WEST,
-        Directions.SOUTH: Directions.NORTH,
-        Directions.WEST: Directions.EAST,
-    }
-    return _OPPOSITE[self]
+    def opposite(self):
+        _OPPOSITE = {
+            Directions.NORTH: Directions.SOUTH,
+            Directions.EAST: Directions.WEST,
+            Directions.SOUTH: Directions.NORTH,
+            Directions.WEST: Directions.EAST,
+        }
+        return _OPPOSITE[self]
 
 
 def _direction_turn_right(self):
@@ -63,7 +60,6 @@ def _direction_turn_left(self):
     return _LEFT[self]
 
 
-Direction.opposite = _direction_opposite
 Direction.turn_right = _direction_turn_right
 Direction.turn_left = _direction_turn_left
 
