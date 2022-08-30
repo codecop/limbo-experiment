@@ -30,11 +30,11 @@ class Point(namedtuple("Point", ["x", "y"])):
 Direction = namedtuple("Direction", ["name", "offset"])
 
 
-def _direction_opposite(direction):
+def _direction_opposite(self):
     _OPPOSITE = {
         Directions.NORTH: Directions.SOUTH,
     }
-    return _OPPOSITE[direction]
+    return _OPPOSITE[self]
 
 
 def _direction_turn_right(self):
