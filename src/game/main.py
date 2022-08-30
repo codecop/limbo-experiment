@@ -5,7 +5,7 @@ from .arena import Arena
 from .game import Game
 from .presenter import Presenter
 from .snake import Snake
-from .geometry import Point, SquareTiling
+from .geometry import SquareTiling
 from .tkview import TkView
 
 
@@ -17,7 +17,6 @@ def run():
 
     snake = Snake(tiling=tiling)
     arena = Arena(box=tiling.box_of(20))
-    arena.place_apple(Point(-1, 1))
     game = Game(snake, arena, grow_count=3)
     # TODO: window focus
     Presenter(view, game, update_interval=100)
