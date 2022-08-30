@@ -23,11 +23,11 @@ class Arena:
         # TODO NEXT move logic into box, tiling gives us proper box then
         walls = set()
         for x in self._box.x.range():
-            self._walls.add(Point(x, self._box.y.min()))
-            self._walls.add(Point(x, self._box.y.max()))
+            walls.add(Point(x, self._box.y.min()))
+            walls.add(Point(x, self._box.y.max()))
         for y in self._box.y.range():
-            self._walls.add(Point(self._box.x.min(), y))
-            self._walls.add(Point(self._box.x.max(), y))
+            walls.add(Point(self._box.x.min(), y))
+            walls.add(Point(self._box.x.max(), y))
         self._walls = self._walls.union(walls)
 
     def place_apple(self, apple):
