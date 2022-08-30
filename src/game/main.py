@@ -5,7 +5,7 @@ from .arena import Arena
 from .game import Game
 from .presenter import Presenter
 from .snake import Snake
-from .geometry import Box, Point, SquareTiling
+from .geometry import Point, SquareTiling
 from .tkview import TkView
 
 
