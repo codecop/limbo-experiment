@@ -51,7 +51,7 @@ def test_axis_random(execution_number):
     "current,opposition",
     [
         (Directions.NORTH, Directions.SOUTH),
-        (Directions.NORTH, Directions.SOUTH),
+        (Directions.SOUTH, Directions.NORTH),
         (Directions.NORTH, Directions.SOUTH),
         (Directions.NORTH, Directions.SOUTH),
     ],
