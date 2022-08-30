@@ -56,3 +56,7 @@ def test_project_point():
     # point = Point(1, 2)
     projected = (1, 2)  # project_point(point)
     assert projected == (1, 2)
+
+
+def test_point_transformer():
+    pass
