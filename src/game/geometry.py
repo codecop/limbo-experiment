@@ -11,6 +11,10 @@ import random
 from collections import namedtuple
 
 
+class Tiling:
+    pass
+
+
 class SquareTiling:
     def starting_direction(self):
         return Directions.NORTH
