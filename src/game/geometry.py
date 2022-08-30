@@ -31,6 +31,7 @@ Direction = namedtuple("Direction", ["name", "offset"])
 
 
 def _direction_opposite(direction):
+    Directions.opposite(direction)
     _OPPOSITE = {
         Directions.NORTH: Directions.SOUTH,
     }
@@ -69,6 +70,10 @@ class Directions:
         }
 
         return _LEFT[direction]
+
+    @classmethod
+    def opposite(cls, direction):
+        pass
 
 
 class Box:
