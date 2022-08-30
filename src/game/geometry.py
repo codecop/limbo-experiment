@@ -31,10 +31,10 @@ Direction = namedtuple("Direction", ["name", "offset"])
 
 
 def foo(direction):
-    _RIGHT = {
+    _OPPOSITE = {
         Directions.NORTH: Directions.SOUTH,
     }
-    return _RIGHT[direction]
+    return _OPPOSITE[direction]
 
 
 Direction.opposite = foo
