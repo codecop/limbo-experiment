@@ -11,7 +11,7 @@ import random
 from collections import namedtuple
 
 
-class Tiling:
+class Tiling:  # TODO: ABC
     def starting_direction(self):  # pragma: no cover
         pass
 
