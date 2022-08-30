@@ -51,7 +51,7 @@ def _direction_turn_right(self):
     return _RIGHT[self]
 
 
-def turn_left(self):
+def _direction_turn_left(self):
     _LEFT = {
         Directions.NORTH: Directions.WEST,
         Directions.WEST: Directions.SOUTH,
@@ -64,7 +64,7 @@ def turn_left(self):
 
 Direction.opposite = _direction_opposite
 Direction.turn_right = _direction_turn_right
-Direction.turn_left = turn_left
+Direction.turn_left = _direction_turn_left
 # NEXT: Implement opposite as class method using a lookup table
 
 
