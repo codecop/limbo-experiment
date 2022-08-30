@@ -74,6 +74,7 @@ class Box:
         walls = set()
         for x in self.x.range():
             walls.add(Point(x, self.y.min()))
+            walls.add(Point(x, self.y.max()))
         return walls
 
 
