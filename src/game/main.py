@@ -16,9 +16,7 @@ def run():
     tiling = SquareTiling()
 
     snake = Snake(tiling=tiling)
-    # box = tiling.box_of(20)
-    box = Box(20, 20)
-    arena = Arena(box=box)
+    arena = Arena(box=tiling.box_of(20))
     arena.place_apple(Point(-1, 1))
     game = Game(snake, arena, grow_count=3)
     # TODO: window focus

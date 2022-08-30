@@ -18,6 +18,9 @@ class SquareTiling:
     def origin(self):
         return Point(0, 0)
 
+    def box_of(self, size):
+        return Box(size, size)
+
 
 class Point(namedtuple("Point", ["x", "y"])):
     def __add__(self, other):
