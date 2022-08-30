@@ -8,7 +8,6 @@ Domain
 - Arena
   - Obstacle
 """
-from .geometry import Point
 
 
 class Arena:
@@ -22,9 +21,6 @@ class Arena:
     def _build_wall(self):
         # TODO NEXT move logic into box, tiling gives us proper box then
         walls = self._box.boundary_points()
-        for y in self._box.y.range():
-            walls.add(Point(self._box.x.min(), y))
-            walls.add(Point(self._box.x.max(), y))
         self._walls = self._walls.union(walls)
 
     def place_apple(self, apple):
