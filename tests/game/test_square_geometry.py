@@ -53,8 +53,8 @@ def test_opposite_direction(current, opposition):
 
 
 def test_point_transformer():
+    # TODO NEXT 0: start here
     # drive function 1: get x and y from point
     # drive function 2: get polygon of four corners of shape when given a radius
-    # TODO Next next
     # Hint: We make tkview generic, then all places are ready to inject Hexagonals
     pass
