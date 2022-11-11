@@ -5,11 +5,11 @@ The game is grid based and the snake moves into different
 directions.
 """
 
-# TODO NEXT: Define interface for PointTransformer
+# TODO: Define interfaces for all elements (Box, PointTransformer, ...)
 
 
 class Tiling:  # TODO: ABC
-    # TODO NEXT: getter for PointTransformer
+    # TODO NEXT 4: getter for PointTransformer
     def starting_direction(self):  # pragma: no cover
         pass
 

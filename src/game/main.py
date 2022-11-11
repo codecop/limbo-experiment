@@ -12,8 +12,8 @@ from .tkview import TkView
 def run():
     # TODO: pull out config (RADIUS, ..., growth rate)
     root = Tk()
+    tiling = SquareTiling()  # Tiling defines geometry which gives origin box, directions (left, right), and projection onto pixels
     view = TkView(root, 500, 500)
-    tiling = SquareTiling()
 
     snake = Snake(tiling=tiling)
     arena = Arena(box=tiling.box_of(20))

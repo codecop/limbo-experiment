@@ -26,7 +26,7 @@ RADIUS = 5
 class TkView:
     def __init__(
         self, root, width=100, height=100, point_transformer=None
-    ):  # TODO NEXT: use PointTransformer
+    ):  # TODO NEXT 5: use PointTransformer
         self.window = root
         self.window.title("Snake")
         self._width = width
@@ -66,6 +66,7 @@ class TkView:
         self.draw_generic(new_points, self._apple_objects, "red", ("apple"))
 
     def draw_point(self, point, fill, tags):
+        # TODO NEXT 1: Move into point transformer implementation
         # transform point to cartesian coordinates
         # transform coordinates to canvas
         # compute polygon coordinates depending on tiling

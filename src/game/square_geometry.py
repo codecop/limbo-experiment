@@ -12,9 +12,10 @@ from collections import namedtuple
 
 from .geometry import Tiling
 
+# TODO NEXT 2: Define (square) point transformer
 
 class SquareTiling(Tiling):
-    # TODO NEXT: get for PointTransformer
+    # TODO NEXT 3: get for PointTransformer
     def starting_direction(self):
         return Directions.NORTH
 
